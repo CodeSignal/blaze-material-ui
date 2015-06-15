@@ -47,7 +47,7 @@ Package.onUse(function(api) {
     'paper-elements/PaperFab/PaperFab.scss',
   ],'client');
 
-  api.addFiles(['blaze-material-ui.es6.js'],'client');
+  api.addFiles(['blaze-material-ui.es6'],'client');
 
 });
 
