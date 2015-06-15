@@ -1,0 +1,66 @@
+
+paper-ripple {
+
+  display: block;
+  position: relative;
+  border-radius: inherit;
+  overflow: hidden;
+
+  &[noink] {
+    pointer-events: none;
+  }
+
+
+  [shadow-id=bg],
+  [shadow-id=waves],
+  .wave-container,
+  .wave {
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  [shadow-id=bg], .wave {
+    opacity: 0;
+  }
+
+  [shadow-id=waves], .wave {
+    overflow: hidden;
+  }
+
+  .wave-container, .wave {
+    border-radius: 50%;
+  }
+
+ .circle #bg,
+  paper-ripple.circle #waves {
+    border-radius: 50%;
+  }
+
+  .wave-container {
+    overflow: hidden;
+    animation: paper-ripple-grow 0.5s ease-in-out forwards;
+  }
+}
+
+@keyframes paper-ripple-grow {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  80% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+
+}

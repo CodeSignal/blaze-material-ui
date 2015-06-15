@@ -1,0 +1,14 @@
+template(name="PaperRipple")
+  paper-ripple(class=className
+               fit
+               shadow-id=id)
+    div(shadow-id="bg"
+        style="opacity:#{opacity}")
+    div(shadow-id="waves")
+      // ripples
+      each getRipples
+        span(class="wave-container"
+             data-id="#{id}"
+             style="top:#{style.top};left:#{style.left};height:#{style.height};width:#{style.width};background:#{style.background}")
+
+

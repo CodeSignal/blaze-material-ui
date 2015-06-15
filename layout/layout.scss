@@ -1,0 +1,200 @@
+html {
+  [layout][horizontal],
+  [layout][vertical] {
+    display: flex;
+  }
+
+  [layout][horizontal][inline],
+  [layout][vertical][inline] {
+    display: inline-flex;
+  }
+
+  [layout][horizontal] {
+    flex-direction: row;
+  }
+
+  [layout][horizontal][reverse] {
+    flex-direction: row-reverse;
+  }
+
+  [layout][vertical] {
+    flex-direction: column;
+  }
+
+  [layout][vertical][reverse] {
+    flex-direction: column-reverse;
+  }
+
+  [layout][wrap] {
+    flex-wrap: wrap;
+  }
+
+  [layout][wrap-reverse] {
+    flex-wrap: wrap-reverse;
+  }
+
+  [flex] {
+    flex: 1;
+    flex-basis: 0.000000001px;
+  }
+
+  [vertical][layout] > [flex][auto-vertical],
+  [vertical][layout] [flex][auto-vertical] {
+    flex-basis: auto;
+  }
+
+  [flex][auto] {
+    flex-basis: auto;
+  }
+
+  [flex][none] {
+    flex: none;
+  }
+
+  [flex][one] {
+    flex: 1;
+  }
+
+  [flex][two] {
+    flex: 2;
+  }
+
+  [flex][three] {
+    flex: 3;
+  }
+
+  [flex][four] {
+    flex: 4;
+  }
+
+  [flex][five] {
+    flex: 5;
+  }
+
+  [flex][six] {
+    flex: 6;
+  }
+
+  [flex][seven] {
+    flex: 7;
+  }
+
+  [flex][eight] {
+    flex: 8;
+  }
+
+  [flex][nine] {
+    flex: 9;
+  }
+
+  [flex][ten] {
+    flex: 10;
+  }
+
+  [flex][eleven] {
+    flex: 11;
+  }
+
+  [flex][twelve] {
+    flex: 12;
+  }
+
+  /* alignment in cross axis */
+
+  [layout][start] {
+    align-items: flex-start;
+  }
+
+  [layout][center], [layout][center-center] {
+    align-items: center;
+  }
+
+  [layout][end] {
+    align-items: flex-end;
+  }
+
+  /* alignment in main axis */
+
+  [layout][start-justified] {
+    justify-content: flex-start;
+  }
+
+  [layout][center-justified], [layout][center-center] {
+    justify-content: center;
+  }
+
+  [layout][end-justified] {
+    justify-content: flex-end;
+  }
+
+  [layout][around-justified] {
+    justify-content: space-around;
+  }
+
+  [layout][justified] {
+    justify-content: space-between;
+  }
+
+  /* self alignment */
+
+  [self-start] {
+    align-self: flex-start;
+  }
+
+  [self-center] {
+    align-self: center;
+  }
+
+  [self-end] {
+    align-self: flex-end;
+  }
+
+  [self-stretch] {
+    align-self: stretch;
+  }
+
+  /*******************************
+            Other Layout
+  *******************************/
+
+  [block] {
+    display: block;
+  }
+
+  /* ie support for hidden */
+  [hidden] {
+    display: none !important;
+  }
+
+  [relative] {
+    position: relative;
+  }
+
+  [fit] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  body[fullbleed] {
+    margin: 0;
+    height: 100vh;
+  }
+
+  /*******************************
+              Other
+  *******************************/
+
+  [segment], segment {
+    display: block;
+    position: relative;
+    box-sizing: border-box;
+    margin: 1em 0.5em;
+    padding: 1em;
+    background-color: white;
+    box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.1);
+    border-radius: 5px 5px 5px 5px;
+  }
+}

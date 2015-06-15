@@ -1,0 +1,25 @@
+template(name="PaperFab")
+  paper-fab(class=className
+            tabindex='0'
+            role="button"
+            title=title
+            mini=mini
+            pressed=getPressed
+            focused=getFocused
+            active=getActive
+            icon=icon
+            aria-label=title)
+    shadow-root
+      +PaperRipple(z=getZ
+                   fit=''
+                   id="ripple")
+      +PaperShadow(z=getZ
+                   fit=''
+                   animated=''
+                   id="shadow")
+      +CoreIcon(z=getZ
+                fit=''
+                label=title
+                icon=icon
+                id="icon")
+

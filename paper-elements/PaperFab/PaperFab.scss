@@ -1,0 +1,56 @@
+paper-fab {
+  display: inline-block;
+  position: relative;
+  outline: none;
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  z-index: 0;
+
+  box-sizing: border-box;
+  width: 56px;
+  height: 56px;
+  background: #d23f31;
+  color: #fff;
+  fill: currentColor;
+  border-radius: 50%;
+  border: 0;
+  padding: 16px;
+
+  &[mini] {
+    width: 40px;
+    height: 40px;
+    padding: 8px;
+  }
+
+  &[disabled] {
+    color: #c9c9c9;
+    pointer-events: none;
+    cursor: auto;
+  }
+
+  shadow-root {
+    visibility: hidden;
+    border-radius: inherit;
+
+    > * {
+      visibility: visible;
+    }
+  }
+
+  [shadow-id=ripple] {
+    pointer-events: none;
+    z-index: -1;
+  }
+
+  [shadow-id=shadow] {
+    border-radius: inherit;
+    pointer-events: none;
+  }
+
+  [shadow-id=icon] {
+    display: block;
+    pointer-events: none;
+  }
+}
+
