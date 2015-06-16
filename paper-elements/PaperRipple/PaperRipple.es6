@@ -15,8 +15,8 @@ class PaperRipple extends BlazeComponent {
     var fillY = Math.abs(height/2 - event.offsetY);
 
     var containerSize = Math.max(width, height);
-    var fillSize =  Math.max(width + (width - fillX), height + (height - fillY))
-
+    var fillSize =  Math.max(width + fillX*2, height + fillY*2);
+    fillSize *= 1.1;
 
     this.rippleCollection.push(++this.rippleCounter);
 

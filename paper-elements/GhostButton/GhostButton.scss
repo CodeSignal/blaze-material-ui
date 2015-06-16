@@ -14,7 +14,7 @@ ghost-button {
   user-select: none;
   cursor: pointer;
   z-index: 0;
-  box-shadow: 0 0 0 2px currentColor;
+  box-shadow: 0 0 0 1px currentColor inset;
 
   &.keyboard-focus.ghost-button {
     font-weight: bold;
