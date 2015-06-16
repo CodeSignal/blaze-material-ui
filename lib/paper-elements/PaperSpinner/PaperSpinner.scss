@@ -1,0 +1,296 @@
+paper-spinner {
+  display: inline-block;
+  position: relative;
+  width: 28px; 
+  height: 28px;
+
+  [data-id=spinnerContainer].paper-spinner {
+    width: 100%;
+    height: 100%;
+  }
+
+  [data-id=spinnerContainer].active.paper-spinner {
+    animation: container-rotate 1568ms linear infinite;
+  }
+
+}
+
+@keyframes container-rotate {
+  to {
+    transform: rotate(360deg)
+  }
+}
+
+paper-spinner {
+  .spinner-layer.paper-spinner {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    font-size: 0;
+  }
+
+  .active.paper-spinner .spinner-layer.layer-1.paper-spinner {
+    animation: fill-unfill-rotate 5332ms cubic-bezier(0.4, 0.0, 0.2, 1) infinite both, layer-1-fade-in-out 5332ms cubic-bezier(0.4, 0.0, 0.2, 1) infinite both;
+  }
+
+  .active.paper-spinner .spinner-layer.layer-2.paper-spinner {
+    animation: fill-unfill-rotate 5332ms cubic-bezier(0.4, 0.0, 0.2, 1) infinite both, layer-2-fade-in-out 5332ms cubic-bezier(0.4, 0.0, 0.2, 1) infinite both;
+  }
+
+  .active.paper-spinner .spinner-layer.layer-3.paper-spinner {
+    animation: fill-unfill-rotate 5332ms cubic-bezier(0.4, 0.0, 0.2, 1) infinite both, layer-3-fade-in-out 5332ms cubic-bezier(0.4, 0.0, 0.2, 1) infinite both;
+  }
+
+  .active.paper-spinner .spinner-layer.layer-4.paper-spinner {
+    animation: fill-unfill-rotate 5332ms cubic-bezier(0.4, 0.0, 0.2, 1) infinite both, layer-4-fade-in-out 5332ms cubic-bezier(0.4, 0.0, 0.2, 1) infinite both;
+  }
+
+}
+
+@keyframes fill-unfill-rotate {
+  12.5% {
+    transform: rotate(135deg);
+  }
+
+  25% {
+    transform: rotate(270deg);
+  }
+
+  37.5% {
+    transform: rotate(405deg);
+  }
+
+  50% {
+    transform: rotate(540deg);
+  }
+
+  62.5% {
+    transform: rotate(675deg);
+  }
+
+  75% {
+    transform: rotate(810deg);
+  }
+
+  87.5% {
+    transform: rotate(945deg);
+  }
+
+  to {
+    transform: rotate(1080deg);
+  }
+
+}
+
+
+@keyframes layer-1-fade-in-out {
+  from {
+    opacity: 0.99;
+  }
+
+  25% {
+    opacity: 0.99;
+  }
+
+  26% {
+    opacity: 0;
+  }
+
+  89% {
+    opacity: 0;
+  }
+
+  90% {
+    opacity: 0.99;
+  }
+
+  100% {
+    opacity: 0.99;
+  }
+
+}
+
+
+@keyframes layer-2-fade-in-out {
+from {
+  opacity: 0;
+}
+
+15% {
+  opacity: 0;
+}
+
+25% {
+  opacity: 0.99;
+}
+
+50% {
+  opacity: 0.99;
+}
+
+51% {
+  opacity: 0;
+}
+
+}
+
+
+@keyframes layer-3-fade-in-out {
+  from {
+    opacity: 0;
+  }
+
+  40% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0.99;
+  }
+
+  75% {
+    opacity: 0.99;
+  }
+
+  76% {
+    opacity: 0;
+  }
+
+}
+
+
+
+@keyframes layer-4-fade-in-out {
+  from {
+    opacity: 0;
+  }
+
+  65% {
+    opacity: 0;
+  }
+
+  75% {
+    opacity: 0.99;
+  }
+
+  90% {
+    opacity: 0.99;
+  }
+
+  100% {
+    opacity: 0;
+  }
+
+}
+
+paper-spinner {
+  .gap-patch.paper-spinner {
+    position: absolute;
+    box-sizing: border-box;
+    top: 0;
+    left: 45%;
+    width: 10%;
+    height: 100%;
+    overflow: hidden;
+    border-color: inherit;
+  }
+
+  .gap-patch.paper-spinner .circle.paper-spinner {
+    width: 1000%;
+    left: -450%;
+  }
+
+  .circle-clipper.paper-spinner {
+    display: inline-block;
+    position: relative;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    border-color: inherit;
+  }
+
+  .circle-clipper.paper-spinner .circle.paper-spinner {
+    width: 200%;
+  }
+
+  .circle.paper-spinner {
+    box-sizing: border-box;
+    height: 100%;
+    border-width: 3px; 
+    border-style: solid;
+    border-color: inherit;
+    border-bottom-color: transparent !important;
+    border-radius: 50%;
+    animation: none;
+  }
+
+  .circle-clipper.left.paper-spinner .circle.paper-spinner {
+    border-right-color: transparent !important;
+    transform: rotate(129deg);
+  }
+
+  .circle-clipper.right.paper-spinner .circle.paper-spinner {
+    left: -100%;
+    border-left-color: transparent !important;
+    transform: rotate(-129deg);
+  }
+
+  .active.paper-spinner .circle-clipper.left.paper-spinner .circle.paper-spinner {
+    animation: left-spin 1333ms cubic-bezier(0.4, 0.0, 0.2, 1) infinite both;
+  }
+
+  .active.paper-spinner .circle-clipper.right.paper-spinner .circle.paper-spinner {
+    animation: right-spin 1333ms cubic-bezier(0.4, 0.0, 0.2, 1) infinite both;
+  }
+}
+
+@keyframes left-spin {
+  from {
+    transform: rotate(130deg);
+  }
+
+  50% {
+    transform: rotate(-5deg);
+  }
+
+  to {
+    transform: rotate(130deg);
+  }
+
+}
+
+
+
+@keyframes right-spin {
+  from {
+    transform: rotate(-130deg);
+  }
+
+  50% {
+    transform: rotate(5deg);
+  }
+
+  to {
+    transform: rotate(-130deg);
+  }
+
+}
+
+paper-spinner [data-id=spinnerContainer].cooldown.paper-spinner {
+  -webkit-animation: container-rotate 1568ms linear infinite, fade-out 400ms cubic-bezier(0.4, 0.0, 0.2, 1);
+  animation: container-rotate 1568ms linear infinite, fade-out 400ms cubic-bezier(0.4, 0.0, 0.2, 1);
+}
+
+
+
+@keyframes fade-out {
+  from {
+    opacity: 0.99;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+

@@ -9,22 +9,6 @@ template(name="IronIcon")
         viewBox="0 0 24 24")
       path(d=getSVG[icon])
 
-template(name="PaperButton")
-  paper-button(class=className
-               title=title
-               pressed=getPressed
-               focused=getFocused
-               active=getActive
-               aria-label=title
-               tabindex='0'
-               role="button")
-    +PaperRipple(fit='' id="ripple")
-    +PaperMaterial(elevation=getElevation
-                   className="content paper-button"
-                   animated=''
-                   id="shadow")
-      +Template.contentBlock
-
 template(name="GhostButton")
   ghost-button(class=className
                title=title
@@ -35,6 +19,14 @@ template(name="GhostButton")
                tabindex='0'
                role="button")
     +PaperRipple(fit='' id="ripple")
+    +Template.contentBlock
+
+template(name="PaperMaterial")
+  paper-material(class=className
+                 data-id=id
+                 fit=fit
+                 animated=animated
+                 elevation=elevation)
     +Template.contentBlock
 
 template(name="PaperFab")
@@ -55,21 +47,6 @@ template(name="PaperFab")
                    id="shadow")
     +IronIcon(label=title icon=icon id="icon")
 
-template(name="PaperRipple")
-  paper-ripple(class=className
-               fit
-               data-id=id)
-    div(data-id="bg")
-    div(data-id="waves")
-
-template(name="PaperMaterial")
-  paper-material(class=className
-                 data-id=id
-                 fit=fit
-                 animated=animated
-                 elevation=elevation)
-    +Template.contentBlock
-
 template(name="PaperProgress")
   paper-progress(value=value class=className)
     div(data-id="progressContainer"
@@ -85,6 +62,61 @@ template(name="PaperProgress")
           fit=""
           class="paper-progress"
           style='transform:scaleX(#{getProgress})')
+
+template(name="PaperButton")
+  paper-button(class=className
+               title=title
+               pressed=getPressed
+               focused=getFocused
+               active=getActive
+               aria-label=title
+               tabindex='0'
+               role="button")
+    +PaperRipple(fit='' id="ripple")
+    +PaperMaterial(elevation=getElevation
+                   className="content paper-button"
+                   animated=''
+                   id="shadow")
+      +Template.contentBlock
+
+template(name="PaperRipple")
+  paper-ripple(class=className
+               fit
+               data-id=id)
+    div(data-id="bg")
+    div(data-id="waves")
+
+template(name="PaperSpinner")
+  paper-spinner(active=active aria-label=title class=className)
+      div(data-id="spinnerContainer" class="#{active} paper-spinner")
+        div(class="spinner-layer layer-1 paper-spinner")
+          div(class="circle-clipper left paper-spinner")
+            div(class="circle paper-spinner")
+          div(class="gap-patch paper-spinner")
+            div(class="circle paper-spinner")
+          div(class="circle-clipper right paper-spinner")
+            div(class="circle paper-spinner")
+        div(class="spinner-layer layer-2 paper-spinner")
+          div(class="circle-clipper left paper-spinner")
+            div(class="circle paper-spinner")
+          div(class="gap-patch paper-spinner")
+            div(class="circle paper-spinner")
+          div(class="circle-clipper right paper-spinner")
+            div(class="circle paper-spinner")
+        div(class="spinner-layer layer-3 paper-spinner")
+          div(class="circle-clipper left paper-spinner")
+            div(class="circle paper-spinner")
+          div(class="gap-patch paper-spinner")
+            div(class="circle paper-spinner")
+          div(class="circle-clipper right paper-spinner")
+            div(class="circle paper-spinner")
+        div(class="spinner-layer layer-4 paper-spinner")
+          div(class="circle-clipper left paper-spinner")
+            div(class="circle paper-spinner")
+          div(class="gap-patch paper-spinner")
+            div(class="circle paper-spinner")
+          div(class="circle-clipper right paper-spinner")
+            div(class="circle paper-spinner")
 
 template(name="PaperToolbar")
   paper-toolbar(class=className role="toolbar")

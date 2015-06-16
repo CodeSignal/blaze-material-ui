@@ -75,6 +75,29 @@ paper-toolbar.paper-toolbar-1 paper-icon-button {
   flex-basis: 0.000000001px;
 }
 
+.paper-spinner-0 .layer-1.paper-spinner {
+  border-color:#4285f4;
+}
+
+.paper-spinner-0 .layer-2.paper-spinner {
+  border-color:#db4437;
+}
+
+.paper-spinner-0 .layer-3.paper-spinner {
+  border-color:#f4b400;
+}
+
+.paper-spinner-0 .layer-4.paper-spinner {
+  border-color:#4285f4;
+}
+.paper-spinner-0 .circle.paper-spinner {
+  position:absolute;
+  top:0;
+  right:0;
+  bottom:0;
+  left:0;
+}
+
 .card {
   position: relative;
   display: inline-block;
