@@ -1,0 +1,14 @@
+paper-fab(class=className
+        title=title
+        mini=mini
+        pressed=getPressed
+        focused=getFocused
+        active=getActive
+        icon=icon
+        aria-label=title
+        tabindex='0'
+        role="button")
+  +PaperRipple(fit='' id="ripple")
+  +PaperMaterial(elevation=getElevation fit='' animated='' id="shadow")
+  +IronIcon(label=title icon=icon id="icon")
+

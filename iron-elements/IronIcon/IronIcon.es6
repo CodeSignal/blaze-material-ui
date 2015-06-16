@@ -1,4 +1,4 @@
-class CoreIcon extends BlazeComponent {
+class IronIcon extends BlazeComponent {
   onCreated () {
     this.svg = new ReactiveVar({
       menu: 'M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z',
@@ -12,4 +12,4 @@ class CoreIcon extends BlazeComponent {
 
 }
 
-CoreIcon.register('CoreIcon');
+IronIcon.register('IronIcon');

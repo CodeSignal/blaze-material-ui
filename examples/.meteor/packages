@@ -7,6 +7,4 @@
 meteor-platform
 autopublish
 insecure
-grigio:babel
 codefights:blaze-material-ui
-peerlibrary:blaze-components

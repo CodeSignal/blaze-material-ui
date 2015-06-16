@@ -3,8 +3,25 @@
 </head>
 
 <body>
+  <h2>Paper Elements</h2>
+  <h3>Paper Progress</h3>
+  {{> PaperProgress className="paper-progress-0" value=30 min=0 max=100}}
+  <h3>Paper Fab</h3>
   {{> PaperFab className="blue" icon="menu"}}
-  {{> CoreIcon icon="menu"}}
-  {{> CoreIcon icon="refresh"}}
-  {{> CoreIcon icon="more"}}
+  {{> PaperFab className="yellow" icon="refresh"}}
+  {{> PaperFab className="green" icon="more"}}
+  {{> PaperFab icon="menu"}}
+  <h3>Paper Material</h3>
+  <div class="card">{{> PaperMaterial fit="" elevation=0}}</div>
+  <div class="card">{{> PaperMaterial fit="" elevation=1}}</div>
+  <div class="card">{{> PaperMaterial fit="" elevation=2}}</div>
+  <div class="card">{{> PaperMaterial fit="" elevation=3}}</div>
+  <div class="card">{{> PaperMaterial fit="" elevation=4}}</div>
+  <div class="card">{{> PaperMaterial fit="" elevation=5}}</div>
+  <h2>Iron Elements</h2>
+  <h3>Iron Icon Fab</h3>
+  {{> IronIcon icon="menu"}}
+  {{> IronIcon icon="refresh"}}
+  {{> IronIcon icon="more"}}
 </body>
+

@@ -13,7 +13,21 @@ Package.describe({
 Package.onUse(function(api) {
   api.versionsFrom('1.1.0.2');
 
+  // includes
+  var css = [
+    'layout/layout'
+  ];
+  var ironElements = [
+    'IronIcon'
+  ];
+  var paperElemens = [
+    'PaperProgress', 
+    'PaperMaterial', 
+    'PaperRipple',
+    'PaperFab'
+  ];
 
+  // server dependencies
   api.use([
     'peerlibrary:blaze-components',
     'grigio:babel',
@@ -21,31 +35,34 @@ Package.onUse(function(api) {
     'templating',
     'fourseven:scss'
   ]);
-
+  // client dependencies
   api.use([
     'templating',
-    'mquandalle:jade'
+    'mquandalle:jade@0.4.3'
   ], 'client');
 
-  api.addFiles([
-    //Layout
-    'layout/layout.scss',
-    // CoreIcon
-    'core-elements/CoreIcon/CoreIcon.jade',
-    'core-elements/CoreIcon/CoreIcon.es6',
-    // PaperShadow
-    'paper-elements/PaperShadow/PaperShadow.jade',
-    'paper-elements/PaperShadow/PaperShadow.es6',
-    'paper-elements/PaperShadow/PaperShadow.scss',
-    // PaperRipple
-    'paper-elements/PaperRipple/PaperRipple.jade',
-    'paper-elements/PaperRipple/PaperRipple.es6',
-    'paper-elements/PaperRipple/PaperRipple.scss',
-    // PaperFab
-    'paper-elements/PaperFab/PaperFab.jade',
-    'paper-elements/PaperFab/PaperFab.es6',
-    'paper-elements/PaperFab/PaperFab.scss',
-  ],'client');
+
+  var files = [];
+  var i = 0;
+
+  for (i = 0; i < css.length; i++) {
+    files.push(css[i] + '.scss');
+  }
+
+  for (i = 0; i < ironElements.length; i++) {
+    files.push('iron-elements/' + ironElements[i] + '/' + ironElements[i] + '.tpl.jade');
+    files.push('iron-elements/' + ironElements[i] + '/' + ironElements[i] + '.scss');
+    files.push('iron-elements/' + ironElements[i] + '/' + ironElements[i] + '.es6');
+  }
+
+  for (i = 0; i < paperElemens.length; i++) {
+    files.push('paper-elements/' + paperElemens[i] + '/' + paperElemens[i] + '.tpl.jade');
+    files.push('paper-elements/' + paperElemens[i] + '/' + paperElemens[i] + '.scss');
+    files.push('paper-elements/' + paperElemens[i] + '/' + paperElemens[i] + '.es6');
+  }
+
+
+  api.addFiles(files,'client');
 
   api.addFiles(['blaze-material-ui.es6'],'client');
 

@@ -1,0 +1,39 @@
+paper-progress {
+  display: inline-block;
+  width: 200px;
+  height: 4px;
+
+
+  [data-id=progressContainer].paper-progress {
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  [data-id=activeProgress].paper-progress,
+  [data-id=secondaryProgress].paper-progress {
+    transform-origin: left center;
+    transform: scaleX(0);
+  }
+
+  [data-id=activeProgress].indeterminate.paper-progress {
+    transform-origin: center center;
+    animation: indeterminate-bar 1s linear infinite;
+  }
+}
+
+
+@keyframes indeterminate-bar {
+0% {
+  transform: translate(-50%) scaleX(0);
+}
+
+50% {
+  transform: translate(0%) scaleX(0.3);
+}
+
+100% {
+  transform: translate(50%) scaleX(0);
+}
+
+}

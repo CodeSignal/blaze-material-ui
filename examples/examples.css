@@ -1,4 +1,43 @@
+@import url(//fonts.googleapis.com/css?family=RobotoDraft:400);
+@import url(//fonts.googleapis.com/css?family=Roboto:400);
+
+body {
+  font-family: "RobotoDraft", "Roboto", sans-serif;
+  background: #fafafa;
+}
+
 .blue {
-  background: #38579A;
+  background: #2E3BFF;
   color: #fff;
 }
+.yellow {
+  background: #FFFC04;
+  color: #000;
+}
+.green {
+  background: #239528;
+  color: #fff;
+}
+
+.paper-progress-0 [data-id=progressContainer].paper-progress {
+  background-color:#e0e0e0;
+}
+
+.paper-progress-0 [data-id=activeProgress].paper-progress {
+  background-color:#0f9d58;
+}
+
+.paper-progress-0 [data-id=secondaryProgress].paper-progress {
+  background-color:#b7e1cd;
+}
+
+
+.card {
+  position: relative;
+  display: inline-block;
+  height: 100px;
+  width: 100px;
+  background: white;
+  margin: 20px;
+}
+

@@ -1,22 +1,22 @@
 class PaperFab extends BlazeComponent {
 
   onCreated () {
-    this.z = new ReactiveVar(1);
+    this.elevation = new ReactiveVar(1);
     this.focused = new ReactiveVar(false);
     this.pressed = new ReactiveVar(false);
     this.active = new ReactiveVar(false);
   }
 
   onRendered () {
-    this.ripple = this._componentInternals.componentChildren.get()[0];
+    this.ripple = this.componentChildrenWith('ripples')[0];
   }
 
-  setZ (index) {
-    this.z.set(index);
+  setElevation (elevation) {
+    this.elevation.set(elevation);
   }
 
-  getZ () {
-    return this.z.get();
+  getElevation () {
+    return this.elevation.get();
   }
   getPressed () {
     return this.pressed.get();
@@ -32,20 +32,20 @@ class PaperFab extends BlazeComponent {
     if (!this.pressed.get()) {
       this.focused.set('');
     }
-    this.setZ(3);
+    this.setElevation(3);
   };
 
   onBlur (event) {
     this.focused.set(false);
-    this.setZ(1);
+    this.setElevation(1);
   }
 
   onDown (event) {
     this.pressed.set('');
     this.active.set('');
     this.focused.set(false);
-   this.ripple.onDown(event);
-    this.setZ(2);
+    this.ripple.onDown(event);
+    this.setElevation(2);
   }
 
   onUp (event) {
@@ -53,10 +53,10 @@ class PaperFab extends BlazeComponent {
     this.active.set(false);
     this.ripple.onUp(event);
     if (this.focused.get()) {
-      this.setZ(3);
+      this.setElevation(3);
     }
     else {
-      this.setZ(1);
+      this.setElevation(1);
     }
   }
 
