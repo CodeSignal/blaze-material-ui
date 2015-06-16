@@ -21,13 +21,21 @@ template(name="GhostButton")
     +PaperRipple(fit='' id="ripple")
     +Template.contentBlock
 
-template(name="PaperMaterial")
-  paper-material(class=className
-                 data-id=id
-                 fit=fit
-                 animated=animated
-                 elevation=elevation)
-    +Template.contentBlock
+template(name="PaperButton")
+  paper-button(class=className
+               title=title
+               pressed=getPressed
+               focused=getFocused
+               active=getActive
+               aria-label=title
+               tabindex='0'
+               role="button")
+    +PaperRipple(fit='' id="ripple")
+    +PaperMaterial(elevation=getElevation
+                   className="content paper-button"
+                   animated=''
+                   id="shadow")
+      +Template.contentBlock
 
 template(name="PaperFab")
   paper-fab(class=className
@@ -47,6 +55,14 @@ template(name="PaperFab")
                    id="shadow")
     +IronIcon(label=title icon=icon id="icon")
 
+template(name="PaperMaterial")
+  paper-material(class=className
+                 data-id=id
+                 fit=fit
+                 animated=animated
+                 elevation=elevation)
+    +Template.contentBlock
+
 template(name="PaperProgress")
   paper-progress(value=value class=className)
     div(data-id="progressContainer"
@@ -62,22 +78,6 @@ template(name="PaperProgress")
           fit=""
           class="paper-progress"
           style='transform:scaleX(#{getProgress})')
-
-template(name="PaperButton")
-  paper-button(class=className
-               title=title
-               pressed=getPressed
-               focused=getFocused
-               active=getActive
-               aria-label=title
-               tabindex='0'
-               role="button")
-    +PaperRipple(fit='' id="ripple")
-    +PaperMaterial(elevation=getElevation
-                   className="content paper-button"
-                   animated=''
-                   id="shadow")
-      +Template.contentBlock
 
 template(name="PaperRipple")
   paper-ripple(class=className
@@ -118,13 +118,6 @@ template(name="PaperSpinner")
           div(class="circle-clipper right paper-spinner")
             div(class="circle paper-spinner")
 
-template(name="PaperToolbar")
-  paper-toolbar(class=className role="toolbar")
-    div(data-id="topBar" class="toolbar-tools paper-toolbar" center horizontal layout)
-      +Template.contentBlock
-    div(data-id="middleBar" class="toolbar-tools paper-toolbar" center horizontal layout)
-    div(data-id="bottomBar" class="toolbar-tools paper-toolbar" center horizontal layout)
-
 template(name="PaperIconButton")
   paper-icon-button(class=className
                     title=title
@@ -138,5 +131,12 @@ template(name="PaperIconButton")
                     role="button")
     +PaperRipple(fit='' id="ink" className="circle paper-icon-button")
     +IronIcon(label=title icon=icon id="icon")
+
+template(name="PaperToolbar")
+  paper-toolbar(class=className role="toolbar")
+    div(data-id="topBar" class="toolbar-tools paper-toolbar" center horizontal layout)
+      +Template.contentBlock
+    div(data-id="middleBar" class="toolbar-tools paper-toolbar" center horizontal layout)
+    div(data-id="bottomBar" class="toolbar-tools paper-toolbar" center horizontal layout)
 
 //# sourceMappingURL=blaze-material-ui.jade.map
