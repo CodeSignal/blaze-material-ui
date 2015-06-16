@@ -204,45 +204,6 @@ iron-icon {
   fill: currentColor;
 }
 
-ghost-button {
-  display: inline-block;
-  position: relative;
-  box-sizing: border-box;
-  min-width: 5.14em;
-  margin: 0 0.29em;
-  padding: 0.7em 0.57em;
-  background: transparent;
-  text-align: center;
-  font: inherit;
-  text-transform: uppercase;
-  outline: none;
-  border-radius: 3px;
-  user-select: none;
-  cursor: pointer;
-  z-index: 0;
-  box-shadow: 0 0 0 1px currentColor inset;
-
-  &.keyboard-focus.ghost-button {
-    font-weight: bold;
-  }
-
-  &[disabled] {
-    background: #eaeaea;
-    color: #a8a8a8;
-    cursor: auto;
-    pointer-events: none;
-  }
-
-  &[noink] paper-ripple.ghost-button {
-    display: none;
-  }
-
-  .content.ghost-button  * {
-    text-transform: inherit;
-  }
-}
-
-
 paper-button {
   display: inline-block;
       position: relative;
@@ -797,26 +758,6 @@ paper-spinner [data-id=spinnerContainer].cooldown.paper-spinner {
 
 
 
-paper-icon-button {
-  display: inline-block;
-  position: relative;
-  padding: 8px;
-  outline: none;
-  user-select: none;
-  cursor: pointer;
-  z-index: 0;
-  border-radius: 50%;
-}
-
-paper-icon-button [data-id=ink].paper-icon-button {
-  opacity: 0.6;
-}
-
-paper-icon-button[disabled] {
-  pointer-events: none;
-  cursor: auto;
-}
-
 paper-toolbar {
   display: block;
   position: relative;
@@ -910,6 +851,26 @@ paper-toolbar {
     margin-left: 0;
   }
 
+}
+
+paper-icon-button {
+  display: inline-block;
+  position: relative;
+  padding: 8px;
+  outline: none;
+  user-select: none;
+  cursor: pointer;
+  z-index: 0;
+  border-radius: 50%;
+}
+
+paper-icon-button [data-id=ink].paper-icon-button {
+  opacity: 0.6;
+}
+
+paper-icon-button[disabled] {
+  pointer-events: none;
+  cursor: auto;
 }
 
 //# sourceMappingURL=blaze-material-ui.scss.map

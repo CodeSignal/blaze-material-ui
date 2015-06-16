@@ -9,18 +9,6 @@ template(name="IronIcon")
         viewBox="0 0 24 24")
       path(d=getSVG[icon])
 
-template(name="GhostButton")
-  ghost-button(class=className
-               title=title
-               pressed=getPressed
-               focused=getFocused
-               active=getActive
-               aria-label=title
-               tabindex='0'
-               role="button")
-    +PaperRipple(fit='' id="ripple")
-    +Template.contentBlock
-
 template(name="PaperButton")
   paper-button(class=className
                title=title
@@ -118,6 +106,13 @@ template(name="PaperSpinner")
           div(class="circle-clipper right paper-spinner")
             div(class="circle paper-spinner")
 
+template(name="PaperToolbar")
+  paper-toolbar(class=className role="toolbar")
+    div(data-id="topBar" class="toolbar-tools paper-toolbar" center horizontal layout)
+      +Template.contentBlock
+    div(data-id="middleBar" class="toolbar-tools paper-toolbar" center horizontal layout)
+    div(data-id="bottomBar" class="toolbar-tools paper-toolbar" center horizontal layout)
+
 template(name="PaperIconButton")
   paper-icon-button(class=className
                     title=title
@@ -131,12 +126,5 @@ template(name="PaperIconButton")
                     role="button")
     +PaperRipple(fit='' id="ink" className="circle paper-icon-button")
     +IronIcon(label=title icon=icon id="icon")
-
-template(name="PaperToolbar")
-  paper-toolbar(class=className role="toolbar")
-    div(data-id="topBar" class="toolbar-tools paper-toolbar" center horizontal layout)
-      +Template.contentBlock
-    div(data-id="middleBar" class="toolbar-tools paper-toolbar" center horizontal layout)
-    div(data-id="bottomBar" class="toolbar-tools paper-toolbar" center horizontal layout)
 
 //# sourceMappingURL=blaze-material-ui.jade.map

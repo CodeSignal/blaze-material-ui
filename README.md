@@ -18,57 +18,103 @@ npm install
 gulp
 ```
 
+## Create components from gulp
+
+```
+gulp component --type=paper-elements --name=PaperButton
+```
+
+will create
+```
+lib
+  ┗━┳ paper-elements
+    ┗━┳ PaperButton
+      ┣━ PaperButton.es6
+      ┣━ PaperButton.scss
+      ┗━ PaperButton.tpl.jade
+```
+
 ## Usage
 
 ### Spacebars
 ```
 <body>
-  {{#PaperButton}}Button{{/PaperButton}}
+  {{#PaperButton}}
+    Button
+  {{/PaperButton}}
 </body>
 ```
 
 ### Jade
 ```
 body
-  +PaperButton() Button
+  +PaperButton() 
+    | Button
 ```
 
 ## Elements
 ### Iron Elements
 
 #### IronIcon
+![IronIcon](examples/readme/IronIcon.png)
 
 ```
-  {{> IronIcon icon="menu"}}
+{{> IronIcon icon=icon}}
 ```
 
 ### Paper Elements
 
 #### PaperButton
+![PaperButton](examples/readme/PaperButton.png)
 
 ```
-  {{# PaperButton}}Button{{/PaperButton}}
+{{# PaperButton}}[content]{{/PaperButton}}
 ```
 
 #### PaperFab
+![PaperFab](examples/readme/PaperFab.png)
 
 ```
-  {{> PaperFab icon="menu"}}
+{{> PaperFab icon=icon}}
 ```
 
 #### PaperIconButton
+![PaperIconButton](examples/readme/PaperIconButton.png)
 
 ```
-  {{> PaperIconButton icon="menu"}}
+{{> PaperIconButton icon=icon}}
 ```
 #### PaperMaterial
+![PaperMaterial](examples/readme/PaperMaterial.png)
 
 ```
-  {{>PaperMaterial elevation="1"}}
-  {{# PaperMaterial elevation="1"}}[content]{{/ PaperMaterial}}
+{{>PaperMaterial elevation=elevation fit=''}}
+{{# PaperMaterial elevation=elevation}}[content]{{/ PaperMaterial}}
 ```
+
 #### PaperRipple
 
 ```
-  {{> PaperRipple}}
+{{> PaperRipple}}
+```
+
+#### PaperProgress
+![PaperProgress](examples/readme/PaperProgress.png)
+
+```
+{{> PaperProgress value=value min=min max=max}}
+```
+
+#### PaperSpinner
+![PaperSpinner](examples/readme/PaperSpinner.png)
+
+```
+{{> PaperSpinner active=active}}
+```
+
+#### PaperToolbar
+![PaperToolbar](examples/readme/PaperToolbar.png)
+
+```
+{{# PaperToolbar}}[content]{{/PaperToolbar}}
 ```
