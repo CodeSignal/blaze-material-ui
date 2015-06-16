@@ -1,3 +1,2 @@
-class PaperMaterial extends BlazeComponent {
-}
+class PaperMaterial extends BlazeComponent {}
 PaperMaterial.register('PaperMaterial');

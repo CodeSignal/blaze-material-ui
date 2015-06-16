@@ -1,0 +1,13 @@
+paper-icon-button(class=className
+                  title=title
+                  mini=mini
+                  pressed=getPressed
+                  focused=getFocused
+                  active=getActive
+                  icon=icon
+                  aria-label=title
+                  tabindex='0'
+                  role="button")
+  +PaperRipple(fit='' id="ink" className="circle paper-icon-button")
+  +IronIcon(label=title icon=icon id="icon")
+

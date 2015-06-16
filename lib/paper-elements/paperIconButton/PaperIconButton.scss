@@ -1,0 +1,19 @@
+paper-icon-button {
+  display: inline-block;
+  position: relative;
+  padding: 8px;
+  outline: none;
+  user-select: none;
+  cursor: pointer;
+  z-index: 0;
+  border-radius: 50%;
+}
+
+paper-icon-button [data-id=ink].paper-icon-button {
+  opacity: 0.6;
+}
+
+paper-icon-button[disabled] {
+  pointer-events: none;
+  cursor: auto;
+}
