@@ -21,8 +21,8 @@ Package.onUse(function(api) {
     'IronIcon'
   ];
   var paperElemens = [
-    'PaperProgress', 
-    'PaperMaterial', 
+    'PaperProgress',
+    'PaperMaterial',
     'PaperRipple',
     'GhostButton',
     'PaperButton',
@@ -34,13 +34,12 @@ Package.onUse(function(api) {
     'peerlibrary:blaze-components',
     'grigio:babel',
     'reactive-var',
-    'templating',
-    'fourseven:scss'
   ]);
   // client dependencies
   api.use([
     'templating',
-    'mquandalle:jade@0.4.3'
+    'mquandalle:jade@0.4.3',
+    'fourseven:scss',
   ], 'client');
 
 
@@ -48,19 +47,19 @@ Package.onUse(function(api) {
   var i = 0;
 
   for (i = 0; i < css.length; i++) {
-    files.push(css[i] + '.scss');
+    files.push('lib/' + css[i] + '.scss');
   }
 
   for (i = 0; i < ironElements.length; i++) {
-    files.push('iron-elements/' + ironElements[i] + '/' + ironElements[i] + '.tpl.jade');
-    files.push('iron-elements/' + ironElements[i] + '/' + ironElements[i] + '.scss');
-    files.push('iron-elements/' + ironElements[i] + '/' + ironElements[i] + '.es6');
+    files.push('lib/iron-elements/' + ironElements[i] + '/' + ironElements[i] + '.tpl.jade');
+    files.push('lib/iron-elements/' + ironElements[i] + '/' + ironElements[i] + '.scss');
+    files.push('lib/iron-elements/' + ironElements[i] + '/' + ironElements[i] + '.es6');
   }
 
   for (i = 0; i < paperElemens.length; i++) {
-    files.push('paper-elements/' + paperElemens[i] + '/' + paperElemens[i] + '.tpl.jade');
-    files.push('paper-elements/' + paperElemens[i] + '/' + paperElemens[i] + '.scss');
-    files.push('paper-elements/' + paperElemens[i] + '/' + paperElemens[i] + '.es6');
+    files.push('lib/paper-elements/' + paperElemens[i] + '/' + paperElemens[i] + '.tpl.jade');
+    files.push('lib/paper-elements/' + paperElemens[i] + '/' + paperElemens[i] + '.scss');
+    files.push('lib/paper-elements/' + paperElemens[i] + '/' + paperElemens[i] + '.es6');
   }
 
 

@@ -1,0 +1,9 @@
+{
+  "enableAutoprefixer": true,
+  "outputStyle": "expanded",
+  "sourceComments": true,
+  "sourceMap": true,
+  "autoprefixerOptions": {
+    "browsers": ["> 0.5%", "last 2 versions"]
+  }
+}
