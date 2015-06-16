@@ -2,7 +2,7 @@
 
 ## inspired by polymer
 
-This library provides material design elemets in meteor.  
+This library provides material design elements in meteor.  
 It is built on top of [meteor-blaze-compoents](https://github.com/peerlibrary/meteor-blaze-components) which uses [blaze](https://github.com/meteor/blaze)
 
 ## Installation
