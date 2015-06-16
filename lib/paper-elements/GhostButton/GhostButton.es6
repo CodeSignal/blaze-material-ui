@@ -14,6 +14,7 @@ class GhostButton extends BlazeComponent {
    */
   onRendered () {
     // find the ripples container
+    console.log('yay');
     this.ripple = this.componentChildrenWith('rippleElements')[0];
   }
 

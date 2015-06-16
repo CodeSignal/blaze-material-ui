@@ -1,0 +1,119 @@
+
+
+template(name="IronIcon")
+  iron-icon(class=className
+            aria-label=label
+            data-id=id
+            icon=icon)
+    svg(xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24")
+      path(d=getSVG[icon])
+
+
+
+template(name="GhostButton")
+  ghost-button(class=className
+               title=title
+               pressed=getPressed
+               focused=getFocused
+               active=getActive
+               aria-label=title
+               tabindex='0'
+               role="button")
+    +PaperRipple(fit='' id="ripple")
+    +Template.contentBlock
+
+
+
+template(name="PaperButton")
+  paper-button(class=className
+               title=title
+               pressed=getPressed
+               focused=getFocused
+               active=getActive
+               aria-label=title
+               tabindex='0'
+               role="button")
+    +PaperRipple(fit='' id="ripple")
+    +PaperMaterial(elevation=getElevation
+                   className="content paper-button"
+                   animated=''
+                   id="shadow")
+      +Template.contentBlock
+
+
+
+template(name="PaperMaterial")
+  paper-material(class=className
+                 data-id=id
+                 fit=fit
+                 animated=animated
+                 elevation=elevation)
+    +Template.contentBlock
+
+
+
+template(name="PaperFab")
+  paper-fab(class=className
+            title=title
+            mini=mini
+            pressed=getPressed
+            focused=getFocused
+            active=getActive
+            icon=icon
+            aria-label=title
+            tabindex='0'
+            role="button")
+    +PaperRipple(fit='' id="ripple")
+    +PaperMaterial(elevation=getElevation
+                   fit=''
+                   animated=''
+                   id="shadow")
+    +IronIcon(label=title icon=icon id="icon")
+
+
+
+template(name="PaperProgress")
+  paper-progress(value=value class=className)
+    div(data-id="progressContainer"
+        role="progressbar"
+        class="paper-progress"
+        aria-valuenow=value
+        aria-valuemin=min
+        aria-valuemax=max)
+      div(data-id="secondaryProgress"
+          fit=""
+          class="paper-progress" )
+      div(data-id="activeProgress"
+          fit=""
+          class="paper-progress"
+          style='transform:scaleX(#{getProgress})')
+
+
+
+template(name="PaperRipple")
+  paper-ripple(class=className
+               fit
+               data-id=id)
+    div(data-id="bg")
+    div(data-id="waves")
+
+
+
+template(name="PaperIconButton")
+  paper-icon-button(class=className
+                    title=title
+                    mini=mini
+                    pressed=getPressed
+                    focused=getFocused
+                    active=getActive
+                    icon=icon
+                    aria-label=title
+                    tabindex='0'
+                    role="button")
+    +PaperRipple(fit='' id="ink" className="circle paper-icon-button")
+    +IronIcon(label=title icon=icon id="icon")
+
+//# sourceMappingURL=blaze-material-ui.jade.map

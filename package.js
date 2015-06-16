@@ -13,23 +13,6 @@ Package.describe({
 Package.onUse(function(api) {
   api.versionsFrom('1.1.0.2');
 
-  // includes
-  var css = [
-    'layout/layout'
-  ];
-  var ironElements = [
-    'IronIcon'
-  ];
-  var paperElemens = [
-    'PaperProgress',
-    'PaperMaterial',
-    'PaperRipple',
-    'PaperIconButton',
-    'GhostButton',
-    'PaperButton',
-    'PaperFab'
-  ];
-
   // server dependencies
   api.use([
     'peerlibrary:blaze-components',
@@ -44,29 +27,12 @@ Package.onUse(function(api) {
   ], 'client');
 
 
-  var files = [];
-  var i = 0;
 
-  for (i = 0; i < css.length; i++) {
-    files.push('lib/' + css[i] + '.scss');
-  }
-
-  for (i = 0; i < ironElements.length; i++) {
-    files.push('lib/iron-elements/' + ironElements[i] + '/' + ironElements[i] + '.tpl.jade');
-    files.push('lib/iron-elements/' + ironElements[i] + '/' + ironElements[i] + '.scss');
-    files.push('lib/iron-elements/' + ironElements[i] + '/' + ironElements[i] + '.es6');
-  }
-
-  for (i = 0; i < paperElemens.length; i++) {
-    files.push('lib/paper-elements/' + paperElemens[i] + '/' + paperElemens[i] + '.tpl.jade');
-    files.push('lib/paper-elements/' + paperElemens[i] + '/' + paperElemens[i] + '.scss');
-    files.push('lib/paper-elements/' + paperElemens[i] + '/' + paperElemens[i] + '.es6');
-  }
-
-
-  api.addFiles(files,'client');
-
-  api.addFiles(['blaze-material-ui.es6'],'client');
+  api.addFiles([
+    'dist/blaze-material-ui.jade',
+    'dist/blaze-material-ui.scss',
+    'dist/blaze-material-ui.es6'
+  ],'client');
 
 });
 

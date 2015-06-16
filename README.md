@@ -11,8 +11,14 @@ It is built on top of [meteor-blaze-compoents](https://github.com/peerlibrary/me
 meteor add codefights:blaze-material-ui
 ```
 
-## Usage
+## Build blaze-meteor-components
 
+```
+npm install
+gulp
+```
+
+## Usage
 
 ### Spacebars
 ```

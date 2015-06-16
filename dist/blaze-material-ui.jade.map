@@ -1,0 +1,16 @@
+{
+  "version": 3,
+  "file": "blaze-material-ui.jade",
+  "sources": [
+    "lib/iron-elements/IronIcon/IronIcon.tpl.jade",
+    "lib/paper-elements/GhostButton/GhostButton.tpl.jade",
+    "lib/paper-elements/PaperButton/PaperButton.tpl.jade",
+    "lib/paper-elements/PaperMaterial/PaperMaterial.tpl.jade",
+    "lib/paper-elements/PaperFab/PaperFab.tpl.jade",
+    "lib/paper-elements/PaperProgress/PaperProgress.tpl.jade",
+    "lib/paper-elements/PaperRipple/PaperRipple.tpl.jade",
+    "lib/paper-elements/paperIconButton/PaperIconButton.tpl.jade"
+  ],
+  "names": [],
+  "mappings": "AAAA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;;ACXA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;;ACZA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;;AChBA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;;ACRA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;;AClBA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;;AChBA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;;ACPA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"
+}
