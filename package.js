@@ -24,6 +24,8 @@ Package.onUse(function(api) {
     'PaperProgress', 
     'PaperMaterial', 
     'PaperRipple',
+    'GhostButton',
+    'PaperButton',
     'PaperFab'
   ];
 

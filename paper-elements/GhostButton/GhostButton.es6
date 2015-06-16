@@ -1,4 +1,4 @@
-class PaperFab extends BlazeComponent {
+class GhostButton extends BlazeComponent {
 
   onCreated () {
     this.elevation = new ReactiveVar(1);
@@ -11,13 +11,6 @@ class PaperFab extends BlazeComponent {
     this.ripple = this.componentChildrenWith('ripples')[0];
   }
 
-  setElevation (elevation) {
-    this.elevation.set(elevation);
-  }
-
-  getElevation () {
-    return this.elevation.get();
-  }
   getPressed () {
     return this.pressed.get();
   }
@@ -37,7 +30,6 @@ class PaperFab extends BlazeComponent {
 
   onBlur (event) {
     this.focused.set(false);
-    this.setElevation(1);
   }
 
   onDown (event) {
@@ -45,7 +37,6 @@ class PaperFab extends BlazeComponent {
     this.active.set('');
     this.focused.set(false);
     this.ripple.onDown(event);
-    this.setElevation(2);
   }
 
   onUp (event) {
@@ -53,12 +44,6 @@ class PaperFab extends BlazeComponent {
       this.pressed.set(false);
       this.active.set(false);
       this.ripple.onUp(event);
-      if (this.focused.get()) {
-        this.setElevation(3);
-      }
-      else {
-        this.setElevation(1);
-      }
     }
   }
 
@@ -74,4 +59,4 @@ class PaperFab extends BlazeComponent {
 }
 
 
-PaperFab.register('PaperFab')
+GhostButton.register('GhostButton')

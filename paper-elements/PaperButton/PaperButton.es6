@@ -1,4 +1,4 @@
-class PaperFab extends BlazeComponent {
+class PaperButton extends BlazeComponent {
 
   onCreated () {
     this.elevation = new ReactiveVar(1);
@@ -74,4 +74,4 @@ class PaperFab extends BlazeComponent {
 }
 
 
-PaperFab.register('PaperFab')
+PaperButton.register('PaperButton')

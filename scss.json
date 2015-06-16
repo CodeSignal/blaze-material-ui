@@ -1,6 +1,4 @@
 {
-  "useIndex" : true,
-  "indexFilePath" : "client/stylesheets/main.scss",
   "enableAutoprefixer": true,
   "autoprefixerOptions": {
       "browsers": ["> 5%", "last 2 versions"]

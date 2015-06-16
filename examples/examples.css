@@ -19,6 +19,19 @@ body {
   color: #fff;
 }
 
+ghost-button.blue {
+  background: none;
+  color: #2E3BFF;
+}
+ghost-button.red {
+  background: none;
+  color: #FF2C38;
+}
+ghost-button.green {
+  background: none;
+  color: #239528;
+}
+
 .paper-progress-0 [data-id=progressContainer].paper-progress {
   background-color:#e0e0e0;
 }
@@ -35,9 +48,10 @@ body {
 .card {
   position: relative;
   display: inline-block;
-  height: 100px;
-  width: 100px;
   background: white;
   margin: 20px;
+}
+.card paper-material {
+  padding: 20px;
 }
 

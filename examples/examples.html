@@ -11,13 +11,23 @@
   {{> PaperFab className="yellow" icon="refresh"}}
   {{> PaperFab className="green" icon="more"}}
   {{> PaperFab icon="menu"}}
+  <h3>Paper Button</h3>
+  {{# PaperButton className="blue"}}Blue{{/PaperButton}}
+  {{# PaperButton className="green"}}Green{{/PaperButton}}
+  {{# PaperButton className="yellow"}}Yellow{{/PaperButton}}
+  {{# PaperButton}}Default{{/PaperButton}}
+  <h3>Ghost Button</h3>
+  {{# GhostButton className="blue"}}Blue{{/GhostButton}}
+  {{# GhostButton className="green"}}Green{{/GhostButton}}
+  {{# GhostButton className="red"}}Red{{/GhostButton}}
+  {{# GhostButton}}Default{{/GhostButton}}
   <h3>Paper Material</h3>
-  <div class="card">{{> PaperMaterial fit="" elevation=0}}</div>
-  <div class="card">{{> PaperMaterial fit="" elevation=1}}</div>
-  <div class="card">{{> PaperMaterial fit="" elevation=2}}</div>
-  <div class="card">{{> PaperMaterial fit="" elevation=3}}</div>
-  <div class="card">{{> PaperMaterial fit="" elevation=4}}</div>
-  <div class="card">{{> PaperMaterial fit="" elevation=5}}</div>
+  <div class="card">{{# PaperMaterial elevation=0}}elevation="0"{{/PaperMaterial}}</div>
+  <div class="card">{{# PaperMaterial elevation=1}}elevation="1"{{/PaperMaterial}}</div>
+  <div class="card">{{# PaperMaterial elevation=2}}elevation="2"{{/PaperMaterial}}</div>
+  <div class="card">{{# PaperMaterial elevation=3}}elevation="3"{{/PaperMaterial}}</div>
+  <div class="card">{{# PaperMaterial elevation=4}}elevation="4"{{/PaperMaterial}}</div>
+  <div class="card">{{# PaperMaterial elevation=5}}elevation="5"{{/PaperMaterial}}</div>
   <h2>Iron Elements</h2>
   <h3>Iron Icon Fab</h3>
   {{> IronIcon icon="menu"}}

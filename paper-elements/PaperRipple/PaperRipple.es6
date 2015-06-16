@@ -57,13 +57,6 @@ class PaperRipple extends BlazeComponent {
   getRipples () {
     return this.ripples.get()
   }
-
-  events() {
-    return [{
-      'mousedown': this.onDown,
-      'mouseup': this.onUp
-    }];
-  }
 }
 
 PaperRipple.register('PaperRipple');

@@ -1,0 +1,14 @@
+paper-button(class=className
+             title=title
+             pressed=getPressed
+             focused=getFocused
+             active=getActive
+             aria-label=title
+             tabindex='0'
+             role="button")
+  +PaperRipple(fit='' id="ripple")
+  +PaperMaterial(elevation=getElevation 
+                className="content paper-button"
+                 animated='' 
+                 id="shadow")
+    +Template.contentBlock
