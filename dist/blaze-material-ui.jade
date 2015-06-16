@@ -1,5 +1,3 @@
-
-
 template(name="IronIcon")
   iron-icon(class=className
             aria-label=label
@@ -10,8 +8,6 @@ template(name="IronIcon")
         height="24"
         viewBox="0 0 24 24")
       path(d=getSVG[icon])
-
-
 
 template(name="GhostButton")
   ghost-button(class=className
@@ -24,8 +20,6 @@ template(name="GhostButton")
                role="button")
     +PaperRipple(fit='' id="ripple")
     +Template.contentBlock
-
-
 
 template(name="PaperButton")
   paper-button(class=className
@@ -42,18 +36,6 @@ template(name="PaperButton")
                    animated=''
                    id="shadow")
       +Template.contentBlock
-
-
-
-template(name="PaperMaterial")
-  paper-material(class=className
-                 data-id=id
-                 fit=fit
-                 animated=animated
-                 elevation=elevation)
-    +Template.contentBlock
-
-
 
 template(name="PaperFab")
   paper-fab(class=className
@@ -73,7 +55,13 @@ template(name="PaperFab")
                    id="shadow")
     +IronIcon(label=title icon=icon id="icon")
 
-
+template(name="PaperMaterial")
+  paper-material(class=className
+                 data-id=id
+                 fit=fit
+                 animated=animated
+                 elevation=elevation)
+    +Template.contentBlock
 
 template(name="PaperProgress")
   paper-progress(value=value class=className)
@@ -91,8 +79,6 @@ template(name="PaperProgress")
           class="paper-progress"
           style='transform:scaleX(#{getProgress})')
 
-
-
 template(name="PaperRipple")
   paper-ripple(class=className
                fit
@@ -100,7 +86,12 @@ template(name="PaperRipple")
     div(data-id="bg")
     div(data-id="waves")
 
-
+template(name="PaperToolbar")
+  paper-toolbar(class=className role="toolbar")
+    div(data-id="topBar" class="toolbar-tools paper-toolbar" center horizontal layout)
+      +Template.contentBlock
+    div(data-id="middleBar" class="toolbar-tools paper-toolbar" center horizontal layout)
+    div(data-id="bottomBar" class="toolbar-tools paper-toolbar" center horizontal layout)
 
 template(name="PaperIconButton")
   paper-icon-button(class=className

@@ -21,6 +21,15 @@
   {{# GhostButton className="green"}}Green{{/GhostButton}}
   {{# GhostButton className="red"}}Red{{/GhostButton}}
   {{# GhostButton}}Default{{/GhostButton}}
+  <h3>Paper Toolbar</h3>
+  {{# PaperToolbar className="paper-toolbar-0"}}Toolbar{{/PaperToolbar}}
+  <br>
+  {{# PaperToolbar className="paper-toolbar-0"}}
+    {{>PaperIconButton icon="menu"}}
+    <span class="title">Toolbar</span>
+    {{>PaperIconButton icon="refresh"}}
+    {{>PaperIconButton icon="more"}}
+  {{/PaperToolbar}}
   <h3>Paper Icon Button</h3>
   {{> PaperIconButton icon="menu"}}
   {{> PaperIconButton icon="refresh"}}

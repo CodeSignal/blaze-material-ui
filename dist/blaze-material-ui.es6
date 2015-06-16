@@ -40,7 +40,6 @@ class GhostButton extends BlazeComponent {
    */
   onRendered () {
     // find the ripples container
-    console.log('yay');
     this.ripple = this.componentChildrenWith('rippleElements')[0];
   }
 
@@ -273,9 +272,6 @@ class PaperButton extends BlazeComponent {
 PaperButton.register('PaperButton')
 
 
-class PaperMaterial extends BlazeComponent {}
-PaperMaterial.register('PaperMaterial');
-
 class PaperFab extends BlazeComponent {
 
   /**
@@ -415,6 +411,9 @@ class PaperFab extends BlazeComponent {
 PaperFab.register('PaperFab')
 
 
+class PaperMaterial extends BlazeComponent {}
+PaperMaterial.register('PaperMaterial');
+
 class PaperProgress extends BlazeComponent {
   
   /**
@@ -499,6 +498,21 @@ class PaperRipple extends BlazeComponent {
 }
 
 PaperRipple.register('PaperRipple');
+
+class PaperToolbar extends BlazeComponent {
+
+  /**
+   * set defaults
+   */
+  onCreated () {}
+
+  /**
+   * after render
+   */
+  onRendered () {}
+}
+
+PaperToolbar.register('PaperToolbar');
 
 class PaperIconButton extends BlazeComponent {
 

@@ -55,7 +55,7 @@ gulp.task('templates', ['clean'], function() {
        var name = path.basename(file.path).replace('.tpl.jade','');
        return {name: name}
      }))
-    .pipe(wrap('\n\ntemplate(name="<%= data.name %>")\n<%= data.contents %>',{}, {variable: 'data'}))
+    .pipe(wrap('template(name="<%= data.name %>")\n<%= data.contents %>',{}, {variable: 'data'}))
     .pipe(concat('blaze-material-ui.jade'))
     .pipe(gulp.dest('./dist'));
 });
