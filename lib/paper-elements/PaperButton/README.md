@@ -9,11 +9,11 @@
 Basic usage
 
 ```
-{{# PaperButton}}[content]{{/Paperbutton}}
+{{# PaperButton}}[content]{{/PaperButton}}
 ```
 
 Add a custom className
 
 ```
-{{# PaperButton className="my-custom-class"}}[content]{{/Paperbutton}}
+{{# PaperButton className="my-custom-class"}}[content]{{/PaperButton}}
 ```
