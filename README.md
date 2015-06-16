@@ -53,68 +53,26 @@ body
 ```
 
 ## Elements
+
 ### Iron Elements
+* IronIcon
+  * [IronIcon](lib/iron-elements/IronIcon)
 
-#### IronIcon
-![IronIcon](examples/readme/IronIcon.png)
-
-```
-{{> IronIcon icon=icon}}
-```
 
 ### Paper Elements
+* PaperButton
+  * [PaperButton](lib/paper-elements/PaperButton)
+* PaperFab
+  * [PaperFab](lib/paper-elements/PaperFab)
+* PaperIconButton
+  * [PaperIconButton](lib/paper-elements/PaperIconButton)
+* PaperMaterial
+  * [PaperMaterial](lib/paper-elements/PaperMaterial)
+* PaperRipple
+* PaperProgress
+  * [PaperProgress](lib/paper-elements/PaperProgress)
+* PaperSpinner
+  * [PaperSpinner](lib/paper-elements/PaperSpinner)
+* PaperToolbar
+  * [PaperToolbar](lib/paper-elements/PaperToolbar)
 
-#### PaperButton
-![PaperButton](examples/readme/PaperButton.png)
-
-```
-{{# PaperButton}}[content]{{/PaperButton}}
-```
-
-#### PaperFab
-![PaperFab](examples/readme/PaperFab.png)
-
-```
-{{> PaperFab icon=icon}}
-```
-
-#### PaperIconButton
-![PaperIconButton](examples/readme/PaperIconButton.png)
-
-```
-{{> PaperIconButton icon=icon}}
-```
-#### PaperMaterial
-![PaperMaterial](examples/readme/PaperMaterial.png)
-
-```
-{{>PaperMaterial elevation=elevation fit=''}}
-{{# PaperMaterial elevation=elevation}}[content]{{/ PaperMaterial}}
-```
-
-#### PaperRipple
-
-```
-{{> PaperRipple}}
-```
-
-#### PaperProgress
-![PaperProgress](examples/readme/PaperProgress.png)
-
-```
-{{> PaperProgress value=value min=min max=max}}
-```
-
-#### PaperSpinner
-![PaperSpinner](examples/readme/PaperSpinner.png)
-
-```
-{{> PaperSpinner active=active}}
-```
-
-#### PaperToolbar
-![PaperToolbar](examples/readme/PaperToolbar.png)
-
-```
-{{# PaperToolbar}}[content]{{/PaperToolbar}}
-```

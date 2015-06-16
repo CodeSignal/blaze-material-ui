@@ -24,7 +24,9 @@ gulp.task('component', [], function() {
     .pipe(template({name: argv.name}))
     .pipe(rename(function (path) {
       path.dirname = argv.name;
-      path.basename = argv.name;
+      if(path.basename !== 'README') {
+        path.basename = argv.name;
+      }
       if(path.extname === '.jade') {
         path.extname = '.tpl.jade';
       }
