@@ -1,8 +1,11 @@
 var gulp = require('gulp');
 var wrap = require('gulp-wrap');
 var concat = require('gulp-concat-sourcemap');
+var argv = require('yargs').argv;
+var template = require('gulp-template');
 var data = require('gulp-data');
 var replace = require('gulp-replace');
+var rename = require("gulp-rename");
 var del = require('del');
 var path = require('path');
 
@@ -14,6 +17,19 @@ var paths = {
 
 gulp.task('clean', function(cb) {
   del(['./dist'], cb);
+});
+
+gulp.task('component', [], function() {
+  return gulp.src('gulp/template/*')
+    .pipe(template({name: argv.name}))
+    .pipe(rename(function (path) {
+      path.dirname = argv.name;
+      path.basename = argv.name;
+      if(path.extname === '.jade') {
+        path.extname = '.tpl.jade';
+      }
+    }))
+    .pipe(gulp.dest('./lib/'+ argv.type));
 });
 
 gulp.task('scripts', ['clean'], function() {
