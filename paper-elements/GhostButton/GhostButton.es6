@@ -1,7 +1,6 @@
 class GhostButton extends BlazeComponent {
 
   onCreated () {
-    this.elevation = new ReactiveVar(1);
     this.focused = new ReactiveVar(false);
     this.pressed = new ReactiveVar(false);
     this.active = new ReactiveVar(false);
@@ -25,7 +24,6 @@ class GhostButton extends BlazeComponent {
     if (!this.pressed.get()) {
       this.focused.set('');
     }
-    this.setElevation(3);
   };
 
   onBlur (event) {
