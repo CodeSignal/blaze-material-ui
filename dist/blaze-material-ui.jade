@@ -9,18 +9,6 @@ template(name="IronIcon")
         viewBox="0 0 24 24")
       path(d=getSVG[icon])
 
-template(name="GhostButton")
-  ghost-button(class=className
-               title=title
-               pressed=getPressed
-               focused=getFocused
-               active=getActive
-               aria-label=title
-               tabindex='0'
-               role="button")
-    +PaperRipple(fit='' id="ripple")
-    +Template.contentBlock
-
 template(name="PaperButton")
   paper-button(class=className
                title=title
@@ -36,6 +24,18 @@ template(name="PaperButton")
                    animated=''
                    id="shadow")
       +Template.contentBlock
+
+template(name="GhostButton")
+  ghost-button(class=className
+               title=title
+               pressed=getPressed
+               focused=getFocused
+               active=getActive
+               aria-label=title
+               tabindex='0'
+               role="button")
+    +PaperRipple(fit='' id="ripple")
+    +Template.contentBlock
 
 template(name="PaperFab")
   paper-fab(class=className
@@ -54,6 +54,13 @@ template(name="PaperFab")
                    animated=''
                    id="shadow")
     +IronIcon(label=title icon=icon id="icon")
+
+template(name="PaperRipple")
+  paper-ripple(class=className
+               fit
+               data-id=id)
+    div(data-id="bg")
+    div(data-id="waves")
 
 template(name="PaperMaterial")
   paper-material(class=className
@@ -78,13 +85,6 @@ template(name="PaperProgress")
           fit=""
           class="paper-progress"
           style='transform:scaleX(#{getProgress})')
-
-template(name="PaperRipple")
-  paper-ripple(class=className
-               fit
-               data-id=id)
-    div(data-id="bg")
-    div(data-id="waves")
 
 template(name="PaperToolbar")
   paper-toolbar(class=className role="toolbar")

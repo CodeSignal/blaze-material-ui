@@ -53,7 +53,16 @@ paper-toolbar.paper-toolbar-0 paper-icon-button {
   color: #ffffff;
 }
 
-.paper-toolbar-0 .toolbar-tools.paper-toolbar .title {
+paper-toolbar.paper-toolbar-1 {
+  background: #692365;
+  color: #ffffff;
+}
+
+paper-toolbar.paper-toolbar-1 paper-icon-button {
+  color: #ffffff;
+}
+
+.paper-toolbar-1 .toolbar-tools.paper-toolbar .title {
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   white-space: nowrap;

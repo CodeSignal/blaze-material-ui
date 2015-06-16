@@ -204,45 +204,6 @@ iron-icon {
   fill: currentColor;
 }
 
-ghost-button {
-  display: inline-block;
-  position: relative;
-  box-sizing: border-box;
-  min-width: 5.14em;
-  margin: 0 0.29em;
-  padding: 0.7em 0.57em;
-  background: transparent;
-  text-align: center;
-  font: inherit;
-  text-transform: uppercase;
-  outline: none;
-  border-radius: 3px;
-  user-select: none;
-  cursor: pointer;
-  z-index: 0;
-  box-shadow: 0 0 0 1px currentColor inset;
-
-  &.keyboard-focus.ghost-button {
-    font-weight: bold;
-  }
-
-  &[disabled] {
-    background: #eaeaea;
-    color: #a8a8a8;
-    cursor: auto;
-    pointer-events: none;
-  }
-
-  &[noink] paper-ripple.ghost-button {
-    display: none;
-  }
-
-  .content.ghost-button  * {
-    text-transform: inherit;
-  }
-}
-
-
 paper-button {
   display: inline-block;
       position: relative;
@@ -284,6 +245,45 @@ paper-button {
 
   .content.paper-button {
     padding: 0.7em 0.57em
+  }
+}
+
+
+ghost-button {
+  display: inline-block;
+  position: relative;
+  box-sizing: border-box;
+  min-width: 5.14em;
+  margin: 0 0.29em;
+  padding: 0.7em 0.57em;
+  background: transparent;
+  text-align: center;
+  font: inherit;
+  text-transform: uppercase;
+  outline: none;
+  border-radius: 3px;
+  user-select: none;
+  cursor: pointer;
+  z-index: 0;
+  box-shadow: 0 0 0 1px currentColor inset;
+
+  &.keyboard-focus.ghost-button {
+    font-weight: bold;
+  }
+
+  &[disabled] {
+    background: #eaeaea;
+    color: #a8a8a8;
+    cursor: auto;
+    pointer-events: none;
+  }
+
+  &[noink] paper-ripple.ghost-button {
+    display: none;
+  }
+
+  .content.ghost-button  * {
+    text-transform: inherit;
   }
 }
 
@@ -334,6 +334,81 @@ paper-fab {
   }
 }
 
+
+
+
+paper-ripple {
+
+  display: block;
+  position: relative;
+  border-radius: inherit;
+  overflow: hidden;
+
+  &[noink] {
+    pointer-events: none;
+  }
+
+
+  [data-id=bg],
+  [data-id=waves],
+  .wave-container,
+  .wave {
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  [data-id=bg], .wave {
+    opacity: 0;
+  }
+
+  [data-id=waves], .wave {
+    overflow: hidden;
+  }
+
+  .wave-container, .wave {
+    border-radius: 50%;
+  }
+
+ .circle [data-id=bg],
+  paper-ripple.circle [data-id=waves] {
+    border-radius: 50%;
+  }
+
+  .wave-container {
+    background-color: currentColor;
+    overflow: hidden;
+    animation: paper-ripple-grow 0.5s ease-in-out forwards;
+
+    &.remove {
+      transition: all 0.5s 0.2s ease-in-out;
+      background-color: transparent;
+    }
+  }
+}
+
+@keyframes paper-ripple-grow {
+  $max-opacity: 0.2;
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  20% {
+    opacity: $max-opacity;
+  }
+  80% {
+    transform: scale(1);
+    opacity: $max-opacity;
+  }
+  100% {
+    transform: scale(1);
+    opacity: $max-opacity;
+  }
+
+}
 
 
 paper-material,
@@ -418,81 +493,6 @@ paper-progress {
 }
 
 }
-
-
-paper-ripple {
-
-  display: block;
-  position: relative;
-  border-radius: inherit;
-  overflow: hidden;
-
-  &[noink] {
-    pointer-events: none;
-  }
-
-
-  [data-id=bg],
-  [data-id=waves],
-  .wave-container,
-  .wave {
-    pointer-events: none;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
-
-  [data-id=bg], .wave {
-    opacity: 0;
-  }
-
-  [data-id=waves], .wave {
-    overflow: hidden;
-  }
-
-  .wave-container, .wave {
-    border-radius: 50%;
-  }
-
- .circle [data-id=bg],
-  paper-ripple.circle [data-id=waves] {
-    border-radius: 50%;
-  }
-
-  .wave-container {
-    background-color: currentColor;
-    overflow: hidden;
-    animation: paper-ripple-grow 0.5s ease-in-out forwards;
-
-    &.remove {
-      transition: all 0.5s 0.2s ease-in-out;
-      background-color: transparent;
-    }
-  }
-}
-
-@keyframes paper-ripple-grow {
-  $max-opacity: 0.2;
-  0% {
-    transform: scale(0);
-    opacity: 0;
-  }
-  20% {
-    opacity: $max-opacity;
-  }
-  80% {
-    transform: scale(1);
-    opacity: $max-opacity;
-  }
-  100% {
-    transform: scale(1);
-    opacity: $max-opacity;
-  }
-
-}
-
 
 paper-toolbar {
   display: block;
