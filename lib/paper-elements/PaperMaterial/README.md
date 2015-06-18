@@ -8,24 +8,24 @@
 
 Basic usage
 
-```
+```handlebars
 {{> PaperMaterial}}
 ```
 
 Add a custom className
 
-```
+```handlebars
 {{> PaperMaterial className="my-custom-class"}}
 ```
 
 Add a content
 
-```
+```handlebars
 {{# PaperMaterial}}[content]{{# PaperMaterial}}
 ```
 
 Change the elevation
 
-```
+```handlebars
 {{> PaperMaterial elevation=3}}
 ```

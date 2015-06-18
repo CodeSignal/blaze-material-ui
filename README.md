@@ -37,7 +37,7 @@ lib
 ## Usage
 
 ### Spacebars
-```
+```handlebars
 <body>
   {{#PaperButton}}
     Button
@@ -46,7 +46,7 @@ lib
 ```
 
 ### Jade
-```
+```jade
 body
   +PaperButton() 
     | Button

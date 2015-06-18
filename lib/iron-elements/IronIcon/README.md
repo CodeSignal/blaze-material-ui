@@ -1,15 +1,15 @@
-# PaperRipple 
+# IronIcon 
 
 ## Usage
 
 Basic usage
 
 ```handlebars
-{{> PaperRipple}}
+{{> IronIcon icon="menu"}}
 ```
 
 Add a custom className
 
 ```handlebars
-{{> PaperRipple className="my-custom-class"}}
+{{> IronIcon className="my-custom-class"}}
 ```
