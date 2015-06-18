@@ -8,17 +8,17 @@
 Basic usage
 
 ```handlebars
-{{> PaperSpinner}}
+{{>PaperSpinner}}
 ```
 
 Add a custom className
 
 ```handlebars
-{{> PaperSpinner className="my-custom-class"}}
+{{>PaperSpinner className="my-custom-class"}}
 ```
 
 Activate
 
 ```handlebars
-{{> PaperSpinner active="active"}}
+{{>PaperSpinner active="active"}}
 ```

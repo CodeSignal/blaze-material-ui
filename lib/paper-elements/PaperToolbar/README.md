@@ -8,33 +8,33 @@
 Basic usage
 
 ```handlebars
-{{# PaperToolbar}}
+{{#PaperToolbar}}
   <div>[content]</div>
-{{/ PaperToolbar}}
+{{/PaperToolbar}}
 ```
 
 Add a custom className
 
 ```handlebars
-{{# PaperToolbar className="my-custom-class"}}
+{{#PaperToolbar className="my-custom-class"}}
   <div>[content]</div>
-{{/ PaperToolbar}}
+{{/PaperToolbar}}
 ```
 
 Change Size
 
 ```handlebars
-{{# PaperToolbar className="[medium-tall || tall]"}}
+{{#PaperToolbar className="[medium-tall || tall]"}}
   <div>[content]</div>
-{{/ PaperToolbar}}
+{{/PaperToolbar}}
 ```
 
 Pin to section
 
 ```handlebars
-{{# PaperToolbar className="tall"}}
+{{#PaperToolbar className="tall"}}
   <div>[content]</div>
   <div class="middle">[content]</div>
   <div class="bottom">[content]</div>
-{{/ PaperToolbar}}
+{{/PaperToolbar}}
 ```

@@ -9,11 +9,11 @@
 Basic usage
 
 ```handlebars
-{{# PaperButton}}[content]{{/PaperButton}}
+{{#PaperButton}}[content]{{/PaperButton}}
 ```
 
 Add a custom className
 
 ```handlebars
-{{# PaperButton className="my-custom-class"}}[content]{{/PaperButton}}
+{{#PaperButton className="my-custom-class"}}[content]{{/PaperButton}}
 ```

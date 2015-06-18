@@ -7,27 +7,33 @@ It is built on top of [meteor-blaze-compoents](https://github.com/peerlibrary/me
 
 ## Installation
 
-```
+```shell
+## add the package to meteor
 meteor add codefights:blaze-material-ui
 ```
 
 ## Build blaze-meteor-components
 
-```
+```shell
+## install node modules
 npm install
+## call gulp to build a new version
 gulp
 ```
 
 ## Create components from gulp
 
-```
+```shell
+## requiers --type and --name to be set
+## --type will declare the folder
+## --name will declare the component name
 gulp component --type=paper-elements --name=PaperButton
 ```
 
 will create
 ```
 lib
-  ┗━┳ paper-elements
+ ┗━┳ paper-elements
     ┗━┳ PaperButton
       ┣━ PaperButton.es6
       ┣━ PaperButton.scss

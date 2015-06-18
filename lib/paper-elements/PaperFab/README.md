@@ -9,17 +9,17 @@
 Basic usage
 
 ```handlebars
-{{> PaperFab}}
+{{>PaperFab}}
 ```
 
 Add a custom className
 
 ```handlebars
-{{> PaperFab className="my-custom-class"}}
+{{>PaperFab className="my-custom-class"}}
 ```
 
 Change the icon
 
 ```handlebars
-{{> PaperFab icon="refresh"}}
+{{>PaperFab icon="refresh"}}
 ```

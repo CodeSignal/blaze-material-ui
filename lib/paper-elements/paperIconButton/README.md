@@ -9,17 +9,17 @@
 Basic usage
 
 ```handlebars
-{{> PaperIconButton}}
+{{>PaperIconButton}}
 ```
 
 Add a custom className
 
 ```handlebars
-{{> PaperIconButton className="my-custom-class"}}
+{{>PaperIconButton className="my-custom-class"}}
 ```
 
 Change the icon
 
 ```handlebars
-{{> PaperIconButton icon="refresh"}}
+{{>PaperIconButton icon="refresh"}}
 ```

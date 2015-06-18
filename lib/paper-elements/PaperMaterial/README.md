@@ -9,23 +9,23 @@
 Basic usage
 
 ```handlebars
-{{> PaperMaterial}}
+{{>PaperMaterial}}
 ```
 
 Add a custom className
 
 ```handlebars
-{{> PaperMaterial className="my-custom-class"}}
+{{>PaperMaterial className="my-custom-class"}}
 ```
 
 Add a content
 
 ```handlebars
-{{# PaperMaterial}}[content]{{# PaperMaterial}}
+{{#PaperMaterial}}[content]{{# PaperMaterial}}
 ```
 
 Change the elevation
 
 ```handlebars
-{{> PaperMaterial elevation=3}}
+{{>PaperMaterial elevation=3}}
 ```
