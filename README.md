@@ -75,6 +75,7 @@ body
 * PaperMaterial
   * [PaperMaterial](lib/paper-elements/PaperMaterial)
 * PaperRipple
+  * [PaperRipple](lib/paper-elements/PaperRipple)
 * PaperProgress
   * [PaperProgress](lib/paper-elements/PaperProgress)
 * PaperSpinner
