@@ -22,13 +22,41 @@
   {{> PaperSpinner active='active' className="paper-spinner-0"}}
   {{> PaperSpinner active='active' className="paper-spinner-0"}}
   <h3>Paper Toolbar</h3>
-  {{# PaperToolbar className="paper-toolbar-0"}}Toolbar{{/PaperToolbar}}
+  {{# PaperToolbar className="paper-toolbar-0"}}      
+  <div><span class="title">Toolbar Top</span></div>
+  {{/PaperToolbar}}
   <br>
-  {{# PaperToolbar className="paper-toolbar-1"}}
-    {{>PaperIconButton icon="menu"}}
-    <span class="title">Toolbar</span>
-    {{>PaperIconButton icon="refresh"}}
-    {{>PaperIconButton icon="more"}}
+  {{# PaperToolbar className="paper-toolbar-1 medium-tall"}}
+    <div>
+      {{>PaperIconButton icon="menu"}}
+      <span class="title">Toolbar Top</span>
+      {{>PaperIconButton icon="more"}}
+    </div>
+    <div class="middle">
+      {{>PaperIconButton icon="refresh"}}
+      <span class="title">Toolbar Middle</span>
+      {{>PaperIconButton icon="more"}}
+    </div>
+  {{/PaperToolbar}}
+  <br>
+  {{# PaperToolbar className="paper-toolbar-2 tall"}}
+    <div>
+      {{>PaperIconButton icon="menu"}}
+      <span class="title">Toolbar Top</span>
+      {{>PaperIconButton icon="refresh"}}
+      {{>PaperIconButton icon="more"}}
+    </div>
+    <div class="middle">
+      {{>PaperIconButton icon="menu"}}
+      <span class="title">Toolbar Middle</span>
+      {{>PaperIconButton icon="refresh"}}
+      {{>PaperIconButton icon="more"}}
+    </div>
+    <div class="bottom">
+      {{>PaperIconButton icon="menu"}}
+      <span class="title">Toolbar Bottom</span>
+      {{>PaperIconButton icon="refresh"}}
+    </div>
   {{/PaperToolbar}}
   <h3>Paper Icon Button</h3>
   {{> PaperIconButton icon="menu"}}

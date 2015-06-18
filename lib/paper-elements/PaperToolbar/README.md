@@ -7,12 +7,34 @@
 
 Basic usage
 
-```
-{{# PaperToolbar}}[content]{{/ PaperToolbar}}
+```handlebars
+{{# PaperToolbar}}
+  <div>[content]</div>
+{{/ PaperToolbar}}
 ```
 
 Add a custom className
 
+```handlebars
+{{# PaperToolbar className="my-custom-class"}}
+  <div>[content]</div>
+{{/ PaperToolbar}}
 ```
-{{# PaperToolbar className="my-custom-class"}}[content]{{/ PaperToolbar}}
+
+Change Size
+
+```handlebars
+{{# PaperToolbar className="[medium-tall || tall]"}}
+  <div>[content]</div>
+{{/ PaperToolbar}}
+```
+
+Pin to section
+
+```handlebars
+{{# PaperToolbar className="tall"}}
+  <div>[content]</div>
+  <div class="middle">[content]</div>
+  <div class="bottom">[content]</div>
+{{/ PaperToolbar}}
 ```

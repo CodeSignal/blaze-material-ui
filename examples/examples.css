@@ -58,11 +58,22 @@ paper-toolbar.paper-toolbar-1 {
   color: #ffffff;
 }
 
-paper-toolbar.paper-toolbar-1 paper-icon-button {
+paper-toolbar.paper-toolbar-2 paper-icon-button {
   color: #ffffff;
 }
 
-.paper-toolbar-1 .toolbar-tools.paper-toolbar .title {
+paper-toolbar.paper-toolbar-2 {
+  background: #11B036;
+  color: #ffffff;
+}
+
+paper-toolbar.paper-toolbar-2 paper-icon-button {
+  color: #ffffff;
+}
+
+.paper-toolbar-0 .toolbar-tools.paper-toolbar .title ,
+.paper-toolbar-1 .toolbar-tools.paper-toolbar .title ,
+.paper-toolbar-2 .toolbar-tools.paper-toolbar .title {
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   white-space: nowrap;

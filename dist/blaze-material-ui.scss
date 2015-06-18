@@ -839,15 +839,22 @@ paper-toolbar {
     margin-right: 24px;
   }
 
-  .toolbar-tools.paper-toolbar  > .title,
-  .toolbar-tools.paper-toolbar [select=".middle"] > .title,
-  .toolbar-tools.paper-toolbar [select=".bottom"] > .title {
+  .toolbar-tools.paper-toolbar  > div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex: 1;
+  }
+  
+  .toolbar-tools.paper-toolbar  > div > .title,
+  .toolbar-tools.paper-toolbar .middle > .title,
+  .toolbar-tools.paper-toolbar .bottom > .title {
     margin-left: 56px;
   }
 
-  .toolbar-tools.paper-toolbar  > paper-icon-button + .title,
-  .toolbar-tools.paper-toolbar [select=".middle"] paper-icon-button + .title,
-  .toolbar-tools.paper-toolbar [select=".bottom"] paper-icon-button + .title {
+  .toolbar-tools.paper-toolbar  > div > paper-icon-button + .title,
+  .toolbar-tools.paper-toolbar .middle paper-icon-button + .title,
+  .toolbar-tools.paper-toolbar .bottom paper-icon-button + .title {
     margin-left: 0;
   }
 
