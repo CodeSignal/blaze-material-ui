@@ -17,7 +17,7 @@ class IronIcon extends BlazeComponent {
    * @return {String}       Retuns the path of the SVG
    */
   getSVG (name) {
-    return this.svg.get()[name];
+    return this.svg.get()[this.data().icon];
   }
 
 }

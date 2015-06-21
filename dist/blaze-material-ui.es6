@@ -24,6 +24,24 @@ class IronIcon extends BlazeComponent {
 
 IronIcon.register('IronIcon');
 
+class MarkedElement extends BlazeComponent {
+
+  /**
+   * set defaults
+   */
+  onCreated () {}
+
+  /**
+   * after render
+   */
+  onRendered () {
+    console.log(this.data().markdown)
+    console.log(marked)
+  }
+}
+
+MarkedElement.register('MarkedElement');
+
 class PaperButton extends BlazeComponent {
 
   /**
@@ -558,3 +576,4 @@ PaperIconButton.register('PaperIconButton')
 
 
 //# sourceMappingURL=blaze-material-ui.es6.map
+
