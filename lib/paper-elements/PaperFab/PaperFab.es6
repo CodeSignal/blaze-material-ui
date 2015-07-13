@@ -119,11 +119,17 @@ class PaperFab extends BlazeComponent {
     }
   }
 
+
+  onClick(e) {
+
+  }
+
   /**
    * @return {Object}  The events
    */
   events () {
     return [{
+      'click': this.onClick,
       'blur': this.onBlur,
       'focus': this.onFocus,
       'mousedown': this.onDown,

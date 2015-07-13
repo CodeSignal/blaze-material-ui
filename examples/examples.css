@@ -1,10 +1,11 @@
-@import url(//fonts.googleapis.com/css?family=RobotoDraft:400);
-@import url(//fonts.googleapis.com/css?family=Roboto:400);
+/*@import url(//fonts.googleapis.com/css?family=RobotoDraft:400);*/
+/*@import url(//fonts.googleapis.com/css?family=Roboto:400);*/
 
 body {
   font-family: "RobotoDraft", "Roboto", sans-serif;
   background: #fafafa;
   font-size: 14px;
+  margin: 0;
 }
 
 .blue {
@@ -108,6 +109,10 @@ paper-toolbar.paper-toolbar-2 paper-icon-button {
   right:0;
   bottom:0;
   left:0;
+}
+
+.paper-selector-0 .iron-selected {
+  background: #cccccc;
 }
 
 .card {

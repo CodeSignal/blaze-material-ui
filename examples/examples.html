@@ -3,78 +3,113 @@
 </head>
 
 <body>
-  <h2>Paper Elements</h2>
-  <h3>Paper Progress</h3>
-  {{> PaperProgress className="paper-progress-0" value=30 min=0 max=100}}
-  <h3>Paper Fab</h3>
-  {{> PaperFab className="blue" icon="menu"}}
-  {{> PaperFab className="yellow" icon="refresh"}}
-  {{> PaperFab className="green" icon="more"}}
-  {{> PaperFab icon="menu"}}
-  <h3>Paper Button</h3>
-  {{# PaperButton className="blue"}}Blue{{/PaperButton}}
-  {{# PaperButton className="green"}}Green{{/PaperButton}}
-  {{# PaperButton className="yellow"}}Yellow{{/PaperButton}}
-  {{# PaperButton}}Default{{/PaperButton}}
-  {{# PaperButton}}{{> IronIcon icon="refresh"}}Reload{{/PaperButton}}
-  {{# PaperButton}}{{> IronIcon icon="chevronRight"}}Next{{/PaperButton}}
-  <h3>Paper Spinner</h3>
-  {{> PaperSpinner active='active' className="paper-spinner-0"}}
-  {{> PaperSpinner active='active' className="paper-spinner-0"}}
-  {{> PaperSpinner active='active' className="paper-spinner-0"}}
-  {{> PaperSpinner active='active' className="paper-spinner-0"}}
-  <h3>Paper Toolbar</h3>
-  {{# PaperToolbar className="paper-toolbar-0"}}      
-  <div><span class="title">Toolbar Top</span></div>
-  {{/PaperToolbar}}
-  <br>
-  {{# PaperToolbar className="paper-toolbar-1 medium-tall"}}
-    <div>
+
+  {{#PaperDrawerPanel}}
+    {{#PaperDrawerPanelMain}} 
+      {{>PaperFab icon="menu" className="paper-drawer-toggle"}}
+
+      <h2>Paper Elements</h2>
+
+
+
+
+
+      <h3>Paper Progress</h3>
+      {{>PaperProgress className="paper-progress-0" value=30 min=0 max=100}}
+      <h3>Paper Fab</h3>
+      {{>PaperFab className="blue" icon="menu"}}
+      {{>PaperFab className="yellow" icon="refresh"}}
+      {{>PaperFab className="green" icon="more"}}
+      {{>PaperFab icon="menu"}}
+      <h3>Paper Button</h3>
+      {{#PaperButton className="blue"}}Blue{{/PaperButton}}
+      {{#PaperButton className="green"}}Green{{/PaperButton}}
+      {{#PaperButton className="yellow"}}Yellow{{/PaperButton}}
+      {{#PaperButton}}Default{{/PaperButton}}
+      {{#PaperButton}}{{> IronIcon icon="refresh"}}Reload{{/PaperButton}}
+      {{#PaperButton}}{{> IronIcon icon="chevronRight"}}Next{{/PaperButton}}
+      <h3>Paper Spinner</h3>
+      {{>PaperSpinner active='active' className="paper-spinner-0"}}
+      {{>PaperSpinner active='active' className="paper-spinner-0"}}
+      {{>PaperSpinner active='active' className="paper-spinner-0"}}
+      {{>PaperSpinner active='active' className="paper-spinner-0"}}
+      <h3>Paper Toolbar</h3>
+      {{#PaperToolbar className="paper-toolbar-0"}}      
+      <div><span class="title">Toolbar Top</span></div>
+      {{/PaperToolbar}}
+      <br>
+      {{#PaperToolbar className="paper-toolbar-1 medium-tall"}}
+        <div>
+          {{>PaperIconButton icon="menu"}}
+          <span class="title">Toolbar Top</span>
+          {{>PaperIconButton icon="more"}}
+        </div>
+        <div class="middle">
+          {{>PaperIconButton icon="refresh"}}
+          <span class="title">Toolbar Middle</span>
+          {{>PaperIconButton icon="more"}}
+        </div>
+      {{/PaperToolbar}}
+      <br>
+      {{#PaperToolbar className="paper-toolbar-2 tall"}}
+        <div>
+          {{>PaperIconButton icon="menu"}}
+          <span class="title">Toolbar Top</span>
+          {{>PaperIconButton icon="refresh"}}
+          {{>PaperIconButton icon="more"}}
+        </div>
+        <div class="middle">
+          {{>PaperIconButton icon="menu"}}
+          <span class="title">Toolbar Middle</span>
+          {{>PaperIconButton icon="refresh"}}
+          {{>PaperIconButton icon="more"}}
+        </div>
+        <div class="bottom">
+          {{>PaperIconButton icon="menu"}}
+          <span class="title">Toolbar Bottom</span>
+          {{>PaperIconButton icon="refresh"}}
+        </div>
+      {{/PaperToolbar}}
+      <h3>Paper Icon Button</h3>
       {{>PaperIconButton icon="menu"}}
-      <span class="title">Toolbar Top</span>
-      {{>PaperIconButton icon="more"}}
-    </div>
-    <div class="middle">
-      {{>PaperIconButton icon="refresh"}}
-      <span class="title">Toolbar Middle</span>
-      {{>PaperIconButton icon="more"}}
-    </div>
-  {{/PaperToolbar}}
-  <br>
-  {{# PaperToolbar className="paper-toolbar-2 tall"}}
-    <div>
-      {{>PaperIconButton icon="menu"}}
-      <span class="title">Toolbar Top</span>
       {{>PaperIconButton icon="refresh"}}
       {{>PaperIconButton icon="more"}}
-    </div>
-    <div class="middle">
-      {{>PaperIconButton icon="menu"}}
-      <span class="title">Toolbar Middle</span>
-      {{>PaperIconButton icon="refresh"}}
-      {{>PaperIconButton icon="more"}}
-    </div>
-    <div class="bottom">
-      {{>PaperIconButton icon="menu"}}
-      <span class="title">Toolbar Bottom</span>
-      {{>PaperIconButton icon="refresh"}}
-    </div>
-  {{/PaperToolbar}}
-  <h3>Paper Icon Button</h3>
-  {{> PaperIconButton icon="menu"}}
-  {{> PaperIconButton icon="refresh"}}
-  {{> PaperIconButton icon="more"}}
-  <h3>Paper Material</h3>
-  <div class="card">{{# PaperMaterial elevation=0}}elevation="0"{{/PaperMaterial}}</div>
-  <div class="card">{{# PaperMaterial elevation=1}}elevation="1"{{/PaperMaterial}}</div>
-  <div class="card">{{# PaperMaterial elevation=2}}elevation="2"{{/PaperMaterial}}</div>
-  <div class="card">{{# PaperMaterial elevation=3}}elevation="3"{{/PaperMaterial}}</div>
-  <div class="card">{{# PaperMaterial elevation=4}}elevation="4"{{/PaperMaterial}}</div>
-  <div class="card">{{# PaperMaterial elevation=5}}elevation="5"{{/PaperMaterial}}</div>
-  <h2>Iron Elements</h2>
-  <h3>Iron Icon</h3>
-  {{> IronIcon icon="menu"}}
-  {{> IronIcon icon="refresh"}}
-  {{> IronIcon icon="more"}}
+      <h3>Paper Material</h3>
+      <div class="card">{{#PaperMaterial elevation=0}}elevation="0"{{/PaperMaterial}}</div>
+      <div class="card">{{#PaperMaterial elevation=1}}elevation="1"{{/PaperMaterial}}</div>
+      <div class="card">{{#PaperMaterial elevation=2}}elevation="2"{{/PaperMaterial}}</div>
+      <div class="card">{{#PaperMaterial elevation=3}}elevation="3"{{/PaperMaterial}}</div>
+      <div class="card">{{#PaperMaterial elevation=4}}elevation="4"{{/PaperMaterial}}</div>
+      <div class="card">{{#PaperMaterial elevation=5}}elevation="5"{{/PaperMaterial}}</div>
+      <h2>Iron Elements</h2>
+      <h3>Iron Icon</h3>
+      {{> IronIcon icon="menu"}}
+      {{> IronIcon icon="refresh"}}
+      {{> IronIcon icon="more"}}
+      <h3>Iron Select</h3>
+      {{#IronSelector selected=0 className="paper-selector-0"}}
+        <div>Item  1</div>
+        <div>Item  2</div>
+        <div>Item  3</div>
+        <div>Item  4</div>
+      {{/IronSelector}}
+      {{#IronSelector selected=2 className="paper-selector-0"}}
+        <div>Item  1</div>
+        <div>Item  2</div>
+        <div>Item  3</div>
+        <div>Item  4</div>
+      {{/IronSelector}}
+      {{#IronSelector selected=1 className="paper-selector-0"}}
+        <div>Item  1</div>
+        <div>Item  2</div>
+        <div>Item  3</div>
+        <div>Item  4</div>
+      {{/IronSelector}}
+
+      {{/PaperDrawerPanelMain}}
+      {{#PaperDrawerPanelDrawer}} 
+        Drawer
+      {{/PaperDrawerPanelDrawer}}
+  {{/PaperDrawerPanel}}
 </body>
 

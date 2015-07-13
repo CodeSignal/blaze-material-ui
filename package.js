@@ -38,9 +38,19 @@ Package.onUse(function(api) {
     'lib/iron-elements/IronIcon/IronIcon.tpl.jade',
     'lib/iron-elements/IronIcon/IronIcon.es6',
 
+    'lib/iron-elements/IronSelector/IronSelector.scss',
+    'lib/iron-elements/IronSelector/IronSelector.tpl.jade',
+    'lib/iron-elements/IronSelector/IronSelector.es6',
+
     'lib/paper-elements/PaperRipple/PaperRipple.scss',
     'lib/paper-elements/PaperRipple/PaperRipple.tpl.jade',
     'lib/paper-elements/PaperRipple/PaperRipple.es6',
+
+    'lib/paper-elements/PaperDrawerPanel/PaperDrawerPanel.scss',
+    'lib/paper-elements/PaperDrawerPanel/PaperDrawerPanel.tpl.jade',
+    'lib/paper-elements/PaperDrawerPanel/PaperDrawerPanel.es6',
+    'lib/paper-elements/PaperDrawerPanel/PaperDrawerPanelMain.jade',
+    'lib/paper-elements/PaperDrawerPanel/PaperDrawerPanelDrawer.jade',
 
     'lib/paper-elements/PaperMaterial/PaperMaterial.scss',
     'lib/paper-elements/PaperMaterial/PaperMaterial.tpl.jade',
