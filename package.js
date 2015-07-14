@@ -60,6 +60,9 @@ Package.onUse(function(api) {
 
     'lib/paper-elements/PaperToolbar/PaperToolbar.scss',
     'lib/paper-elements/PaperToolbar/PaperToolbar.tpl.jade',
+    'lib/paper-elements/PaperToolbar/PaperToolbarTop.tpl.jade',
+    'lib/paper-elements/PaperToolbar/PaperToolbarMiddle.tpl.jade',
+    'lib/paper-elements/PaperToolbar/PaperToolbarBottom.tpl.jade',
     'lib/paper-elements/PaperToolbar/PaperToolbar.es6',
 
     'lib/paper-elements/PaperIconButton/PaperIconButton.scss',
