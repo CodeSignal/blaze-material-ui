@@ -2,7 +2,7 @@ class PaperDrawerPanel extends BlazeComponent {
 
   constructor() {
     super();
-    this.sizeClass = new ReactiveVar('wide-layout left-drawer paper-drawer-panel');
+    this.classNames = new ReactiveVar('wide-layout left-drawer paper-drawer-panel transition');
     this.handleResize = this.handleResize.bind(this);
   }
   /**
@@ -26,9 +26,9 @@ class PaperDrawerPanel extends BlazeComponent {
 
   handleResize() {
     if (window.innerWidth < 900) {
-      this.sizeClass.set('narrow-layout left-drawer paper-drawer-panel');
+      this.classNames.set('narrow-layout left-drawer paper-drawer-panel transition');
     } else {
-      this.sizeClass.set('wide-layout left-drawer paper-drawer-panel');
+      this.classNames.set('wide-layout left-drawer paper-drawer-panel transition');
     }
   }
 

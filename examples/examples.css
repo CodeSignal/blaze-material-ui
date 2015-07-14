@@ -8,15 +8,20 @@ body {
   margin: 0;
 }
 
-.blue {
+paper-fab.green,
+paper-button.green {
   background: #2E3BFF;
   color: #fff;
 }
-.yellow {
+
+paper-fab.yellow,
+paper-button.yellow {
   background: #FFFC04;
   color: #000;
 }
-.green {
+
+paper-fab.blue,
+paper-button.blue {
   background: #239528;
   color: #fff;
 }
@@ -25,25 +30,27 @@ ghost-button.blue {
   background: none;
   color: #2E3BFF;
 }
+
 ghost-button.red {
   background: none;
   color: #FF2C38;
 }
+
 ghost-button.green {
   background: none;
   color: #239528;
 }
 
 .paper-progress-0 [data-id=progressContainer].paper-progress {
-  background-color:#e0e0e0;
+  background-color: #e0e0e0;
 }
 
 .paper-progress-0 [data-id=activeProgress].paper-progress {
-  background-color:#0f9d58;
+  background-color: #0f9d58;
 }
 
 .paper-progress-0 [data-id=secondaryProgress].paper-progress {
-  background-color:#b7e1cd;
+  background-color: #b7e1cd;
 }
 
 paper-toolbar.paper-toolbar-0 {
@@ -73,8 +80,8 @@ paper-toolbar.paper-toolbar-2 paper-icon-button {
   color: #ffffff;
 }
 
-.paper-toolbar-0 .toolbar-tools.paper-toolbar .title ,
-.paper-toolbar-1 .toolbar-tools.paper-toolbar .title ,
+.paper-toolbar-0 .toolbar-tools.paper-toolbar .title,
+.paper-toolbar-1 .toolbar-tools.paper-toolbar .title,
 .paper-toolbar-2 .toolbar-tools.paper-toolbar .title {
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
@@ -89,26 +96,27 @@ paper-toolbar.paper-toolbar-2 paper-icon-button {
 }
 
 .paper-spinner-0 .layer-1.paper-spinner {
-  border-color:#4285f4;
+  border-color: #4285f4;
 }
 
 .paper-spinner-0 .layer-2.paper-spinner {
-  border-color:#db4437;
+  border-color: #db4437;
 }
 
 .paper-spinner-0 .layer-3.paper-spinner {
-  border-color:#f4b400;
+  border-color: #f4b400;
 }
 
 .paper-spinner-0 .layer-4.paper-spinner {
-  border-color:#4285f4;
+  border-color: #4285f4;
 }
+
 .paper-spinner-0 .circle.paper-spinner {
-  position:absolute;
-  top:0;
-  right:0;
-  bottom:0;
-  left:0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
 
 .paper-selector-0 .iron-selected {
@@ -121,7 +129,94 @@ paper-toolbar.paper-toolbar-2 paper-icon-button {
   background: white;
   margin: 20px;
 }
+
 .card paper-material {
   padding: 20px;
 }
 
+paper-header-panel.paper-header-panel-0 {
+  display: flex;
+  flex-direction: column;
+}
+
+.paper-header-panel-0 [data-id=mainContainer].paper-header-panel {
+  flex: 1;
+  flex-basis: 0.01px;
+}
+
+paper-header-panel.paper-header-panel-0 paper-toolbar:after,
+paper-header-panel.paper-header-panel-0 .paper-header:after {
+  height: 6px;
+  bottom: -6px;
+  box-shadow: inset 0px 5px 6px -3px rgba(0, 0, 0, 0.4);
+}
+
+.paper-header {
+  height: 60px;
+  font-size: 16px;
+  line-height: 60px;
+  padding: 0 10px;
+  color: white;
+  transition: height 0.2s;
+}
+
+.paper-header.tall {
+  height: 120px;
+}
+
+.paper-header.medium-tall {
+  height: 100px;
+  line-height: 50px;
+}
+
+paper-header-panel .cover {
+  margin: 60px;
+}
+
+paper-header-panel.blue .paper-header {
+  background-color: #4323CB;
+}
+
+paper-header-panel.blue > .content {
+  background-image: linear-gradient(to bottom, #fff, #4323CB);
+}
+
+paper-header-panel.green .paper-header {
+  background-color: #2ACB66;
+}
+
+paper-header-panel.green > .content {
+  background-image: linear-gradient(to bottom, #fff, #2ACB66);
+}
+
+paper-header-panel.yellow .paper-header {
+  background-color: #C1CB2E;
+}
+
+paper-header-panel.yellow > .content {
+  background-image: linear-gradient(to bottom, #fff, #C1CB2E);
+}
+
+paper-header-panel.red .paper-header {
+  background-color: #CB5539;
+}
+
+paper-header-panel.red > .content {
+  background-image: linear-gradient(to bottom, #fff, #CB5539);
+}
+
+paper-header-panel.orange .paper-header {
+  background-color: #CB831F;
+}
+
+paper-header-panel.orange > .content {
+  background-image: linear-gradient(to bottom, #fff, #CB831F);
+}
+
+paper-header-panel.grey .paper-header {
+  background-color: #555555;
+}
+
+paper-header-panel.grey > .content {
+  background-image: linear-gradient(to bottom, #fff, #555555);
+}
