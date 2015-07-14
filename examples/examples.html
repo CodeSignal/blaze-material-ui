@@ -8,7 +8,7 @@
     {{#PaperDrawerPanelMain}} 
       {{>PaperFab icon="menu" className="paper-drawer-toggle"}}
 
-      <h2>Paper Elements</h2>
+      <h2>Paper Elements {{handler}}</h2>
 
 
 
@@ -105,11 +105,10 @@
         <div>Item  3</div>
         <div>Item  4</div>
       {{/IronSelector}}
-
-      {{/PaperDrawerPanelMain}}
-      {{#PaperDrawerPanelDrawer}} 
-        Drawer
-      {{/PaperDrawerPanelDrawer}}
+    {{/PaperDrawerPanelMain}}
+    {{#PaperDrawerPanelDrawer}} 
+      Drawer
+    {{/PaperDrawerPanelDrawer}}
   {{/PaperDrawerPanel}}
 </body>
 

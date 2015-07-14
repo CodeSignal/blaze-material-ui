@@ -46,12 +46,6 @@ Package.onUse(function(api) {
     'lib/paper-elements/PaperRipple/PaperRipple.tpl.jade',
     'lib/paper-elements/PaperRipple/PaperRipple.es6',
 
-    'lib/paper-elements/PaperDrawerPanel/PaperDrawerPanel.scss',
-    'lib/paper-elements/PaperDrawerPanel/PaperDrawerPanel.tpl.jade',
-    'lib/paper-elements/PaperDrawerPanel/PaperDrawerPanel.es6',
-    'lib/paper-elements/PaperDrawerPanel/PaperDrawerPanelMain.jade',
-    'lib/paper-elements/PaperDrawerPanel/PaperDrawerPanelDrawer.jade',
-
     'lib/paper-elements/PaperMaterial/PaperMaterial.scss',
     'lib/paper-elements/PaperMaterial/PaperMaterial.tpl.jade',
     'lib/paper-elements/PaperMaterial/PaperMaterial.es6',
@@ -83,6 +77,13 @@ Package.onUse(function(api) {
     'lib/molecules/MarkedElement/MarkedElement.scss',
     'lib/molecules/MarkedElement/MarkedElement.tpl.jade',
     'lib/molecules/MarkedElement/MarkedElement.es6',
+
+
+    'lib/paper-elements/PaperDrawerPanel/PaperDrawerPanel.scss',
+    'lib/paper-elements/PaperDrawerPanel/PaperDrawerPanel.tpl.jade',
+    'lib/paper-elements/PaperDrawerPanel/PaperDrawerPanelMain.jade',
+    'lib/paper-elements/PaperDrawerPanel/PaperDrawerPanelDrawer.jade',
+    'lib/paper-elements/PaperDrawerPanel/PaperDrawerPanel.es6',
 
 
     //'dist/blaze-material-ui.jade',

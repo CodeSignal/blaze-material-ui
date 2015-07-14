@@ -1,4 +1,9 @@
-class PaperFab extends BlazeComponent {
+PaperFab = class PaperFab extends BlazeComponent {
+
+
+  constructor(props) {
+    super();
+  }
 
   /**
    * set defaults
@@ -119,9 +124,10 @@ class PaperFab extends BlazeComponent {
     }
   }
 
-
-  onClick(e) {
-
+  onClick () {
+    if (this.data().onClick) {
+      this.data().onClick();
+    }
   }
 
   /**
@@ -129,9 +135,9 @@ class PaperFab extends BlazeComponent {
    */
   events () {
     return [{
-      'click': this.onClick,
       'blur': this.onBlur,
       'focus': this.onFocus,
+      'click': this.onClick,
       'mousedown': this.onDown,
       'mouseleave': this.onUp,
       'mouseup': this.onUp
@@ -140,4 +146,5 @@ class PaperFab extends BlazeComponent {
 }
 
 
-PaperFab.register('PaperFab')
+PaperFab.register('PaperFab');
+

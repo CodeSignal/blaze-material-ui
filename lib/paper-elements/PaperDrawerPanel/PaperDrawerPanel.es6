@@ -4,38 +4,23 @@ class PaperDrawerPanel extends BlazeComponent {
     super();
     this.sizeClass = new ReactiveVar('wide-layout left-drawer paper-drawer-panel');
     this.handleResize = this.handleResize.bind(this);
-    this.onClick = this.onClick.bind(this);
-    console.log('constructor', this);
   }
   /**
    * set defaults
    */
-  onCreated () {
+  onCreated() {
     this.handleResize();
-    console.log('onCreated', this);
- }
+  }
 
   /**
    * after render
    */
-  onRendered () {
-    console.log('onRendered', this);
+  onRendered() {
     var main = this.componentChildren('IronSelector');
-    console.log(main[0].componentChildren('PaperDrawerPanelMain'));
-    // var mainTemplate = this.find('template [main]');
-    // var drawerTemplate = this.find('template [drawer]');
-
     this.selector = this.componentChildrenWith('selected')[0];
-    // var mainContent = this.selector.find('[data-id=main]');
-    // var drawerContent = this.selector.find('[data-id=drawer]');
-    // var drawerContent = this.selector.find('[data-id=drawer]');
 
-    // mainContent.appendChild(mainTemplate);
-    // drawerContent.appendChild(drawerTemplate);
-
+    // handle resize
     window.addEventListener('resize', this.handleResize);
-
-    //console.log(this.selector);
 
   }
 
@@ -48,39 +33,18 @@ class PaperDrawerPanel extends BlazeComponent {
   }
 
   selectDrawer() {
-    this.selector.selected.set(1)
-    this.selector.updateSelection()
-  }
-
-  onClick() {
-    console.log('clicked');
-  }
-
-  handlerHelper (callback) {
-    return () => {
-      return callback;
-    }
-  }
-
-  handler () {
-    handlerHelper((e) => {
-     console.log('click!', e);
-   });
-  }
-
-
-  getClasses(){
-    return this.sizeClass.get();
+    this.selector.selected.set(1);
+    this.selector.updateSelection();
   }
 
   selectMain() {
-    this.selector.selected.set(0)
-    this.selector.updateSelection()
+    this.selector.selected.set(0);
+    this.selector.updateSelection();
   }
 
-  events () {
+  events() {
     return [{
-      'click .paper-drawer-toggle': this.selectDrawer,
+      'click .paper-drawer-toggle:first': this.selectDrawer,
       'click [data-id=scrim]': this.selectMain
     }];
   }
@@ -91,34 +55,4 @@ PaperDrawerPanel.register('PaperDrawerPanel');
 
 
 
-class PaperDrawerPanelMain extends BlazeComponent {
 
-  constructor() {
-    super();
-    console.log('constructor', this);
-  }
-  /**
-   * set defaults
-   */
-  onCreated () {
-    console.log('onCreated', this);
- }
-}
-
-PaperDrawerPanelMain.register('PaperDrawerPanelMain');
-
-class PaperDrawerPanelDrawer extends BlazeComponent {
-
-  constructor() {
-    super();
-    console.log('constructor', this);
-  }
-  /**
-   * set defaults
-   */
-  onCreated () {
-    console.log('onCreated', this);
- }
-}
-
-PaperDrawerPanelDrawer.register('PaperDrawerPanelDrawer');
