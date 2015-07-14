@@ -81,8 +81,8 @@ Package.onUse(function(api) {
 
     'lib/paper-elements/PaperDrawerPanel/PaperDrawerPanel.scss',
     'lib/paper-elements/PaperDrawerPanel/PaperDrawerPanel.tpl.jade',
-    'lib/paper-elements/PaperDrawerPanel/PaperDrawerPanelMain.jade',
-    'lib/paper-elements/PaperDrawerPanel/PaperDrawerPanelDrawer.jade',
+    'lib/paper-elements/PaperDrawerPanel/PaperDrawerPanelMain.tpl.jade',
+    'lib/paper-elements/PaperDrawerPanel/PaperDrawerPanelDrawer.tpl.jade',
     'lib/paper-elements/PaperDrawerPanel/PaperDrawerPanel.es6',
 
 
