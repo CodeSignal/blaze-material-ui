@@ -151,6 +151,23 @@ paper-header-panel.paper-header-panel-0 .paper-header:after {
   box-shadow: inset 0px 5px 6px -3px rgba(0, 0, 0, 0.4);
 }
 
+paper-header-panel.paper-header-panel-1 {
+  display: flex;
+  flex-direction: column;
+}
+
+.paper-header-panel-1 [data-id=mainContainer].paper-header-panel {
+  flex: 1;
+  flex-basis: 0.01px;
+}
+
+paper-header-panel.paper-header-panel-1 paper-toolbar:after,
+paper-header-panel.paper-header-panel-1 .paper-header:after {
+  height: 6px;
+  bottom: -6px;
+  box-shadow: inset 0px 5px 6px -3px rgba(0, 0, 0, 0.4);
+}
+
 .paper-header {
   height: 60px;
   font-size: 16px;
@@ -177,7 +194,7 @@ paper-header-panel.blue .paper-header {
   background-color: #4323CB;
 }
 
-paper-header-panel.blue > .content {
+.paper-header-panel-0.blue .paper-header-panel > .content {
   background-image: linear-gradient(to bottom, #fff, #4323CB);
 }
 
@@ -185,7 +202,7 @@ paper-header-panel.green .paper-header {
   background-color: #2ACB66;
 }
 
-paper-header-panel.green > .content {
+.paper-header-panel-0.green .paper-header-panel > .content {
   background-image: linear-gradient(to bottom, #fff, #2ACB66);
 }
 
@@ -193,7 +210,7 @@ paper-header-panel.yellow .paper-header {
   background-color: #C1CB2E;
 }
 
-paper-header-panel.yellow > .content {
+.paper-header-panel-0.yellow .paper-header-panel > .content {
   background-image: linear-gradient(to bottom, #fff, #C1CB2E);
 }
 
@@ -201,7 +218,7 @@ paper-header-panel.red .paper-header {
   background-color: #CB5539;
 }
 
-paper-header-panel.red > .content {
+.paper-header-panel-0.red .paper-header-panel > .content {
   background-image: linear-gradient(to bottom, #fff, #CB5539);
 }
 
@@ -209,14 +226,10 @@ paper-header-panel.orange .paper-header {
   background-color: #CB831F;
 }
 
-paper-header-panel.orange > .content {
+.paper-header-panel-0.orange .paper-header-panel > .content {
   background-image: linear-gradient(to bottom, #fff, #CB831F);
 }
 
 paper-header-panel.grey .paper-header {
   background-color: #555555;
-}
-
-paper-header-panel.grey > .content {
-  background-image: linear-gradient(to bottom, #fff, #555555);
 }
