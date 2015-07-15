@@ -1,0 +1,8 @@
+paper-tabs(class=className role="tablist" tabindex="0")
+  +PaperIconButton(icon="chevronLeft")
+  div(data-id="tabsContainer" flex class="paper-tabs")
+    div(data-id="tabsContent" horizontal layout class="paper-tabs")
+      +IronSelector(selected=0)
+        +Template.contentBlock
+
+  +PaperIconButton(icon="chevronRight")

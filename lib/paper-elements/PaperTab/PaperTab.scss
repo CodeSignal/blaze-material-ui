@@ -1,0 +1,43 @@
+paper-tab {
+  position: relative;
+  padding: 0 12px;
+  overflow: hidden;
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
+
+  &[link] {
+    padding: 0;
+  }
+
+  .tab-content.paper-tab {
+    height: 100%;
+    transform: translateZ(0);
+    transition: opacity 0.1s cubic-bezier(0.4, 0, 1, 1);
+  }
+
+  .tab-content.paper-tab, paper-ripple.paper-tab {
+    pointer-events: none;
+  }
+
+  &:not(.iron-selected) > .tab-content.paper-tab {
+    opacity: 0.8;
+  }
+
+  &:focus .tab-content.paper-tab {
+    opacity: 1;
+    font-weight: 700;
+  }
+
+  [data-id=ink].paper-tab {
+    pointer-events: none;
+  }
+
+  .tab-content.paper-tab > a {
+    height: 100%;
+    flex: 1;
+    flex-basis: 0.01px;
+  }
+}

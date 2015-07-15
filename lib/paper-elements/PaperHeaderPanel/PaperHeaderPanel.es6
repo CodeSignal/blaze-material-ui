@@ -12,8 +12,9 @@ class PaperHeaderPanel extends BlazeComponent {
 
   onRendered(){
     this.mainContainer = this.find('[data-id="mainContainer"]');
-    this.header = this.find('.paper-header') || this.find('.paper-toolbar');
+    this.header = this.find('paper-toolbar') || this.find('.paper-header');
     let staticShadow = this.staticShadow.indexOf(this.mode.get()) > -1;
+    console.log(this.header)
 
     if(staticShadow) {
       this.addShadow();
