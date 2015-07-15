@@ -237,11 +237,12 @@ paper-header-panel.grey .paper-header {
 paper-tabs.paper-tabs-0 {
   display: flex;
   align-items: center;
-  background: #30CB2D;
+  background: #1D7B1B;
+  color: white;
 }
 
 .paper-tabs-0 [data-id=selectionBar].paper-tabs {
-  background-color: #D2FF6A;
+  background-color: #20361D;
 }
 
 paper-tab.paper-tab-0 {
@@ -250,9 +251,14 @@ paper-tab.paper-tab-0 {
   justify-content: center;
   flex: 1;
   flex-basis: 0.01px;
+  text-transform: uppercase;
 }
 
 .paper-tab-0 [data-id=ink].paper-tab {
-  color: #D2FF6A;
-  opacity: 1;
+  color: #20361D;
+}
+
+.paper-tab-0.iron-selected {
+  background: #20361D;
+  transition: background 0s 0.2s;
 }

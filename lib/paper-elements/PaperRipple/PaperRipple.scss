@@ -1,6 +1,4 @@
-
 paper-ripple {
-
   display: block;
   position: relative;
   border-radius: inherit;
@@ -9,7 +7,6 @@ paper-ripple {
   &[noink] {
     pointer-events: none;
   }
-
 
   [data-id=bg],
   [data-id=waves],
@@ -40,7 +37,7 @@ paper-ripple {
     border-radius: 50%;
   }
 
- .circle [data-id=bg],
+  .circle [data-id=bg],
   paper-ripple.circle [data-id=waves] {
     border-radius: 50%;
   }
@@ -59,20 +56,23 @@ paper-ripple {
 
 @keyframes paper-ripple-grow {
   $max-opacity: 0.2;
+
   0% {
     transform: scale(0);
     opacity: 0;
   }
+
   20% {
     opacity: $max-opacity;
   }
+
   80% {
     transform: scale(1);
     opacity: $max-opacity;
   }
+
   100% {
     transform: scale(1);
     opacity: $max-opacity;
   }
-
 }

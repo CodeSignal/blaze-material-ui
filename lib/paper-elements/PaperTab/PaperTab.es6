@@ -30,7 +30,7 @@ class PaperTab extends BlazeComponent {
    * @param  {Event}
    */
   onUp(event) {
-    //this.ripple.onUp(event);
+    this.ripple.onUp(event);
   }
   /**
    * @return {Object}  The events

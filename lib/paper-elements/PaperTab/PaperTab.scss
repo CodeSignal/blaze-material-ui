@@ -33,11 +33,38 @@ paper-tab {
 
   [data-id=ink].paper-tab {
     pointer-events: none;
+
+    .wave-container {
+      animation-name: tab-paper-ripple-grow;
+    }
   }
 
   .tab-content.paper-tab > a {
     height: 100%;
     flex: 1;
     flex-basis: 0.01px;
+  }
+}
+
+@keyframes tab-paper-ripple-grow {
+  $max-opacity: 0.95;
+
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+
+  20% {
+    opacity: $max-opacity;
+  }
+
+  80% {
+    transform: scale(1);
+    opacity: $max-opacity;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: $max-opacity;
   }
 }
