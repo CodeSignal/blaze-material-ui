@@ -74,6 +74,14 @@ Package.onUse(function(api) {
     'lib/paper-elements/PaperIconButton/PaperIconButton.tpl.jade',
     'lib/paper-elements/PaperIconButton/PaperIconButton.es6',
 
+    'lib/paper-elements/PaperTab/PaperTab.scss',
+    'lib/paper-elements/PaperTab/PaperTab.tpl.jade',
+    'lib/paper-elements/PaperTab/PaperTab.es6',
+
+    'lib/paper-elements/PaperTabs/PaperTabs.scss',
+    'lib/paper-elements/PaperTabs/PaperTabs.tpl.jade',
+    'lib/paper-elements/PaperTabs/PaperTabs.es6',
+
     'lib/paper-elements/PaperProgress/PaperProgress.scss',
     'lib/paper-elements/PaperProgress/PaperProgress.tpl.jade',
     'lib/paper-elements/PaperProgress/PaperProgress.es6',

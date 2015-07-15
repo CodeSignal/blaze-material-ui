@@ -13,6 +13,7 @@ class IronSelector extends BlazeComponent {
 
   handleClick (e) {
     var $element = $(e.toElement);
+    console.log($element)
     if ($element.parent()[0] !== this._componentInternals.templateInstance.firstNode) {
       return false;
     }

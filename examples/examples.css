@@ -233,3 +233,24 @@ paper-header-panel.orange .paper-header {
 paper-header-panel.grey .paper-header {
   background-color: #555555;
 }
+
+paper-tabs.paper-tabs-0 {
+  display: flex;
+  align-items: center;
+}
+
+.paper-tabs-0 [data-id=selectionBar].paper-tabs {
+  background-color: #ffff8d;
+}
+
+paper-tab.paper-tab-0 {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  flex-basis: 0.01px;
+}
+
+.paper-tab-0 #ink.paper-tab {
+  color: #ffff8d;
+}
