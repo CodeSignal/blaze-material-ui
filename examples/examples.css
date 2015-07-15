@@ -256,10 +256,14 @@ paper-tab.paper-tab-0 {
 }
 
 .paper-tab-0 [data-id=ink].paper-tab {
+<<<<<<< HEAD
   color: #91524E;
 }
 
 .paper-tab-0.iron-selected {
   /*background: #91524E;*/
   transition: background 0s 0.2s;
+  color: #D2FF6A;
+  opacity: 1;
 }
+

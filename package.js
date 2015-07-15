@@ -46,6 +46,10 @@ Package.onUse(function(api) {
     'lib/paper-elements/PaperRipple/PaperRipple.tpl.jade',
     'lib/paper-elements/PaperRipple/PaperRipple.es6',
 
+    'lib/paper-elements/PaperCheckbox/PaperCheckbox.scss',
+    'lib/paper-elements/PaperCheckbox/PaperCheckbox.tpl.jade',
+    'lib/paper-elements/PaperCheckbox/PaperCheckbox.es6',
+
     'lib/paper-elements/PaperMaterial/PaperMaterial.scss',
     'lib/paper-elements/PaperMaterial/PaperMaterial.tpl.jade',
     'lib/paper-elements/PaperMaterial/PaperMaterial.es6',
