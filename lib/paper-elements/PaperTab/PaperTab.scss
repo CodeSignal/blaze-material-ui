@@ -3,6 +3,7 @@ paper-tab {
   padding: 0 12px;
   overflow: hidden;
   cursor: pointer;
+  min-width: min-content;
 
   &:focus {
     outline: none;

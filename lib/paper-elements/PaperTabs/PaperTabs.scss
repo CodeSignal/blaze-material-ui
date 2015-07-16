@@ -19,6 +19,7 @@ paper-tabs {
 
   [data-id=tabsContent].paper-tabs {
     height: 100%;
+    min-width: min-content;
   }
 
   [data-id=tabsContent].scrollable.paper-tabs {
@@ -37,6 +38,10 @@ paper-tabs {
   paper-icon-button.paper-tabs {
     width: 24px;
     padding: 16px;
+  }
+
+  iron-selector {
+    position: relative;
   }
 
   [data-id=selectionBar].paper-tabs {

@@ -19,14 +19,22 @@ class PaperTabs extends BlazeComponent {
     this.selectorElement.setAttribute('layout', '');
     this.tabs = $(this.selectorElement).find('paper-tab');
     let tabs = this.tabs.length;
-    this.style.set('transform:translate3d('+ 100/tabs * this.selected +'%,0,0) scaleX('+ 1/tabs + ')');
+    this.updatePosition();
 
   }
 
   handleClick() {
     this.selected = this.selector.selected.get();
+    this.updatePosition();
+
+  }
+
+  updatePosition(){
     let tabs = this.tabs.length;
-    this.style.set('transform:translate3d('+ 100/tabs * this.selected +'%,0,0) scaleX('+ 1/tabs + ')');
+    let selectedTab = this.find('paper-tab:nth-child('+ (parseInt(this.selected,10)  + 1) +')');
+    let scale = selectedTab.offsetWidth/(this.selectorElement.offsetWidth);
+    console.log(selectedTab.offsetWidth, this.selectorElement.offsetWidth*scale);
+    this.style.set('transform:translate3d('+ selectedTab.offsetLeft +'px,0,0) scaleX('+ scale + ')');
   }
 
   events() {
