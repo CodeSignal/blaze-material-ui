@@ -57,11 +57,13 @@ class PaperRipple extends BlazeComponent {
    * @param {Event} the vent that triggered the function
    */
   onUp (event) {
-    var waveContainer = this.rippleElements[this.rippleCounter -1];
-    waveContainer.classList.add('remove');
-    waveContainer.addEventListener('transitionend', () => {
-       waveContainer.remove();
-     });
+    var waveContainer = this.rippleElements[this.rippleCounter - 1];
+    if (waveContainer) {
+      waveContainer.classList.add('remove');
+      waveContainer.addEventListener('transitionend', () => {
+         waveContainer.remove();
+       });      
+    }
   }
 }
 

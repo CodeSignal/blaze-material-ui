@@ -4,5 +4,5 @@ paper-tabs(class=className role="tablist" tabindex="0")
     div(data-id="tabsContent" horizontal layout class="paper-tabs")
       +IronSelector(selected=0)
         +Template.contentBlock
-
+        div(data-id="selectionBar" class="paper-tabs" style=style.get)
   +PaperIconButton(icon="chevronRight")
