@@ -1,6 +1,12 @@
 paper-checkbox {
   display: inline-block;
   white-space: nowrap;
+  position: relative;
+
+  input {
+    position: absolute;
+    opacity: 0;
+  }
 
   &:focus {
     outline: none;
@@ -40,7 +46,7 @@ paper-checkbox {
     transition: background-color 140ms, border-color 140ms;
   }
 
-  [data-id=checkbox].checked.paper-checkbox #checkmark.paper-checkbox {
+  [data-id=checkbox].checked.paper-checkbox [data-id=checkmark].paper-checkbox {
     animation: checkmark-expand 140ms ease-out forwards;
   }
 
