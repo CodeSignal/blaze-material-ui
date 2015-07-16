@@ -266,3 +266,76 @@ paper-tab.paper-tab-0 {
   /*color: #D2FF6A;*/
   opacity: 1;
 }
+
+.paper-checkbox-0 #checkboxContainer.paper-checkbox {
+  background-color: transparent;
+}
+
+paper-checkbox.paper-checkbox-0 #ink.paper-checkbox {
+  color: #212121;
+}
+
+paper-checkbox.paper-checkbox-0 #ink[checked].paper-checkbox {
+  color: #3f51b5;
+}
+
+paper-checkbox.paper-checkbox-0 #checkbox.paper-checkbox {
+  border-color: #212121;
+}
+
+@-webkit-keyframes checkmark-expand {
+  0% {
+    top: 9px;
+    left: 6px;
+    width: 0px;
+    height: 0px;
+  }
+
+  100% {
+    top: -1px;
+    left: 4px;
+    width: 5px;
+    height: 10px;
+  }
+}
+
+@keyframes checkmark-expand {
+  0% {
+    top: 9px;
+    left: 6px;
+    width: 0px;
+    height: 0px;
+  }
+
+  100% {
+    top: -1px;
+    left: 4px;
+    width: 5px;
+    height: 10px;
+  }
+}
+
+paper-checkbox.paper-checkbox-0 [data-id=checkbox].checked.paper-checkbox {
+  background-color: #3f51b5;
+  border-color: #3f51b5;
+}
+
+paper-checkbox.paper-checkbox-0 [data-id=checkbox].checked.paper-checkbox + paper-ripple {
+  color: #3f51b5;
+}
+
+paper-checkbox.paper-checkbox-0 [data-id=checkmark].paper-checkbox {
+  border-color: white;
+}
+
+.paper-checkbox-0 #checkboxLabel.paper-checkbox {
+  color: #212121;
+}
+
+paper-checkbox.paper-checkbox-0[disabled] [data-id=checkbox].paper-checkbox {
+  border-color: #212121;
+}
+
+paper-checkbox.paper-checkbox-0[disabled][checked] [data-id=checkbox].paper-checkbox {
+  background-color: #212121;
+}
