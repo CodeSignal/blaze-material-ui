@@ -9,8 +9,8 @@ paper-checkbox(class=className
                pressed="")
     div(data-id="checkboxContainer"
         class="paper-checkbox")
-        +PaperRipple(id="ink" class="paper-checkbox")
-        input(type="checkbox", checked=checked.get)
+        +PaperRipple(id="ink" className="paper-checkbox" centered="")
+        input(type="checkbox" checked=checked.get)
         div(data-id="checkbox" class="#{checked.get} paper-checkbox")
             div(data-id="checkmark" class="#{hidden.get} paper-checkbox")
     div(data-id="checkboxLabel"

@@ -18,6 +18,7 @@
 
             <h2>Paper Elements</h2>
 
+            <h3>Paper Tabs</h3>
 
             {{#PaperTabs selected=0 className="paper-tabs-0"}}
               {{#PaperTab className="paper-tab-0"}}
@@ -31,6 +32,12 @@
               {{/PaperTab}}
             {{/PaperTabs}}
 
+            <h3>Paper Checkbox</h3>
+              {{>PaperCheckbox label="Oxygen"}}
+              {{>PaperCheckbox label="Carbon"}}
+              {{>PaperCheckbox label="Hydrogen" checked="checked"}}
+              {{>PaperCheckbox label="Nitrogen" checked="checked"}}
+              {{>PaperCheckbox label="Calcium" checked="checked"}}
 
             <h3>Paper Progress</h3>
             {{>PaperProgress className="paper-progress-0" value=30 min=0 max=100}}

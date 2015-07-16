@@ -6,6 +6,7 @@ paper-checkbox {
   input {
     position: absolute;
     opacity: 0;
+    pointer-events: none;
   }
 
   &:focus {
@@ -24,16 +25,28 @@ paper-checkbox {
     cursor: pointer;
     transform: translateZ(0);
     vertical-align: middle;
+
+    * {
+      pointer-events: none;
+    }
   }
 
   [data-id=ink].paper-checkbox {
-    position: absolute;
-    top: -15px;
-    left: -15px;
-    width: 48px;
-    height: 48px;
-    opacity: 0.6;
+    $offset: -10px;
+
+    top: $offset;
+    right: $offset;
+    bottom: $offset;
+    left: $offset;
     pointer-events: none;
+
+    &, [data-id=waves] {
+      overflow: visible;
+    }
+
+    [data-id=waves] {
+      -webkit-mask-image: none;
+    }
   }
 
   [data-id=checkbox].paper-checkbox {
