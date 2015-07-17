@@ -4,7 +4,7 @@ paper-radio-button {
 
   input {
     position: absolute;
-    top: 100px;
+    opacity: 0;
     pointer-events: none;
   }
 
@@ -22,9 +22,12 @@ paper-radio-button {
   }
 
   [data-id=ink].paper-radio-button {
+    $offset: -15px;
     position: absolute;
-    top: -16px;
-    left: -16px;
+    top: $offset;
+    right: $offset;
+    bottom: $offset;
+    left: $offset;
     width: 48px;
     height: 48px;
     opacity: 0.6;
@@ -69,7 +72,7 @@ paper-radio-button {
     pointer-events: none;
   }
 
-  [data-id=radioLabel][hidden].paper-radio-button {
+  [data-id=radioLabel][hidden].paper-radio t-button {
     display: none;
   }
 
