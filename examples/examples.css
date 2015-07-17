@@ -262,7 +262,6 @@ paper-tab.paper-tab-0 {
 .paper-tab-0.iron-selected {
   /*background: #91524E;*/
   transition: background 0s 0.2s;
-
   /*color: #D2FF6A;*/
   opacity: 1;
 }
@@ -283,6 +282,43 @@ paper-checkbox.paper-checkbox-0 #checkbox.paper-checkbox {
   border-color: #212121;
 }
 
+<<<<<<< HEAD
+=======
+@-webkit-keyframes checkmark-expand {
+  0% {
+    top: 9px;
+    left: 6px;
+    width: 0px;
+    height: 0px;
+  }
+
+  100% {
+    top: -1px;
+    left: 4px;
+    width: 5px;
+    height: 10px;
+  }
+}
+
+
+@keyframes checkmark-expand {
+  0% {
+    top: 9px;
+    left: 6px;
+    width: 0px;
+    height: 0px;
+  }
+
+  100% {
+    top: -1px;
+    left: 4px;
+    width: 5px;
+    height: 10px;
+  }
+}
+
+
+>>>>>>> Test radio button.
 paper-checkbox.paper-checkbox-0 [data-id=checkbox].checked.paper-checkbox {
   background-color: #3f51b5;
   border-color: #3f51b5;
@@ -310,4 +346,36 @@ paper-checkbox.paper-checkbox-0[disabled][checked] [data-id=checkbox].paper-chec
 
 .paper-header-panel-1 .paper-header-panel > .content {
   padding: 0 20px;
+
+paper-radio-button.paper-radio-button-0 #ink.paper-radio-button {
+  color: #212121;
+}
+
+paper-radio-button.paper-radio-button-0 #ink[checked].paper-radio-button {
+  color: #3f51b5;
+}
+
+paper-radio-button.paper-radio-button-0 #offRadio.paper-radio-button {
+  background-color: transparent;
+  border-color: #212121;
+}
+
+paper-radio-button.paper-radio-button-0 #onRadio.paper-radio-button {
+  background-color: #3f51b5;
+}
+
+paper-radio-button.paper-radio-button-0[checked] #offRadio.paper-radio-button {
+  border-color: #3f51b5;
+}
+
+.paper-radio-button-0 #radioLabel.paper-radio-button {
+  color: #212121;
+}
+
+paper-radio-button.paper-radio-button-0[disabled] #offRadio.paper-radio-button {
+  border-color: #212121;
+}
+
+paper-radio-button.paper-radio-button-0[disabled][checked] #onRadio.paper-radio-button {
+  background-color: #212121;
 }

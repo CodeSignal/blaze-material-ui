@@ -50,6 +50,10 @@ Package.onUse(function(api) {
     'lib/paper-elements/PaperCheckbox/PaperCheckbox.tpl.jade',
     'lib/paper-elements/PaperCheckbox/PaperCheckbox.es6',
 
+    'lib/paper-elements/PaperRadioButton/PaperRadioButton.scss',
+    'lib/paper-elements/PaperRadioButton/PaperRadioButton.tpl.jade',
+    'lib/paper-elements/PaperRadioButton/PaperRadioButton.es6',
+
     'lib/paper-elements/PaperMaterial/PaperMaterial.scss',
     'lib/paper-elements/PaperMaterial/PaperMaterial.tpl.jade',
     'lib/paper-elements/PaperMaterial/PaperMaterial.es6',

@@ -1,0 +1,20 @@
+paper-radio-button(class=className
+                   role="radio"
+                   tabindex="0"
+                   toggles=""
+                   aria-pressed="false"
+                   aria-disabled="false"
+                   aria-checked="false"
+                   aria-label=label
+                   checked=checked.get)
+  div(data-id="radioContainer"
+      class="paper-radio-button")
+    input(type="checkbox" checked=checked.get)
+    div(data-id="offRadio"
+        class="paper-radio-button")
+    div(data-id="onRadio"
+        class="paper-radio-button")
+    +PaperRipple(id="ink" class="paper-radio-button" centered="" checked="")
+  div(data-id="radioLabel"
+      class="paper-radio-button"
+      aria-hidden="true")= label

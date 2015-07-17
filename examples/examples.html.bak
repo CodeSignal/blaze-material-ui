@@ -33,11 +33,11 @@
             {{/PaperTabs}}
 
             <h3>Paper Checkbox</h3>
-              {{>PaperCheckbox label="Oxygen"}}
-              {{>PaperCheckbox label="Carbon"}}
-              {{>PaperCheckbox label="Hydrogen" checked="checked"}}
-              {{>PaperCheckbox label="Nitrogen" checked="checked"}}
-              {{>PaperCheckbox label="Calcium" checked="checked"}}
+              {{>PaperCheckbox label="Oxygen" className="paper-checkbox-0"}}
+              {{>PaperCheckbox label="Carbon" className="paper-checkbox-0"}}
+              {{>PaperCheckbox label="Hydrogen" checked="checked" className="paper-checkbox-0"}}
+              {{>PaperCheckbox label="Nitrogen" checked="checked" className="paper-checkbox-0"}}
+              {{>PaperCheckbox label="Calcium" checked="checked" className="paper-checkbox-0"}}
 
             <h3>Paper Progress</h3>
             {{>PaperProgress className="paper-progress-0" value=30 min=0 max=100}}
