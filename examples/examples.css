@@ -237,12 +237,12 @@ paper-header-panel.grey .paper-header {
 paper-tabs.paper-tabs-0 {
   display: flex;
   align-items: center;
-  background: #A8980E;
+  background: #00bcd4;
   color: white;
 }
 
 .paper-tabs-0 [data-id=selectionBar].paper-tabs {
-  background-color: #910C09;
+  background-color: #ffff8d;
   transition-duration: 0.5s;
 }
 
@@ -256,7 +256,7 @@ paper-tab.paper-tab-0 {
 }
 
 .paper-tab-0 [data-id=ink].paper-tab {
-  color: #91524E;
+  color: #ffff8d;
 }
 
 .paper-tab-0.iron-selected {
@@ -283,38 +283,6 @@ paper-checkbox.paper-checkbox-0 #checkbox.paper-checkbox {
   border-color: #212121;
 }
 
-@-webkit-keyframes checkmark-expand {
-  0% {
-    top: 9px;
-    left: 6px;
-    width: 0px;
-    height: 0px;
-  }
-
-  100% {
-    top: -1px;
-    left: 4px;
-    width: 5px;
-    height: 10px;
-  }
-}
-
-@keyframes checkmark-expand {
-  0% {
-    top: 9px;
-    left: 6px;
-    width: 0px;
-    height: 0px;
-  }
-
-  100% {
-    top: -1px;
-    left: 4px;
-    width: 5px;
-    height: 10px;
-  }
-}
-
 paper-checkbox.paper-checkbox-0 [data-id=checkbox].checked.paper-checkbox {
   background-color: #3f51b5;
   border-color: #3f51b5;
@@ -338,4 +306,8 @@ paper-checkbox.paper-checkbox-0[disabled] [data-id=checkbox].paper-checkbox {
 
 paper-checkbox.paper-checkbox-0[disabled][checked] [data-id=checkbox].paper-checkbox {
   background-color: #212121;
+}
+
+.paper-header-panel-1 .paper-header-panel > .content {
+  padding: 0 20px;
 }
