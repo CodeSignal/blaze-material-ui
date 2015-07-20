@@ -19,46 +19,6 @@ class PaperButton extends BlazeComponent {
   }
 
   /**
-   * Set the elevation of the button
-   * @param {Integer} elevation  The index of the item
-   */
-  setElevation (elevation) {
-    this.elevation.set(elevation);
-  }
-
-  /**
-   * get the elevation of the button
-   * @return {Integer}  Returns the elevation
-   */
-  getElevation () {
-    return this.elevation.get();
-  }
-
-  /**
-   * get the pressed state of the button
-   * @return {Boolean}  Returns the pressed state
-   */
-  getPressed () {
-    return this.pressed.get();
-  }
-
-  /**
-   * get the focused state of the button
-   * @return {Boolean}  Returns the focused state
-   */
-  getFocused () {
-    return this.focused.get();
-  }
-
-  /**
-   * get the active state of the button
-   * @return {Boolean}  Returns the active state
-   */
-  getActive () {
-    return this.active.get();
-  }
-
-  /**
    * handle the focus event
    * 1. not focused while pressed
    * 2. elevated
@@ -67,7 +27,7 @@ class PaperButton extends BlazeComponent {
     if (!this.pressed.get()) {
       this.focused.set('');
     }
-    this.setElevation(3);
+    this.elevation.set(3);
   };
   /**
    * handle the blur event
@@ -76,7 +36,7 @@ class PaperButton extends BlazeComponent {
    */
   onBlur () {
     this.focused.set(false);
-    this.setElevation(1);
+    this.elevation.set(1);
   }
 
   /**
@@ -92,7 +52,7 @@ class PaperButton extends BlazeComponent {
     this.pressed.set('');
     this.active.set('');
     this.focused.set(false);
-    this.setElevation(2);
+    this.elevation.set(2);
     this.ripple.onDown(event);
   }
 
@@ -111,10 +71,10 @@ class PaperButton extends BlazeComponent {
       this.active.set(false);
       this.ripple.onUp(event);
       if (this.focused.get()) {
-        this.setElevation(3);
+        this.elevation.set(3);
       }
       else {
-        this.setElevation(1);
+        this.elevation.set(1);
       }
     }
   }

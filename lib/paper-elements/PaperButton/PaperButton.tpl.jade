@@ -1,14 +1,14 @@
 paper-button(class=className
              title=title
              disabled=disabled
-             pressed=getPressed
-             focused=getFocused
-             active=getActive
+             pressed=pressed.get
+             focused=focused.get
+             active=active.get
              aria-label=title
              tabindex='0'
              role="button")
   +PaperRipple(fit='' id="ripple")
-  +PaperMaterial(elevation=getElevation 
+  +PaperMaterial(elevation=elevation.get 
                  className="content paper-button"
                  animated='' 
                  id="shadow")
