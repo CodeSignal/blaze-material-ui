@@ -262,6 +262,7 @@ paper-tab.paper-tab-0 {
 .paper-tab-0.iron-selected {
   /*background: #91524E;*/
   transition: background 0s 0.2s;
+
   /*color: #D2FF6A;*/
   opacity: 1;
 }
@@ -282,8 +283,6 @@ paper-checkbox.paper-checkbox-0 #checkbox.paper-checkbox {
   border-color: #212121;
 }
 
-<<<<<<< HEAD
-=======
 @-webkit-keyframes checkmark-expand {
   0% {
     top: 9px;
@@ -299,7 +298,6 @@ paper-checkbox.paper-checkbox-0 #checkbox.paper-checkbox {
     height: 10px;
   }
 }
-
 
 @keyframes checkmark-expand {
   0% {
@@ -317,8 +315,6 @@ paper-checkbox.paper-checkbox-0 #checkbox.paper-checkbox {
   }
 }
 
-
->>>>>>> Test radio button.
 paper-checkbox.paper-checkbox-0 [data-id=checkbox].checked.paper-checkbox {
   background-color: #3f51b5;
   border-color: #3f51b5;
@@ -346,7 +342,7 @@ paper-checkbox.paper-checkbox-0[disabled][checked] [data-id=checkbox].paper-chec
 
 .paper-header-panel-1 .paper-header-panel > .content {
   padding: 0 20px;
-
+}
 
 paper-radio-button.paper-radio-button-0 [data-id=ink].paper-radio-button {
   color: #212121;

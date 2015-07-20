@@ -4,8 +4,17 @@
 
 <body>
 
-  {{>PaperRadioButton label="Test"}}
-  {{>PaperCheckbox label="Test"}}
+  {{#PaperDrawerPanel}}
+    {{#PaperDrawerPanelMain}}
+        {{#PaperHeaderPanel mode="standard" className="paper-header-panel-1 blue"}}
+          {{#PaperToolbar className="paper-toolbar-0"}}
+            {{#PaperToolbarTop}}
+             {{>PaperIconButton icon="menu" className="paper-drawer-toggle"}}
+              <span class="title">Toolbar Top</span>
+            {{/PaperToolbarTop}}
+          {{/PaperToolbar}}
+          {{#PaperHeaderPanelMain}}
+            <div class="content">
 
               <h2>Paper Elements</h2>
 
@@ -68,20 +77,20 @@
                 <br>
                 {{>PaperCheckbox label="Calcium" checked="checked" className="paper-checkbox-0"}}
 
-            <h3>Paper Radio Button</h3>
-              {{>PaperRadioButton label="Oxygen" className="paper-radio-button-0"}}
+              <h3>Paper Checkbox</h3>
+                {{>PaperRadioButton label="Oxygen" className="paper-radio-button-0"}}
                 <br>
                 <br>
-              {{>PaperRadioButton label="Carbon" className="paper-cradio-buttonheckbox-0"}}
+                {{>PaperRadioButton label="Carbon" className="paper-radio-button-0"}}
                 <br>
                 <br>
-              {{>PaperRadioButton label="Hydrogen" checked="checked" className="paper-radio-button-0"}}
+                {{>PaperRadioButton label="Hydrogen" checked="checked" className="paper-radio-button-0"}}
                 <br>
                 <br>
-              {{>PaperRadioButton label="Nitrogen" checked="checked" className="paper-radio-button-0"}}
+                {{>PaperRadioButton label="Nitrogen" checked="checked" className="paper-radio-button-0"}}
                 <br>
                 <br>
-              {{>PaperRadioButton label="Calcium" checked="checked" className="paper-radio-button-0"}}
+                {{>PaperRadioButton label="Calcium" checked="checked" className="paper-radio-button-0"}}
 
               <h3>Paper Progress</h3>
               {{>PaperProgress className="paper-progress-0" value=30 min=0 max=100}}
@@ -245,5 +254,6 @@
       {{/PaperToolbar}}
     {{/PaperDrawerPanelDrawer}}
   {{/PaperDrawerPanel}}
+
 </body>
 
