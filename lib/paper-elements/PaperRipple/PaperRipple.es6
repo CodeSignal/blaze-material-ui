@@ -25,7 +25,7 @@ class PaperRipple extends BlazeComponent {
     var fillSize = Math.max(width + fillX * 2, height + fillY * 2);
     // scale to fill edges
     // TODO use trigonometric check?
-    fillSize *= 1.1;
+    fillSize *= 1.3;
     ++this.rippleCounter;
 
     // create an object with styles for the ripple

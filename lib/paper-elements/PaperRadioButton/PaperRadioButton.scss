@@ -23,6 +23,7 @@ paper-radio-button {
 
   [data-id=ink].paper-radio-button {
     $offset: -15px;
+
     position: absolute;
     top: $offset;
     right: $offset;
