@@ -18,8 +18,7 @@ class PaperCheckbox extends BlazeComponent {
    */
   handleClick(){
     let checked = this.checked.get()
-    console.log(checked)
-    if (checked === 'checked') {
+    if (checked) {
         this.checked.set(false);
         this.hidden.set('hidden');
     } else {

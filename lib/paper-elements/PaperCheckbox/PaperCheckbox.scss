@@ -4,9 +4,9 @@ paper-checkbox {
   position: relative;
 
   input {
-    position: absolute;
-    opacity: 0;
-    pointer-events: none;
+    position: absolute !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
   }
 
   &:focus {
