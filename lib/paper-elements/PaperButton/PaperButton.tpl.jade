@@ -4,12 +4,18 @@ paper-button(class=className
              pressed=pressed.get
              focused=focused.get
              active=active.get
+             toggles=toggled.get
              aria-label=title
              tabindex='0'
              role="button")
-  +PaperRipple(fit='' id="ripple")
-  +PaperMaterial(elevation=elevation.get 
-                 className="content paper-button"
-                 animated='' 
-                 id="shadow")
-    +Template.contentBlock
+  if ink
+    +PaperRipple(fit='' id="ripple")
+  if elevated
+    +PaperMaterial(elevation=elevation.get
+                   className="content paper-button"
+                   animated=''
+                   id="shadow")
+      +Template.contentBlock
+  else
+    div
+      +Template.contentBlock

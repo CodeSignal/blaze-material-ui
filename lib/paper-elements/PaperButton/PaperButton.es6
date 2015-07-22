@@ -4,10 +4,42 @@ class PaperButton extends BlazeComponent {
    * set defaults
    */
   onCreated () {
-    this.elevation = new ReactiveVar(1);
     this.focused = new ReactiveVar(false);
     this.pressed = new ReactiveVar(false);
     this.active = new ReactiveVar(false);
+
+    this.elevated = this.data().elevated
+    this.ink = !this.data().noink
+
+    if (this.elevated) {
+      this.elevation = new ReactiveVar(1);
+    } else {
+      this.elevation = new ReactiveVar(false);
+    }
+
+    if (this.data().toggles) {
+      console.log('canIhaztoggle')
+      this.toggled = new ReactiveVar(false);
+    }
+  }
+
+  /**
+   *  Handle the toggle event of the button
+   */
+
+  handleToggle() {
+    let toggled = this.toggled.get();
+    this.toggled.set(!toggled);
+  }
+
+  /**
+   * handle the click event
+   * 1. toggles the button
+   * 2. add active state
+   */
+  onClick() {
+    this.handleToggle();
+    this.active = new ReactiveVar(true);
   }
 
   /**
@@ -27,8 +59,13 @@ class PaperButton extends BlazeComponent {
     if (!this.pressed.get()) {
       this.focused.set('');
     }
-    this.elevation.set(3);
+    if (this.elevated) {
+      this.elevation.set(3);
+    } else {
+      this.elevation.set(0);
+    }
   };
+
   /**
    * handle the blur event
    * 1. not focused
@@ -36,7 +73,11 @@ class PaperButton extends BlazeComponent {
    */
   onBlur () {
     this.focused.set(false);
-    this.elevation.set(1);
+    if (this.elevated) {
+      this.elevation.set(1);
+    } else {
+      this.elevation.set(0);
+    }
   }
 
   /**
@@ -52,8 +93,14 @@ class PaperButton extends BlazeComponent {
     this.pressed.set('');
     this.active.set('');
     this.focused.set(false);
-    this.elevation.set(2);
-    this.ripple.onDown(event);
+    if (this.elevated) {
+      this.elevation.set(2);
+    } else {
+      this.elevation.set(0);
+    }
+    if (this.ripple) {
+      this.ripple.onDown(event);
+    }
   }
 
   /**
@@ -69,12 +116,19 @@ class PaperButton extends BlazeComponent {
     if(this.pressed.get()!==false) {
       this.pressed.set(false);
       this.active.set(false);
-      this.ripple.onUp(event);
-      if (this.focused.get()) {
-        this.elevation.set(3);
+      if (this.elevated) {
+        if (this.focused.get()) {
+          this.elevation.set(3);
+        }
+        else {
+          this.elevation.set(1);
+        }
+      } else {
+        this.elevation.set(0);
       }
-      else {
-        this.elevation.set(1);
+
+      if(this.ripple) {
+        this.ripple.onUp(event);
       }
     }
   }
@@ -88,7 +142,8 @@ class PaperButton extends BlazeComponent {
       'focus': this.onFocus,
       'mousedown': this.onDown,
       'mouseleave': this.onUp,
-      'mouseup': this.onUp
+      'mouseup': this.onUp,
+      'click': this.onClick
     }];
   }
 }

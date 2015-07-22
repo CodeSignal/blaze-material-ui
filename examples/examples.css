@@ -9,18 +9,11 @@ body {
 }
 
 .horizontal-section-container {
-  display: -ms-flexbox;
-  display: -webkit-flex;
   display: flex;
-  -ms-flex-direction: row;
-  -webkit-flex-direction: row;
   flex-direction: row;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
   justify-content: center;
-  -ms-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
   flex-wrap: wrap;
+  margin: 100px auto;
 }
 
 .horizontal-section {
@@ -40,19 +33,88 @@ body {
 }
 
 paper-fab.green,
+  min-width: 130px;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+}
+
+paper-button {
+  display: block;
+  margin-bottom: 24px;
+}
+
+paper-button.colorful {
+  color: #4285f4;
+}
+
+paper-button[raised].colorful {
+  background: #4285f4;
+  color: #fff;
+}
+
+paper-button[toggles] {
+  transition: background-color 0.3s;
+}
+
+paper-button[toggles][active] {
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
+paper-button[toggles][active].colorful {
+  background-color: rgba(66, 133, 244, 0.25);
+}
+
+paper-button[toggles][active][raised].colorful {
+  background-color: rgba(66, 133, 244, 0.75);
+}
+
+paper-button.blue {
+  color: #03a9f4;
+}
+
+paper-button.blue:hover {
+  background: #e1f5fe;
+}
+
+paper-button.red {
+  color: #f44336;
+}
+
+paper-button.red:hover {
+  background: #ffebee;
+}
+
 paper-button.green {
+  color: #4caf50;
+}
+
+paper-button.green:hover {
+  background: #e8f5e9;
+}
+
+paper-button.orange {
+  color: #ff9800;
+}
+
+paper-button.orange:hover {
+  background: #fff3e0;
+}
+
+paper-button.hover:hover {
+  background: #eee;
+}
+
+
+paper-fab.green {
   background: #2E3BFF;
   color: #fff;
 }
 
-paper-fab.yellow,
-paper-button.yellow {
+paper-fab.yellow {
   background: #FFFC04;
   color: #000;
 }
 
-paper-fab.blue,
-paper-button.blue {
+paper-fab.blue {
   background: #239528;
   color: #fff;
 }
