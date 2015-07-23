@@ -1,10 +1,10 @@
 paper-tabs(class=className role="tablist" tabindex="0" scrollable=scrollable)
   if (scrollable)
-    +PaperIconButton(icon="chevronLeft")
+    +PaperIconButton(icon="navigation:chevron-left")
   div(data-id="tabsContainer" flex class="paper-tabs")
     div(data-id="tabsContent" horizontal layout class="paper-tabs")
       +IronSelector(selected=0)
         +Template.contentBlock
         div(data-id="selectionBar" class="paper-tabs" style=style.get)
   if (scrollable)
-    +PaperIconButton(icon="chevronRight")
+    +PaperIconButton(icon="navigation:chevron-right")
