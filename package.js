@@ -54,6 +54,10 @@ Package.onUse(function(api) {
     'lib/paper-elements/PaperRadioButton/PaperRadioButton.tpl.jade',
     'lib/paper-elements/PaperRadioButton/PaperRadioButton.es6',
 
+    'lib/paper-elements/PaperToggleButton/PaperToggleButton.scss',
+    'lib/paper-elements/PaperToggleButton/PaperToggleButton.tpl.jade',
+    'lib/paper-elements/PaperToggleButton/PaperToggleButton.es6',
+
     'lib/paper-elements/PaperMaterial/PaperMaterial.scss',
     'lib/paper-elements/PaperMaterial/PaperMaterial.tpl.jade',
     'lib/paper-elements/PaperMaterial/PaperMaterial.es6',

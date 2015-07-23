@@ -8,6 +8,37 @@ body {
   margin: 0;
 }
 
+.horizontal-section-container {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -ms-flex-direction: row;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -ms-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.horizontal-section {
+  background-color: white;
+  padding: 24px;
+  margin-right: 24px;
+  min-width: 200px;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+}
+
+.line {
+  margin-bottom: 40px;
+}
+
+.line span {
+  margin-left: 24px;
+}
+
 paper-fab.green,
 paper-button.green {
   background: #2E3BFF;
@@ -262,7 +293,6 @@ paper-tab.paper-tab-0 {
 .paper-tab-0.iron-selected {
   /*background: #91524E;*/
   transition: background 0s 0.2s;
-
   /*color: #D2FF6A;*/
   opacity: 1;
 }
@@ -299,6 +329,7 @@ paper-checkbox.paper-checkbox-0 #checkbox.paper-checkbox {
   }
 }
 
+
 @keyframes checkmark-expand {
   0% {
     top: 9px;
@@ -314,6 +345,7 @@ paper-checkbox.paper-checkbox-0 #checkbox.paper-checkbox {
     height: 10px;
   }
 }
+
 
 paper-checkbox.paper-checkbox-0 [data-id=checkbox].checked.paper-checkbox {
   background-color: #3f51b5;
@@ -375,4 +407,124 @@ paper-radio-button.paper-radio-button-0[disabled] [data-id=offRadio].paper-radio
 
 paper-radio-button.paper-radio-button-0[disabled][checked] [data-id=onRadio].paper-radio-button {
   background-color: #212121;
+}
+
+paper-toggle-button.paper-toggle-button-0 .toggle-bar.paper-toggle-button {
+  background-color: #000000;
+}
+
+paper-toggle-button.paper-toggle-button-0 .toggle-button.paper-toggle-button {
+  background-color: #fafafa;
+}
+
+paper-toggle-button.paper-toggle-button-0[checked] .toggle-bar.paper-toggle-button {
+  background-color: #0f9d58;
+}
+
+paper-toggle-button.paper-toggle-button-0[checked] .toggle-button.paper-toggle-button {
+  background-color: #0f9d58;
+}
+
+paper-toggle-button.paper-toggle-button-0 .toggle-ink.paper-toggle-button {
+  color: #212121;
+}
+
+paper-toggle-button.paper-toggle-button-0[checked] .toggle-ink.paper-toggle-button {
+  color: #0f9d58;
+}
+
+paper-toggle-button.paper-toggle-button-1 .toggle-bar.paper-toggle-button {
+  background-color: #01579b;
+}
+
+paper-toggle-button.paper-toggle-button-1 .toggle-button.paper-toggle-button {
+  background-color: #01579b;
+}
+
+paper-toggle-button.paper-toggle-button-1[checked] .toggle-bar.paper-toggle-button {
+  background-color: #03a9f4;
+}
+
+paper-toggle-button.paper-toggle-button-1[checked] .toggle-button.paper-toggle-button {
+  background-color: #03a9f4;
+}
+
+paper-toggle-button.paper-toggle-button-1 .toggle-ink.paper-toggle-button {
+  color: #01579b;
+}
+
+paper-toggle-button.paper-toggle-button-1[checked] .toggle-ink.paper-toggle-button {
+  color: #03a9f4;
+}
+
+paper-toggle-button.paper-toggle-button-2 .toggle-bar.paper-toggle-button {
+  background-color: #b71c1c;
+}
+
+paper-toggle-button.paper-toggle-button-2 .toggle-button.paper-toggle-button {
+  background-color: #b71c1c;
+}
+
+paper-toggle-button.paper-toggle-button-2[checked] .toggle-bar.paper-toggle-button {
+  background-color: #f44336;
+}
+
+paper-toggle-button.paper-toggle-button-2[checked] .toggle-button.paper-toggle-button {
+  background-color: #f44336;
+}
+
+paper-toggle-button.paper-toggle-button-2 .toggle-ink.paper-toggle-button {
+  color: #b71c1c;
+}
+
+paper-toggle-button.paper-toggle-button-2[checked] .toggle-ink.paper-toggle-button {
+  color: #f44336;
+}
+
+paper-toggle-button.paper-toggle-button-3 .toggle-bar.paper-toggle-button {
+  background-color: #e65100;
+}
+
+paper-toggle-button.paper-toggle-button-3 .toggle-button.paper-toggle-button {
+  background-color: #e65100;
+}
+
+paper-toggle-button.paper-toggle-button-3[checked] .toggle-bar.paper-toggle-button {
+  background-color: #ff9800;
+}
+
+paper-toggle-button.paper-toggle-button-3[checked] .toggle-button.paper-toggle-button {
+  background-color: #ff9800;
+}
+
+paper-toggle-button.paper-toggle-button-3 .toggle-ink.paper-toggle-button {
+  color: #e65100;
+}
+
+paper-toggle-button.paper-toggle-button-3[checked] .toggle-ink.paper-toggle-button {
+  color: #ff9800;
+}
+
+paper-toggle-button.paper-toggle-button-4 .toggle-bar.paper-toggle-button {
+  background-color: #1b5e20;
+}
+
+paper-toggle-button.paper-toggle-button-4 .toggle-button.paper-toggle-button {
+  background-color: #1b5e20;
+}
+
+paper-toggle-button.paper-toggle-button-4[checked] .toggle-bar.paper-toggle-button {
+  background-color: #4caf50;
+}
+
+paper-toggle-button.paper-toggle-button-4[checked] .toggle-button.paper-toggle-button {
+  background-color: #4caf50;
+}
+
+paper-toggle-button.paper-toggle-button-4 .toggle-ink.paper-toggle-button {
+  color: #1b5e20;
+}
+
+paper-toggle-button.paper-toggle-button-4[checked] .toggle-ink.paper-toggle-button {
+  color: #4caf50;
 }

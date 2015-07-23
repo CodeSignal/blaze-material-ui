@@ -1,0 +1,12 @@
+paper-toggle-button(class=className
+                    role="button"
+                    aria-pressed="false"
+                    tabindex="0"
+                    toggles=""
+                    aria-disabled="false"
+                    disabled=disabled
+                    checked=checked.get)
+  div(data-id="toggleContainer" class="paper-toggle-button")
+    div(data-id="toggleBar" class="toggle-bar paper-toggle-button")
+    div(data-id="toggleButton" class="toggle-button paper-toggle-button")
+      +PaperRipple(id="ink" className="paper-toggle-button" centered="")

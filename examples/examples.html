@@ -60,7 +60,7 @@
                 {{#PaperTab className="paper-tab-0"}}
                 nine
                 {{/PaperTab}}
-              {{/PaperTabs}}            
+              {{/PaperTabs}}
 
               <h3>Paper Checkbox</h3>
                 {{>PaperCheckbox label="Oxygen" className="paper-checkbox-0"}}
@@ -92,6 +92,86 @@
                 <br>
                 {{>PaperRadioButton label="Calcium" checked="checked" className="paper-radio-button-0"}}
 
+              <div class="horizontal-section-container">
+
+                <div>
+                  <h4>Enable</h4>
+                  <div class="horizontal-section">
+                    <div class="line">
+                      {{>PaperToggleButton className="paper-toggle-button-0"}}
+                      <span>Oxygen</span>
+                    </div>
+                    <div class="line">
+                      {{>PaperToggleButton className="paper-toggle-button-0"}}
+                      <span>Carbon</span>
+                    </div>
+                    <div class="line">
+                      {{>PaperToggleButton className="paper-toggle-button-0" checked="true"}}
+                      <span>Hydrogen</span>
+                    </div>
+                    <div class="line">
+                      {{>PaperToggleButton className="paper-toggle-button-0" checked="true"}}
+                      <span>Nitrogen</span>
+                    </div>
+                    <div class="line">
+                      {{>PaperToggleButton className="paper-toggle-button-0" checked="true"}}
+                      <span>Calcium</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div>
+                  <h4>Disabled</h4>
+                  <div class="horizontal-section">
+                    <div class="line">
+                      {{>PaperToggleButton className="paper-toggle-button-0" disabled=""}}
+                      <span>Oxygen</span>
+                    </div>
+                    <div class="line">
+                      {{>PaperToggleButton className="paper-toggle-button-0" disabled=""}}
+                      <span>Carbon</span>
+                    </div>
+                    <div class="line">
+                      {{>PaperToggleButton className="paper-toggle-button-0" checked="true" disabled=""}}
+                      <span>Hydrogen</span>
+                    </div>
+                    <div class="line">
+                      {{>PaperToggleButton className="paper-toggle-button-0" checked="true" disabled=""}}
+                      <span>Nitrogen</span>
+                    </div>
+                    <div class="line">
+                      {{>PaperToggleButton className="paper-toggle-button-0" checked="true" disabled=""}}
+                      <span>Calcium</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div>
+                  <h4>Enable</h4>
+                  <div class="horizontal-section">
+                    <div class="line">
+                      {{>PaperToggleButton className="paper-toggle-button-1"}}
+                      <span>Oxygen</span>
+                    </div>
+                    <div class="line">
+                      {{>PaperToggleButton className="paper-toggle-button-2"}}
+                      <span>Carbon</span>
+                    </div>
+                    <div class="line">
+                      {{>PaperToggleButton className="paper-toggle-button-3" checked="true"}}
+                      <span>Hydrogen</span>
+                    </div>
+                    <div class="line">
+                      {{>PaperToggleButton className="paper-toggle-button-4" checked="true"}}
+                      <span>Nitrogen</span>
+                    </div>
+                    <div class="line">
+                      {{>PaperToggleButton className="paper-toggle-button-1" checked="true"}}
+                      <span>Calcium</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
               <h3>Paper Progress</h3>
               {{>PaperProgress className="paper-progress-0" value=30 min=0 max=100}}
               <h3>Paper Fab</h3>
