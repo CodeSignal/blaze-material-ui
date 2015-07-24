@@ -229,11 +229,68 @@
 
             <h3>Paper Progress</h3>
             {{>PaperProgress className="paper-progress-0" value=30 min=0 max=100}}
-            <h3>Paper Fab</h3>
-            {{>PaperFab className="blue" icon="navigation:menu"}}
-            {{>PaperFab className="yellow" icon="navigation:refresh"}}
-            {{>PaperFab className="green" icon="navigation:more-vert"}}
-            {{>PaperFab icon="navigation:menu"}}
+            <div class="horizontal-section-container">
+              <div>
+                <h3>Enabled</h3>
+                <div class="horizontal-section">
+                  <div class="line">
+                    {{>PaperFab className="paper-fab-0" icon="navigation:arrow-forward"}}
+                  </div>
+                  <div class="line">
+                    {{>PaperFab className="paper-fab-0" icon="content:create"}}
+                  </div>
+                  <div class="line">
+                    {{>PaperFab className="paper-fab-0" icon="action:favorite"}}
+                  </div>
+                  <div class="line">
+                    {{>PaperFab className="paper-fab-0" icon="navigation:check" mini=""}}
+                  </div>
+                  <div class="line">
+                    {{>PaperFab className="paper-fab-0" icon="content:reply" mini=""}}
+                  </div>
+                </div>
+              </div>
+              <div>
+                <h3>Disabled</h3>
+                <div class="horizontal-section">
+                  <div class="line">
+                    {{>PaperFab className="paper-fab-0" icon="navigation:arrow-forward" disabled=""}}
+                  </div>
+                  <div class="line">
+                    {{>PaperFab className="paper-fab-0" icon="content:create" disabled=""}}
+                  </div>
+                  <div class="line">
+                    {{>PaperFab className="paper-fab-0" icon="action:favorite" disabled=""}}
+                  </div>
+                  <div class="line">
+                    {{>PaperFab className="paper-fab-0" icon="navigation:check" mini="" disabled=""}}
+                  </div>
+                  <div class="line">
+                    {{>PaperFab className="paper-fab-0" icon="content:reply" mini="" disabled=""}}
+                  </div>
+                </div>
+              </div>
+              <div>
+                <h3>Enabled</h3>
+                <div class="horizontal-section">
+                  <div class="line">
+                    {{>PaperFab className="paper-fab-1" icon="navigation:arrow-forward"}}
+                  </div>
+                  <div class="line">
+                    {{>PaperFab className="paper-fab-2" icon="content:create"}}
+                  </div>
+                  <div class="line">
+                    {{>PaperFab className="paper-fab-3" icon="action:favorite"}}
+                  </div>
+                  <div class="line">
+                    {{>PaperFab className="paper-fab-4" icon="navigation:check" mini=""}}
+                  </div>
+                  <div class="line">
+                    {{>PaperFab className="paper-fab-1" icon="content:reply" mini=""}}
+                  </div>
+                </div>
+              </div>
+            </div>
             <div class="horizontal-section-container">
               <div>
                 <h3>Flat</h3>
