@@ -3,6 +3,7 @@ paper-fab(class=className
           mini=mini
           pressed=getPressed
           focused=getFocused
+          disabled=disabled.get
           active=getActive
           icon=icon
           aria-label=title
@@ -16,6 +17,6 @@ paper-fab(class=className
                  id="shadow")
   if icon
     +IronIcon(label=title icon=icon id="icon")
-  else 
+  else
     +UI.contentBlock
 
