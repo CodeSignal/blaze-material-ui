@@ -25,6 +25,19 @@ class PaperTab extends BlazeComponent {
   }
 
   /**
+   * handle the click event
+   * 1. click link if present
+   * @param  {Event}
+   */
+  onClick(event) {
+    var link = this.find('a');
+
+    if (link) {
+      link.click();
+    }
+  }
+
+  /**
    * handle the mouseup event
    * 1. send event to ripple
    * @param  {Event}
@@ -39,7 +52,8 @@ class PaperTab extends BlazeComponent {
     return [{
       'mousedown': this.onDown,
       'mouseleave': this.onUp,
-      'mouseup': this.onUp
+      'mouseup': this.onUp,
+      'click': this.onClick
     }];
   }
 }

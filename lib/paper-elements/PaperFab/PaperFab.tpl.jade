@@ -14,5 +14,8 @@ paper-fab(class=className
                  fit=''
                  animated=''
                  id="shadow")
-  +IronIcon(label=title icon=icon id="icon")
+  if icon
+    +IronIcon(label=title icon=icon id="icon")
+  else 
+    +UI.contentBlock
 
