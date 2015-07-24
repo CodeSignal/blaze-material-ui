@@ -1,4 +1,11 @@
-paper-tab(class=className role="tab" aria-disabled="false")
+paper-tab(class=className 
+          role="tab" 
+          aria-disabled="false"
+          link=link)
   +PaperRipple(className="paper-tab" id="ink")
   div(class="tab-content  paper-tab" flex-auto center-center horizontal layout)
-    +Template.contentBlock
+    if link
+      a(href=link)
+        +Template.contentBlock
+    else
+      +Template.contentBlock
