@@ -65,6 +65,7 @@ class PaperCheckbox extends BlazeComponent {
    */
   onBlur () {
     this.focused.set(false);
+    this.ripple.onUp(event);
   }
 
   /**
@@ -93,7 +94,7 @@ class PaperCheckbox extends BlazeComponent {
       'mousedown [data-id=checkboxContainer]': this.onDown,
       'mouseleave [data-id=checkboxContainer]': this.onUp,
       'mouseup [data-id=checkboxContainer]': this.onUp,
-      'blur': this.onBlur,
+      'blur [data-id=checkboxContainer]': this.onBlur,
       'focus [data-id=checkboxContainer]': this.onFocus,
       'click': this.handleClick
     }]
