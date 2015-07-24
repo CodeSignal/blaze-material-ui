@@ -430,8 +430,160 @@ paper-checkbox.paper-checkbox-0[disabled] [data-id=checkbox].paper-checkbox {
   border-color: #212121;
 }
 
-paper-checkbox.paper-checkbox-0[disabled][checked] [data-id=checkbox].paper-checkbox {
-  background-color: #212121;
+paper-checkbox.paper-checkbox-0[disabled] [data-id=checkbox].checked.paper-checkbox {
+  background-color: #212121 !important;
+}
+
+.paper-checkbox-1 [data-id=checkboxContainer].paper-checkbox {
+  background-color:transparent;
+}
+
+paper-checkbox.paper-checkbox-1 [data-id=ink].paper-checkbox {
+  color:#01579b;
+}
+
+paper-checkbox.paper-checkbox-1 [data-id=ink][checked].paper-checkbox {
+  color:#03a9f4;
+}
+
+paper-checkbox.paper-checkbox-1 [data-id=checkbox].paper-checkbox {
+  border-color:#01579b;
+}
+
+paper-checkbox.paper-checkbox-1 [data-id=checkbox].checked.paper-checkbox {
+  background-color:#03a9f4;
+
+  border-color:#03a9f4;
+}
+
+paper-checkbox.paper-checkbox-1 [data-id=checkmark].paper-checkbox {
+  border-color:white;
+}
+
+.paper-checkbox-1 [data-id=checkboxLabel].paper-checkbox {
+  color:#212121;
+}
+
+paper-checkbox.paper-checkbox-1[disabled] [data-id=checkbox].paper-checkbox {
+  border-color:#01579b;
+}
+
+paper-checkbox.paper-checkbox-1[disabled][checked] [data-id=checkbox].paper-checkbox {
+  background-color:#01579b;
+}
+
+.paper-checkbox-2 [data-id=checkboxContainer].paper-checkbox {
+  background-color:transparent;
+}
+
+paper-checkbox.paper-checkbox-2 [data-id=ink].paper-checkbox {
+  color:#b71c1c;
+}
+
+paper-checkbox.paper-checkbox-2 [data-id=ink][checked].paper-checkbox {
+  color:#f44336;
+}
+
+paper-checkbox.paper-checkbox-2 [data-id=checkbox].paper-checkbox {
+  border-color:#b71c1c;
+}
+
+paper-checkbox.paper-checkbox-2 [data-id=checkbox].checked.paper-checkbox {
+  background-color:#f44336;
+
+  border-color:#f44336;
+}
+
+paper-checkbox.paper-checkbox-2 [data-id=checkmark].paper-checkbox {
+  border-color:white;
+}
+
+.paper-checkbox-2 [data-id=checkboxLabel].paper-checkbox {
+  color:#212121;
+}
+
+paper-checkbox.paper-checkbox-2[disabled] [data-id=checkbox].paper-checkbox {
+  border-color:#b71c1c;
+}
+
+paper-checkbox.paper-checkbox-2[disabled][checked] [data-id=checkbox].paper-checkbox {
+  background-color:#b71c1c;
+}
+
+.paper-checkbox-3 [data-id=checkboxContainer].paper-checkbox {
+  background-color:transparent;
+}
+
+paper-checkbox.paper-checkbox-3 [data-id=ink].paper-checkbox {
+  color:#e65100;
+}
+
+paper-checkbox.paper-checkbox-3 [data-id=ink][checked].paper-checkbox {
+  color:#ff9800;
+}
+
+paper-checkbox.paper-checkbox-3 [data-id=checkbox].paper-checkbox {
+  border-color:#e65100;
+}
+
+paper-checkbox.paper-checkbox-3 [data-id=checkbox].checked.paper-checkbox {
+  background-color:#ff9800;
+
+  border-color:#ff9800;
+}
+
+paper-checkbox.paper-checkbox-3 [data-id=checkmark].paper-checkbox {
+  border-color:white;
+}
+
+.paper-checkbox-3 [data-id=checkboxLabel].paper-checkbox {
+  color:#212121;
+}
+
+paper-checkbox.paper-checkbox-3[disabled] [data-id=checkbox].paper-checkbox {
+  border-color:#e65100;
+}
+
+paper-checkbox.paper-checkbox-3[disabled][checked] [data-id=checkbox].paper-checkbox {
+  background-color:#e65100;
+}
+
+.paper-checkbox-4 [data-id=checkboxContainer].paper-checkbox {
+  background-color:transparent;
+}
+
+paper-checkbox.paper-checkbox-4 [data-id=ink].paper-checkbox {
+  color:#1b5e20;
+}
+
+paper-checkbox.paper-checkbox-4 [data-id=ink][checked].paper-checkbox {
+  color:#4caf50;
+}
+
+paper-checkbox.paper-checkbox-4 [data-id=checkbox].paper-checkbox {
+  border-color:#1b5e20;
+}
+
+paper-checkbox.paper-checkbox-4 [data-id=checkbox].checked.paper-checkbox {
+  background-color:#4caf50;
+
+  border-color:#4caf50;
+}
+
+paper-checkbox.paper-checkbox-4 [data-id=checkmark].paper-checkbox {
+  border-color:white;
+}
+
+.paper-checkbox-4 [data-id=checkboxLabel].paper-checkbox {
+  color:#212121;
+}
+
+paper-checkbox.paper-checkbox-4[disabled] [data-id=checkbox].paper-checkbox {
+  border-color:#1b5e20;
+}
+
+paper-checkbox.paper-checkbox-4[disabled][checked] [data-id=checkbox].paper-checkbox {
+  background-color:#1b5e20;
 }
 
 .paper-header-panel-1 .paper-header-panel > .content {

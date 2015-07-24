@@ -6,7 +6,9 @@ paper-checkbox(class=className
                aria-disabled="false"
                aria-checked="false"
                aria-label=label
-               pressed="")
+               focused=getFocused
+               pressed=""
+               disabled=disabled.get)
     div(data-id="checkboxContainer"
         class="paper-checkbox")
         input(type="checkbox" checked=checked.get class=className)

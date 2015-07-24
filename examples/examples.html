@@ -74,12 +74,70 @@
               {{/PaperTab}}
             {{/PaperTabs}}
 
-            <h3>Paper Checkbox</h3>
-              {{>PaperCheckbox label="Oxygen" className="paper-checkbox-0"}}
-              {{>PaperCheckbox label="Carbon" className="paper-checkbox-0"}}
-              {{>PaperCheckbox label="Hydrogen" checked="checked" className="paper-checkbox-0"}}
-              {{>PaperCheckbox label="Nitrogen" checked="checked" className="paper-checkbox-0"}}
-              {{>PaperCheckbox label="Calcium" checked="checked" className="paper-checkbox-0"}}
+            <div class="horizontal-section-container">
+              <div>
+                <h3>Enabled</h3>
+                <div class="horizontal-section">
+                  <div class="line">
+                    {{>PaperCheckbox label="Oxygen" className="paper-checkbox-0"}}
+                  </div>
+                  <div class="line">
+                    {{>PaperCheckbox label="Carbon" className="paper-checkbox-0"}}
+                  </div>
+                  <div class="line">
+                    {{>PaperCheckbox label="Hydrogen" checked="checked" className="paper-checkbox-0"}}
+                  </div>
+                  <div class="line">
+                    {{>PaperCheckbox label="Nitrogen" checked="checked" className="paper-checkbox-0"}}
+                  </div>
+                  <div class="line">
+                    {{>PaperCheckbox label="Calcium" checked="checked" className="paper-checkbox-0"}}
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <h3>Disabled</h3>
+                <div class="horizontal-section">
+                  <div class="line">
+                    {{>PaperCheckbox label="Oxygen" className="paper-checkbox-0" disabled=""}}
+                  </div>
+                  <div class="line">
+                    {{>PaperCheckbox label="Carbon" className="paper-checkbox-0" disabled=""}}
+                  </div>
+                  <div class="line">
+                    {{>PaperCheckbox label="Hydrogen" checked="checked" className="paper-checkbox-0" disabled=""}}
+                  </div>
+                  <div class="line">
+                    {{>PaperCheckbox label="Nitrogen" checked="checked" className="paper-checkbox-0" disabled=""}}
+                  </div>
+                  <div class="line">
+                    {{>PaperCheckbox label="Calcium" checked="checked" className="paper-checkbox-0" disabled=""}}
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <h3>Color</h3>
+                <div class="horizontal-section">
+                  <div class="line">
+                    {{>PaperCheckbox label="Oxygen" className="paper-checkbox-1"}}
+                  </div>
+                  <div class="line">
+                    {{>PaperCheckbox label="Carbon" className="paper-checkbox-2"}}
+                  </div>
+                  <div class="line">
+                    {{>PaperCheckbox label="Hydrogen" checked="checked" className="paper-checkbox-3"}}
+                  </div>
+                  <div class="line">
+                    {{>PaperCheckbox label="Nitrogen" checked="checked" className="paper-checkbox-4"}}
+                  </div>
+                  <div class="line">
+                    {{>PaperCheckbox label="Calcium" checked="checked" className="paper-checkbox-1"}}
+                  </div>
+                </div>
+              </div>
+            </div>
 
             <h3>Paper Radio Button</h3>
               {{>PaperRadioButton label="Oxygen" className="paper-radio-button-0"}}
