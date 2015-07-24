@@ -1,4 +1,4 @@
-# PaperCheckbox 
+# PaperCheckbox
 
 
 ## Screenshot
@@ -18,8 +18,51 @@ Add a custom className
 {{> PaperCheckbox className="my-custom-class"}}
 ```
 
-Use an argument
+## Properties
 
+* Checked
+
+	```handlebars
+	{{#PaperButton checked="checked"}}[content]{{/PaperButton}}
+	```
+
+* Disabled
+
+	```handlebars
+	{{#PaperButton disabled=""}}[content]{{/PaperButton}}
+	```
+
+## Styling
+
+Style the checkmark with CSS as you would a normal DOM element.
+
+```css
+// Default Checkbox
+.my-custom-class data-blue;
+	border-color: transparent;
+}
+
+// Checked Checkbox
+.my-custom-class [data-id='checkbox'].checked.paper-checkbox {
+	background-color: darkblue;
+	border-color: darkblue;
+}
+
+// Checkmark
+.my-custom-class [data-id=checkmark].paper-checkbox {
+	border-color: white;
+}
+
+// Checkbox Label
+.my-custom-class [data-id=checkboxLabel].paper-check {
+	color: blue;
+}
 ```
-{{> PaperCheckbox argument="some-argument"}}
+
+By default, the ripple is the same color as the foreground at 25% opacity. You may customize the color using this selector:
+
+```css
+.my-custom-class::shadow paper-ripple {
+	color: darkblue;
+}
 ```
