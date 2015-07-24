@@ -5,6 +5,7 @@ class PaperCheckbox extends BlazeComponent {
    */
   onCreated () {
     this.focused = new ReactiveVar(false);
+    this.pressed = new ReactiveVar(false);
     let checked = this.data().checked;
     let hidden;
     if (!this.data().checked) {
@@ -54,8 +55,17 @@ class PaperCheckbox extends BlazeComponent {
     if (!this.pressed.get()) {
       this.focused.set('');
     }
-    this.setElevation(3);
+    this.ripple.onDown(event);
   };
+
+  /**
+   * handle the blur event
+   * 1. not focused
+   * 2. not elevated
+   */
+  onBlur () {
+    this.focused.set(false);
+  }
 
   /**
    * handle the mousedown event
@@ -83,7 +93,8 @@ class PaperCheckbox extends BlazeComponent {
       'mousedown [data-id=checkboxContainer]': this.onDown,
       'mouseleave [data-id=checkboxContainer]': this.onUp,
       'mouseup [data-id=checkboxContainer]': this.onUp,
-      'focus': this.onFocus,
+      'blur': this.onBlur,
+      'focus [data-id=checkboxContainer]': this.onFocus,
       'click': this.handleClick
     }]
   }
