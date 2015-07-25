@@ -796,3 +796,65 @@ paper-toggle-button.paper-toggle-button-4 .toggle-ink.paper-toggle-button {
 paper-toggle-button.paper-toggle-button-4[checked] .toggle-ink.paper-toggle-button {
   color: #4caf50;
 }
+
+paper-icon-button {
+  margin: 0 auto;
+}
+
+paper-icon-button svg {
+  width: 100%;
+  height: 100%;
+}
+
+paper-icon-button.huge {
+  margin-left: 0px;
+  width: 100px;
+  --paper-icon-button-ink-color: var(--paper-indigo-500);
+}
+
+paper-icon-button.huge::shadow [data-id=icon] {
+  width: 100px;
+  height: 100px;
+}
+
+paper-icon-button.huge::shadow [data-id=icon] {
+  width: 100px;
+  height: 100px;
+}
+
+paper-icon-button.huge [data-id=icon] {
+  width: 100px;
+  height: 100px;
+}
+
+paper-icon-button.paper-icon-button-0 [data-id=ink].paper-icon-button {
+  color: #212121;
+}
+
+paper-icon-button.paper-icon-button-0[disabled] {
+  color: #bdbdbd;
+}
+
+paper-icon-button.paper-icon-button-1 [data-id=ink].paper-icon-button {
+  color: #3f51b5;
+}
+
+paper-icon-button.paper-icon-button-1[disabled] {
+  color: #bdbdbd;
+}
+
+paper-icon-button.blue {
+  color: #03a9f4;
+}
+
+paper-icon-button.red {
+  color: #f44336;
+}
+
+paper-icon-button.orange {
+  color: #ff9800;
+}
+
+paper-icon-button.green {
+  color: #4caf50;
+}

@@ -412,11 +412,88 @@
             {{/PaperToolbar}}
 
             <!--  Paper Icon Button -->
-            <h3>Paper Icon Button</h3>
-            {{>PaperIconButton icon="navigation:menu"}}
-            {{>PaperIconButton icon="navigation:refresh"}}
-            {{>PaperIconButton icon="navigation:more-vert"}}
-
+            <div class="horizontal-section-container">
+              <div>
+                <h3>Enable</h3>
+                <div class="horizontal-section" style="min-width: 150px; text-align: center;">
+                  <div class="line">
+                    {{>PaperIconButton icon="navigation:menu"}}
+                  </div>
+                  <div class="line">
+                    {{>PaperIconButton icon="action:favorite"}}
+                  </div>
+                  <div class="line">
+                    {{>PaperIconButton icon="navigation:arrow-back"}}
+                  </div>
+                  <div class="line">
+                    {{>PaperIconButton icon="navigation:arrow-forward"}}
+                  </div>
+                  <div class="line">
+                    {{>PaperIconButton icon="navigation:close"}}
+                  </div>
+                  <div class="line">
+                    {{>PaperIconButton icon="action:polymer"}}
+                  </div>
+                </div>
+              </div>
+              <div>
+                <h3>Disable</h3>
+                <div class="horizontal-section" style="min-width: 150px; text-align: center;">
+                  <div class="line">
+                    {{>PaperIconButton className="paper-icon-button-0" icon="navigation:menu" disabled=""}}
+                  </div>
+                  <div class="line">
+                    {{>PaperIconButton className="paper-icon-button-0" icon="action:favorite" disabled=""}}
+                  </div>
+                  <div class="line">
+                    {{>PaperIconButton className="paper-icon-button-0" icon="navigation:arrow-back" disabled=""}}
+                  </div>
+                  <div class="line">
+                    {{>PaperIconButton className="paper-icon-button-0" icon="navigation:arrow-forward" disabled=""}}
+                  </div>
+                  <div class="line">
+                    {{>PaperIconButton className="paper-icon-button-0" icon="navigation:close" disabled=""}}
+                  </div>
+                  <div class="line">
+                    {{>PaperIconButton className="paper-icon-button-0" icon="action:polymer" disabled=""}}
+                  </div>
+                </div>
+              </div>
+              <div>
+                <h3>Color</h3>
+                <div class="horizontal-section" style="min-width: 150px; text-align: center;">
+                  <div class="line">
+                    {{>PaperIconButton className="blue" icon="navigation:menu"}}
+                  </div>
+                  <div class="line">
+                    {{>PaperIconButton className="red" icon="action:favorite"}}
+                  </div>
+                  <div class="line">
+                    {{>PaperIconButton className="orange" icon="navigation:arrow-back"}}
+                  </div>
+                  <div class="line">
+                    {{>PaperIconButton className="green" icon="navigation:arrow-forward"}}
+                  </div>
+                  <div class="line">
+                    {{>PaperIconButton className="blue" icon="navigation:close"}}
+                  </div>
+                  <div class="line">
+                    {{>PaperIconButton className="red" icon="action:polymer"}}
+                  </div>
+                </div>
+              </div>
+              <div>
+                <h3>Size</h3>
+                <div class="horizontal-section" style="min-width: 150px; text-align: center;">
+                  <div class="line">
+                    {{>PaperIconButton className="huge" icon="action:favorite"}}
+                  </div>
+                  <div class="line">
+                    {{>PaperIconButton className="huge" icon="action:polymer"}}
+                  </div>
+                </div>
+              </div>
+            </div>
             <!--  Paper Material -->
 
             <h3>Paper Material</h3>
