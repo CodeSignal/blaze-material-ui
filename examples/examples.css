@@ -677,6 +677,138 @@ paper-radio-button.paper-radio-button-0[disabled][checked] [data-id=onRadio].pap
   background-color: #212121;
 }
 
+paper-radio-button.paper-radio-button-1 [data-id=ink].paper-radio-button {
+  color: #01579b;
+}
+
+paper-radio-button.paper-radio-button-1 [data-id=ink][checked].paper-radio-button {
+  color: #03a9f4;
+}
+
+paper-radio-button.paper-radio-button-1 [data-id=offRadio].paper-radio-button {
+  background-color: transparent;
+  border-color: #01579b;
+}
+
+paper-radio-button.paper-radio-button-1 [data-id=onRadio].paper-radio-button {
+  background-color: #03a9f4;
+}
+
+paper-radio-button.paper-radio-button-1[checked] [data-id=offRadio].paper-radio-button {
+  border-color: #03a9f4;
+}
+
+.paper-radio-button-1 [data-id=radioLabel].paper-radio-button {
+  color: #212121;
+}
+
+paper-radio-button.paper-radio-button-1[disabled] [data-id=offRadio].paper-radio-button {
+  border-color: #01579b;
+}
+
+paper-radio-button.paper-radio-button-1[disabled][checked] [data-id=onRadio].paper-radio-button {
+  background-color: #01579b;
+}
+
+paper-radio-button.paper-radio-button-2 [data-id=ink].paper-radio-button {
+  color: #b71c1c;
+}
+
+paper-radio-button.paper-radio-button-2 [data-id=ink][checked].paper-radio-button {
+  color: #f44336;
+}
+
+paper-radio-button.paper-radio-button-2 [data-id=offRadio].paper-radio-button {
+  background-color: transparent;
+  border-color: #b71c1c;
+}
+
+paper-radio-button.paper-radio-button-2 [data-id=onRadio].paper-radio-button {
+  background-color: #f44336;
+}
+
+paper-radio-button.paper-radio-button-2[checked] [data-id=offRadio].paper-radio-button {
+  border-color: #f44336;
+}
+
+.paper-radio-button-2 [data-id=radioLabel].paper-radio-button {
+  color: #212121;
+}
+
+paper-radio-button.paper-radio-button-2[disabled] [data-id=offRadio].paper-radio-button {
+  border-color: #b71c1c;
+}
+
+paper-radio-button.paper-radio-button-2[disabled][checked] [data-id=onRadio].paper-radio-button {
+  background-color: #b71c1c;
+}
+
+paper-radio-button.paper-radio-button-3 [data-id=ink].paper-radio-button {
+  color: #e65100;
+}
+
+paper-radio-button.paper-radio-button-3 [data-id=ink][checked].paper-radio-button {
+  color: #ff9800;
+}
+
+paper-radio-button.paper-radio-button-3 [data-id=offRadio].paper-radio-button {
+  background-color: transparent;
+  border-color: #e65100;
+}
+
+paper-radio-button.paper-radio-button-3 [data-id=onRadio].paper-radio-button {
+  background-color: #ff9800;
+}
+
+paper-radio-button.paper-radio-button-3[checked] [data-id=offRadio].paper-radio-button {
+  border-color: #ff9800;
+}
+
+.paper-radio-button-3 [data-id=radioLabel].paper-radio-button {
+  color: #212121;
+}
+
+paper-radio-button.paper-radio-button-3[disabled] [data-id=offRadio].paper-radio-button {
+  border-color: #e65100;
+}
+
+paper-radio-button.paper-radio-button-3[disabled][checked] [data-id=onRadio].paper-radio-button {
+  background-color: #e65100;
+}
+
+paper-radio-button.paper-radio-button-4 [data-id=ink].paper-radio-button {
+  color: #1b5e20;
+}
+
+paper-radio-button.paper-radio-button-4 [data-id=ink][checked].paper-radio-button {
+  color: #4caf50;
+}
+
+paper-radio-button.paper-radio-button-4 [data-id=offRadio].paper-radio-button {
+  background-color: transparent;
+  border-color: #1b5e20;
+}
+
+paper-radio-button.paper-radio-button-4 [data-id=onRadio].paper-radio-button {
+  background-color: #4caf50;
+}
+
+paper-radio-button.paper-radio-button-4[checked] [data-id=offRadio].paper-radio-button {
+  border-color: #4caf50;
+}
+
+.paper-radio-button-4 [data-id=radioLabel].paper-radio-button {
+  color: #212121;
+}
+
+paper-radio-button.paper-radio-button-4[disabled] [data-id=offRadio].paper-radio-button {
+  border-color: #1b5e20;
+}
+
+paper-radio-button.paper-radio-button-4[disabled][checked] [data-id=onRadio].paper-radio-button {
+  background-color: #1b5e20;
+}
+
 paper-toggle-button.paper-toggle-button-0 .toggle-bar.paper-toggle-button {
   background-color: #000000;
 }

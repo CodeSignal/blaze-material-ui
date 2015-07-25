@@ -44,7 +44,7 @@ Style the checkmark with CSS as you would a normal DOM element.
 }
 
 // Checked Checkbox
-.my-custom-class [data-id='checkbox'].checked.paper-checkbox {
+.my-custom-class [data-id=checkbox].checked.paper-checkbox {
 	background-color: darkblue;
 	border-color: darkblue;
 }
