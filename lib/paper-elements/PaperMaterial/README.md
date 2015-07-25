@@ -1,4 +1,4 @@
-# PaperMaterial 
+# PaperMaterial
 
 
 ## Screenshot
@@ -6,26 +6,28 @@
 
 ## Usage
 
-Basic usage
+* Basic usage
 
-```handlebars
-{{>PaperMaterial}}
-```
+	```handlebars
+	{{>PaperMaterial}}
+	```
 
-Add a custom className
+* Add a custom className
 
-```handlebars
-{{>PaperMaterial className="my-custom-class"}}
-```
+	```handlebars
+	{{>PaperMaterial className="my-custom-class"}}
+	```
 
-Add a content
+* Add a content
 
-```handlebars
-{{#PaperMaterial}}[content]{{# PaperMaterial}}
-```
+	```handlebars
+	{{#PaperMaterial}}[content]{{# PaperMaterial}}
+	```
 
-Change the elevation
+## Properties
 
-```handlebars
-{{>PaperMaterial elevation=3}}
-```
+* Elevation
+
+	```handlebars
+	{{>PaperMaterial elevation=3}}
+	```
