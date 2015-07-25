@@ -36,6 +36,6 @@ The PaperDrawerPanel provides/requires 3 components.
   * The drawer content
 
 
-For the logic to work you need to use this strukture to define where your content should appear
+For the logic to work you need to use this structure to define where your content should appear
 
 Any nestewd button with the classname `drawer-toggle-button` will toggle the sidebar. You can have multiple toggle buttons for the same panel
