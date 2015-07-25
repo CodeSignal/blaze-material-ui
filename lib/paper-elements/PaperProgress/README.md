@@ -1,31 +1,31 @@
-# PaperProgress 
+# PaperProgress
 
 ## Screenshot
 ![PaperProgress ](../../../examples/readme/PaperProgress.png)
 
 ## Usage
 
-Basic usage
+* Basic usage
 
-```handlebars
-{{> PaperMaterial}}
-```
+	```handlebars
+	{{> PaperMaterial}}
+	```
 
-Add a custom className
+* Add a custom className
 
-```handlebars
-{{> PaperProgress className="my-custom-class"}}
-```
+	```handlebars
+	{{> PaperProgress className="my-custom-class"}}
+	```
 
-Set the min & max
+* Set the min & max
 
-```handlebars
-{{> PaperProgress min=0 max=100}}
-```
+	```handlebars
+	{{> PaperProgress min=0 max=100}}
+	```
 
-Change the value
+* Change the value
 
-```handlebars
-{{> PaperProgress value=30}}
-```
+	```handlebars
+	{{> PaperProgress value=30}}
+	```
 
