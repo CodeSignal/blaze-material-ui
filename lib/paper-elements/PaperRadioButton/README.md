@@ -40,7 +40,7 @@
 
 ## Styling
 
-Style the checkmark with CSS as you would a normal DOM element.
+Style the radio button with CSS as you would a normal DOM element.
 
 ```css
 // onRadio
