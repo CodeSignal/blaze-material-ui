@@ -8,18 +8,15 @@
 
 Basic usage
 
-```
-{{> PaperHeaderPanel}}
+```handlebars
+{{#PaperHeaderPanel mode="waterfall" className="paper-header-panel-0 yellow"}}
+  <div class="paper-header">Waterfall</div>
+  {{#PaperHeaderPanelMain}}
+  <div class="content" style="height:2000px">content</div>
+  {{/PaperHeaderPanelMain}}
+{{/PaperHeaderPanel}}
 ```
 
-Add a custom className
+`<div class="paper-header">Waterfall</div>` can be replaced by a PaperToolbar
 
-```
-{{> PaperHeaderPanel className="my-custom-class"}}
-```
-
-Use an argument
-
-```
-{{> PaperHeaderPanel argument="some-argument"}}
-```
+the mode defines the way the panel behaves on scroll

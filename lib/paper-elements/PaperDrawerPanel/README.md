@@ -8,18 +8,34 @@
 
 Basic usage
 
-```
-{{> PaperDrawerPanel}}
+```handlebars
+  {{#PaperDrawerPanel}}
+    {{#PaperDrawerPanelMain}}
+
+      Main Content
+
+    {{/PaperDrawerPanelMain}}
+    {{#PaperDrawerPanelDrawer}}
+
+      Drawer Content
+
+    {{/PaperDrawerPanelDrawer}}
+  {{/PaperDrawerPanel}}
 ```
 
-Add a custom className
+## Description
 
-```
-{{> PaperDrawerPanel className="my-custom-class"}}
-```
+The PaperDrawerPanel provides/requires 3 components.
 
-Use an argument
+1. PaperDrawerPanel
+  * the wrapper aound the content
+  * handles the selection
+2. PaperDrawerPanelMain
+  * The main content
+3. PaperDrawerPanelMain
+  * The drawer content
 
-```
-{{> PaperDrawerPanel argument="some-argument"}}
-```
+
+For the logic to work you need to use this strukture to define where your content should appear
+
+Any nestewd button with the classname `drawer-toggle-button` will toggle the sidebar. You can have multiple toggle buttons for the same panel
