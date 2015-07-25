@@ -23,13 +23,13 @@ Add a custom className
 * Checked
 
 	```handlebars
-	{{#PaperButton checked="checked"}}[content]{{/PaperButton}}
+	{{#PaperCheckbox checked="checked"}}[content]{{/PaperCheckbox}}
 	```
 
 * Disabled
 
 	```handlebars
-	{{#PaperButton disabled=""}}[content]{{/PaperButton}}
+	{{#PaperCheckbox disabled=""}}[content]{{/PaperCheckbox}}
 	```
 
 ## Styling
@@ -38,7 +38,8 @@ Style the checkmark with CSS as you would a normal DOM element.
 
 ```css
 // Default Checkbox
-.my-custom-class data-blue;
+.my-custom-class [data-id=checkbox] {
+	background-color: blue;
 	border-color: transparent;
 }
 
