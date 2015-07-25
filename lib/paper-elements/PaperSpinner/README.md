@@ -1,24 +1,24 @@
-# PaperSpinner 
+# PaperSpinner
 
 ## Screenshot
 ![PaperSpinner ](../../../examples/readme/PaperSpinner.png)
 
 ## Usage
 
-Basic usage
+* Basic usage
 
-```handlebars
-{{>PaperSpinner}}
-```
+	```handlebars
+	{{>PaperSpinner}}
+	```
 
-Add a custom className
+* Add a custom className
 
-```handlebars
-{{>PaperSpinner className="my-custom-class"}}
-```
+	```handlebars
+	{{>PaperSpinner className="my-custom-class"}}
+	```
 
-Activate
+* Activate
 
-```handlebars
-{{>PaperSpinner active="active"}}
-```
+	```handlebars
+	{{>PaperSpinner active="active"}}
+	```
