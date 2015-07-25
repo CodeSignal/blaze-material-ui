@@ -1,15 +1,15 @@
-# PaperRipple 
+# PaperRipple
 
 ## Usage
 
-Basic usage
+* Basic usage
 
-```handlebars
-{{>PaperRipple}}
-```
+	```handlebars
+	{{>PaperRipple}}
+	```
 
-Add a custom className
+* Add a custom className
 
-```handlebars
-{{>PaperRipple className="my-custom-class"}}
-```
+	```handlebars
+	{{>PaperRipple className="my-custom-class"}}
+	```
