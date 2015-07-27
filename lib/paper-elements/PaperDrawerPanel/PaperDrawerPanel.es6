@@ -1,4 +1,6 @@
-class PaperDrawerPanel extends BlazeComponent {
+Material = Material || {}
+
+Material.PaperDrawerPanel = PaperDrawerPanel = class PaperDrawerPanel extends BlazeComponent {
 
   constructor() {
     super();
