@@ -1,4 +1,7 @@
-class IronSelector extends BlazeComponent {
+Material = Material || {}
+
+
+Material.IronSelector = IronSelector = class IronSelector extends BlazeComponent {
 
   /**
    * set defaults

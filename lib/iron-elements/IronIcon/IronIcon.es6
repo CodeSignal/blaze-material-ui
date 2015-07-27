@@ -1,4 +1,12 @@
-class IronIcon extends BlazeComponent {
+Material = Material || {}
+
+
+Material.IronIcon = IronIcon = class IronIcon extends BlazeComponent {
+
+  constructor() {
+    super();
+  }
+
   onCreated() {
     /**
      * Map of icons to use

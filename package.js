@@ -119,7 +119,9 @@ Package.onUse(function(api) {
     //'dist/blaze-material-ui.es6'
   ],'client');
 
-  api.export('IronIcon');
+  // api.export('Material');
+  api.export('Material');
+
 
 });
 
