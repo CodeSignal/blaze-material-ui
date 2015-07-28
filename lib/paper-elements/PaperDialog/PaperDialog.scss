@@ -1,0 +1,32 @@
+paper-dialog {
+  display: block;
+  margin: 24px 40px;
+
+  > * {
+    margin-top: 20px;
+    padding: 0 24px;
+  }
+
+  > .no-padding {
+    padding: 0;
+  }
+
+  > *:first-child {
+    margin-top: 24px;
+  }
+
+  > *:last-child {
+    margin-bottom: 24px;
+  }
+
+  h2 {
+    position: relative;
+    margin: 0;
+  }
+
+  .buttons {
+    position: relative;
+    padding: 8px 8px 8px 24px;
+    margin: 0;
+  }
+}
