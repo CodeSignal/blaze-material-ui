@@ -1,0 +1,8 @@
+paper-item {
+  display: block;
+  padding: 0px 16px;
+
+  > *:not(:first-child):not(:last-child) {
+    margin-right: 16px;
+  }
+}
