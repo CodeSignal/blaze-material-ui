@@ -18,7 +18,6 @@ class PaperButton extends BlazeComponent {
     }
 
     if (this.data().toggles) {
-      console.log('canIhaztoggle')
       this.toggled = new ReactiveVar(false);
     }
   }
@@ -28,8 +27,10 @@ class PaperButton extends BlazeComponent {
    */
 
   handleToggle() {
-    let toggled = this.toggled.get();
-    this.toggled.set(!toggled);
+    if (this.data().toggles) {
+      let toggled = this.toggled.get();
+      this.toggled.set(!toggled);
+    }
   }
 
   /**
