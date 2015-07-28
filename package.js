@@ -50,6 +50,10 @@ Package.onUse(function(api) {
     'lib/paper-elements/PaperDialog/PaperDialog.tpl.jade',
     'lib/paper-elements/PaperDialog/PaperDialog.es6',
 
+    'lib/paper-elements/PaperMenu/PaperMenu.scss',
+    'lib/paper-elements/PaperMenu/PaperMenu.tpl.jade',
+    'lib/paper-elements/PaperMenu/PaperMenu.es6',
+
     'lib/paper-elements/PaperCheckbox/PaperCheckbox.scss',
     'lib/paper-elements/PaperCheckbox/PaperCheckbox.tpl.jade',
     'lib/paper-elements/PaperCheckbox/PaperCheckbox.es6',
