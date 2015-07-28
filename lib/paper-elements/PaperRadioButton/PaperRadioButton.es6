@@ -4,6 +4,8 @@ class PaperRadioButton extends BlazeComponent {
    * set defaults
    */
   onCreated () {
+    this.focused = new ReactiveVar(false);
+    this.pressed = new ReactiveVar(false);
     let checked = this.data().checked;
     this.checked = new ReactiveVar(checked);
   }
@@ -28,6 +30,36 @@ class PaperRadioButton extends BlazeComponent {
 
     // find the ripples container
     this.ripple = this.componentChildrenWith('rippleElements')[0];
+  }
+
+  /**
+   * get the focused state of the button
+   * @return {Boolean}  Returns the focused state
+   */
+  getFocused () {
+    return this.focused.get();
+  }
+
+  /**
+   * handle the focus event
+   * 1. not focused while pressed
+   * 2. elevated
+   */
+  onFocus () {
+    if (!this.pressed.get()) {
+      this.focused.set('');
+    }
+    this.ripple.onDown(event);
+  };
+
+  /**
+   * handle the blur event
+   * 1. not focused
+   * 2. not elevated
+   */
+  onBlur () {
+    this.focused.set(false);
+    this.ripple.onUp(event);
   }
 
   /**
@@ -56,6 +88,8 @@ class PaperRadioButton extends BlazeComponent {
       'mousedown [data-id=radioContainer]': this.onDown,
       'mouseleave [data-id=radioContainer]': this.onUp,
       'mouseup [data-id=radioContainer]': this.onUp,
+      'blur [data-id=radioContainer]': this.onBlur,
+      'focus [data-id=radioContainer]': this.onFocus,
       'click': this.handleClick
     }]
   }
