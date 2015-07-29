@@ -23,12 +23,18 @@
 
             <h2>Paper Elements</h2>
 
-            <h3>Paper Menu</h3>
-            {{#PaperMenu}}
-              {{#PaperItem className="paper-item-0"}}Item #1{{/PaperItem}}
-              {{#PaperItem className="paper-item-0"}}Item #2{{/PaperItem}}
-              {{#PaperItem className="paper-item-0"}}Item #3{{/PaperItem}}
-            {{/PaperMenu}}
+            <div class="horizontal-section-container">
+              <div>
+                <h3>Standard</h3>
+                <div class="horizontal-section">
+                  {{#PaperMenu className="paper-menu-0"}}
+                    {{#PaperItem className="paper-item-0"}}Item #1{{/PaperItem}}
+                    {{#PaperItem className="paper-item-0"}}Item #2{{/PaperItem}}
+                    {{#PaperItem className="paper-item-0"}}Item #3{{/PaperItem}}
+                  {{/PaperMenu}}
+                </div>
+              </div>
+            </div>
 
             <h3>Paper Tabs</h3>
 
