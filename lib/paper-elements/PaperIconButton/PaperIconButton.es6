@@ -18,30 +18,6 @@ class PaperIconButton extends BlazeComponent {
   }
 
   /**
-   * get the pressed state of the button
-   * @return {Boolean}  Returns the pressed state
-   */
-  getPressed () {
-    return this.pressed.get();
-  }
-
-  /**
-   * get the focused state of the button
-   * @return {Boolean}  Returns the focused state
-   */
-  getFocused () {
-    return this.focused.get();
-  }
-
-  /**
-   * get the active state of the button
-   * @return {Boolean}  Returns the active state
-   */
-  getActive () {
-    return this.active.get();
-  }
-
-  /**
    * handle the focus event
    * 1. not focused while pressed
    */
