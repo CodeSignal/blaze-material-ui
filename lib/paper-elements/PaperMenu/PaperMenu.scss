@@ -1,23 +1,24 @@
 paper-menu {
+  outline: 0;
   display: block;
   padding: 8px 0;
 
-  .content.paper-menu > .iron-selected {
+  .content > .iron-selected {
     font-weight: bold;
   }
 
-  .content.paper-menu > *:focus {
+  .content > *:focus {
     position: relative;
     outline: 0;
   }
 
-  .content.paper-menu > *:focus:after {
+  .content > *:focus:after {
     background: currentColor;
     opacity: 0.12;
     content: '';
   }
 
-  .content.paper-menu > *[colored]:focus:after {
+  .content > *[colored]:focus:after {
     opacity: 0.26;
   }
 }
