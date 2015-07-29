@@ -7,7 +7,8 @@ paper-button(class=className
              toggles=toggled.get
              aria-label=title
              tabindex='0'
-             role="button")
+             role="button"
+             event-hook=eventHook)
   if ink
     +PaperRipple(fit='' id="ripple")
   if elevated
