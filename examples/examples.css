@@ -8,6 +8,10 @@ body {
   margin: 0;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 .horizontal-section-container {
   display: flex;
   flex-direction: row;
@@ -413,6 +417,7 @@ paper-tab.paper-tab-0 {
 .paper-tab-0.iron-selected {
   /*background: #91524E;*/
   transition: background 0s 0.2s;
+
   /*color: #D2FF6A;*/
   opacity: 1;
 }
@@ -449,7 +454,6 @@ paper-checkbox.paper-checkbox-0 #checkbox.paper-checkbox {
   }
 }
 
-
 @keyframes checkmark-expand {
   0% {
     top: 9px;
@@ -465,7 +469,6 @@ paper-checkbox.paper-checkbox-0 #checkbox.paper-checkbox {
     height: 10px;
   }
 }
-
 
 paper-checkbox.paper-checkbox-0 [data-id=checkbox].checked.paper-checkbox {
   background-color: #3f51b5;

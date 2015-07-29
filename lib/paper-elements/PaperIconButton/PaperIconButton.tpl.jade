@@ -1,14 +1,15 @@
 paper-icon-button(class=className
                   title=title
                   mini=mini
-                  pressed=getPressed
-                  focused=getFocused
-                  active=getActive
-                  disabled=disabled.get
+                  pressed=pressed.get
+                  focused=focused.get
+                  active=active.get
+                  disabled=disabled
                   icon=icon
                   aria-label=title
                   tabindex='0'
-                  role="button")
+                  role="button"
+                  event-hook=eventHook)
   +PaperRipple(fit='' id="ink" className="circle paper-icon-button" centered="")
   +IronIcon(label=title icon=icon id="icon")
 
