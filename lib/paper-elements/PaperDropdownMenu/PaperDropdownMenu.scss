@@ -1,3 +1,21 @@
 paper-dropdown-menu {
-  
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  padding: 0.5em 0 0.25em;
+  margin: 1.1em 0;
+  border-bottom: 1px solid #757575;
+  outline: none;
+
+  [data-id=label]:not(.selectedItem), [data-id=arrow] {
+    color: #757575;
+  }
+
+  [data-id=label] {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
 }
