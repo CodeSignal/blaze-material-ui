@@ -14,7 +14,7 @@ class PaperButton extends BlazeComponent {
     if (this.elevated) {
       this.elevation = new ReactiveVar(1);
     } else {
-      this.elevation = new ReactiveVar(false);
+      this.elevation = new ReactiveVar(0);
     }
 
     if (this.data().toggles) {
