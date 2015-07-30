@@ -62,6 +62,10 @@ Package.onUse(function(api) {
     'lib/paper-elements/PaperDropdownMenu/PaperDropdownMenu.tpl.jade',
     'lib/paper-elements/PaperDropdownMenu/PaperDropdownMenu.es6',
 
+    'lib/paper-elements/PaperMenuButton/PaperMenuButton.scss',
+    'lib/paper-elements/PaperMenuButton/PaperMenuButton.tpl.jade',
+    'lib/paper-elements/PaperMenuButton/PaperMenuButton.es6',
+
     'lib/paper-elements/PaperItem/PaperItem.scss',
     'lib/paper-elements/PaperItem/PaperItem.tpl.jade',
     'lib/paper-elements/PaperItem/PaperItem.es6',

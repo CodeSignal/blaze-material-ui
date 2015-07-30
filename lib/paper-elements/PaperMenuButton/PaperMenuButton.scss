@@ -1,0 +1,26 @@
+paper-menu-button {
+  display: inline-block;
+  position: relative;
+  padding: 8px;
+  outline: none;
+
+  &[disabled] {
+    cursor: auto;
+  }
+
+  &[vertical-align="top"] paper-material.paper-menu-button {
+    margin-bottom: 20px;
+    margin-top: -10px;
+    top: 10px;
+  }
+
+  &[vertical-align="bottom"] paper-material.paper-menu-button {
+    bottom: 10px;
+    margin-bottom: -10px;
+    margin-top: 20px;
+  }
+
+  &.paper-menu-button {
+    border-radius: 2px;
+  }
+}
