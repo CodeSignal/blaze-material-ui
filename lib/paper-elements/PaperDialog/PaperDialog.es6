@@ -3,8 +3,7 @@ class PaperDialog extends BlazeComponent {
   /**
    * set defaults
    */
-  onCreated () {
-  }
+  onCreated () {}
 
   /**
    * after render
