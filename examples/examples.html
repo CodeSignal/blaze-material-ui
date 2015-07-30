@@ -31,6 +31,22 @@
               <div>
                 <h3>Standard</h3>
                 <div class="horizontal-section">
+                  {{#PaperDropdownMenu className=""}}
+                    {{#PaperDropdown className=""}}
+                      {{#PaperItem className="paper-item-0"}}Inbox{{/PaperItem}}
+                      {{#PaperItem className="paper-item-0"}}Starred{{/PaperItem}}
+                      {{#PaperItem className="paper-item-0"}}Sent mail{{/PaperItem}}
+                      {{#PaperItem className="paper-item-0"}}Draft{{/PaperItem}}
+                    {{/PaperDropdown}}
+                  {{/PaperDropdownMenu}}
+                </div>
+              </div>
+            </div>
+
+            <div class="horizontal-section-container">
+              <div>
+                <h3>Standard</h3>
+                <div class="horizontal-section">
                   {{#PaperMenu className="paper-menu-0"}}
                     {{#PaperItem className="paper-item-0"}}Inbox{{/PaperItem}}
                     {{#PaperItem className="paper-item-0"}}Starred{{/PaperItem}}

@@ -1,3 +1,28 @@
 paper-dropdown {
-  
+  display: inline-block;
+  position: relative;
+  padding: 8px;
+  outline: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  z-index: 0;
+
+  &([disabled]) {
+    color: #c9c9c9;
+    pointer-events: none;
+    cursor: auto;
+  }
+
+  [data-id=ripple] {
+    pointer-events: none;
+    z-index: -1;
+  }
+
+  [data-id=icon] {
+    display: block;
+    pointer-events: none;
+  }
 }
