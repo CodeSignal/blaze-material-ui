@@ -10,7 +10,7 @@ paper-dropdown {
   cursor: pointer;
   z-index: 0;
 
-  &([disabled]) {
+  &[disabled] {
     color: #c9c9c9;
     pointer-events: none;
     cursor: auto;
