@@ -1,17 +1,17 @@
 paper-checkbox(class=className
                role="checkbox"
-               tabindex="0"
-               toggles=""
-               aria-pressed="false"
-               aria-disabled="false"
-               aria-checked="false"
+               tabindex="-1"
+               aria-pressed=pressed.get
+               aria-disabled=disabled
+               aria-checked=checked.get
                aria-label=label
-               focused=getFocused
-               pressed=getPressed
-               disabled=disabled.get)
+               focused=focused.get
+               pressed=pressed.get
+               disabled=disabled
+               checked=checked.get)
     div(data-id="checkboxContainer"
         class="paper-checkbox")
-        input(type="checkbox" checked=checked.get class=className)
+        input(type="checkbox" checked=checked.get class=className tabindex="0" name=name)
         div(data-id="checkbox" class="#{checked.get} paper-checkbox")
             div(data-id="checkmark" class="#{hidden.get} paper-checkbox")
         +PaperRipple(id="ink" className="paper-checkbox" centered="")

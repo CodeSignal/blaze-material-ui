@@ -75,6 +75,7 @@ paper-checkbox {
     border-left: none;
     border-right-width: 2px;
     border-bottom-width: 2px;
+    box-sizing: content-box;
   }
 
   [data-id=checkboxLabel].paper-checkbox {

@@ -15,7 +15,6 @@ class PaperRadioButton extends BlazeComponent {
    */
   handleClick(){
     let checked = this.checked.get()
-    console.log(checked)
     if (checked === 'checked') {
         this.checked.set(false);
     } else {
@@ -23,41 +22,39 @@ class PaperRadioButton extends BlazeComponent {
     }
   }
 
+
   /**
    * after render
    */
-  onRendered () {
+  onRendered() {
 
     // find the ripples container
     this.ripple = this.componentChildrenWith('rippleElements')[0];
   }
 
   /**
-   * get the focused state of the button
-   * @return {Boolean}  Returns the focused state
-   */
-  getFocused () {
-    return this.focused.get();
-  }
-
-  /**
    * handle the focus event
    * 1. not focused while pressed
-   * 2. elevated
+   * @param  {Event}
    */
-  onFocus () {
+  onFocus(event) {
+    if (this.disabled) {
+      return
+    };
     if (!this.pressed.get()) {
-      this.focused.set('');
+      this.focused.set(true);
+      this.ripple.onDown(event);
+    } else {
+      this.focused.set(false);
     }
-    this.ripple.onDown(event);
   };
 
   /**
    * handle the blur event
    * 1. not focused
-   * 2. not elevated
+   * @param  {Event}
    */
-  onBlur () {
+  onBlur(event) {
     this.focused.set(false);
     this.ripple.onUp(event);
   }
@@ -68,16 +65,18 @@ class PaperRadioButton extends BlazeComponent {
    * @param  {Event}
    */
   onDown(event) {
+    this.ripple.onUp();
+    this.pressed.set(true);
     this.ripple.onDown(event);
   }
 
   /**
    * handle the mouseup event
    * 1. send event to ripple
-   * @param  {Event}
    */
-  onUp(event) {
-    this.ripple.onUp(event);
+  onUp() {
+    this.pressed.set(false);
+    this.ripple.onUp();
   }
 
   /**
@@ -88,11 +87,12 @@ class PaperRadioButton extends BlazeComponent {
       'mousedown [data-id=radioContainer]': this.onDown,
       'mouseleave [data-id=radioContainer]': this.onUp,
       'mouseup [data-id=radioContainer]': this.onUp,
-      'blur [data-id=radioContainer]': this.onBlur,
-      'focus [data-id=radioContainer]': this.onFocus,
+      'blur input': this.onBlur,
+      'focus input': this.onFocus,
       'click': this.handleClick
-    }]
+    }];
   }
+
 }
 
 PaperRadioButton.register('PaperRadioButton');

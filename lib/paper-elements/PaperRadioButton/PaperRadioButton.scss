@@ -44,6 +44,7 @@ paper-radio-button {
     border-radius: 50%;
     border: solid 2px;
     transition: border-color 0.28s;
+    box-sizing: content-box;
   }
 
   [data-id=onRadio].paper-radio-button {
@@ -53,14 +54,12 @@ paper-radio-button {
     width: 8px;
     height: 8px;
     border-radius: 50%;
-    -webkit-transform: scale(0);
     transform: scale(0);
-    transition: -webkit-transform ease 0.28s;
     transition: transform ease 0.28s;
+    box-sizing: content-box;
   }
 
   &[checked] [data-id=onRadio].paper-radio-button {
-    -webkit-transform: scale(1);
     transform: scale(1);
   }
 
@@ -73,7 +72,7 @@ paper-radio-button {
     pointer-events: none;
   }
 
-  [data-id=radioLabel][hidden].paper-radio t-button {
+  [data-id=radioLabel][hidden].paper-radio-button {
     display: none;
   }
 

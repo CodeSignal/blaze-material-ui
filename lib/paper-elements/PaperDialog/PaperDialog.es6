@@ -17,7 +17,7 @@ class PaperDialog extends BlazeComponent {
     setTimeout(()=>{
       this.node.style.display = 'none';
 
-    }, 400);
+    }, 100);
   }
 
   openDialog() {
