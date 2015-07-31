@@ -33,7 +33,7 @@ class PaperDialog extends BlazeComponent {
       top: `${top}`, 
       left: `${left}`, 
       boxSizing: 'border-box',
-      maxHeight: `${maxHeight}px`,
+      //maxHeight: `${maxHeight}px`,
       maxWidth: `${maxWidth}px`,
       position: 'fixed'
     }
