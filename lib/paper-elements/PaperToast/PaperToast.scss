@@ -1,0 +1,39 @@
+paper-toast {
+  display: inline-block;
+  position: fixed;
+  background: #323232;
+  color: #f1f1f1;
+  min-height: 48px;
+  min-width: 288px;
+  padding: 16px 24px 12px;
+  box-sizing: border-box;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+  border-radius: 2px;
+  bottom: 12px;
+  left: 12px;
+  font-size: 14px;
+  cursor: default;
+  -webkit-transition: visibility 0.3s, -webkit-transform 0.3s;
+  transition: visibility 0.3s, transform 0.3s;
+  -webkit-transform: translateY(100px);
+  transform: translateY(100px);
+  visibility: hidden;
+
+  &.capsule {
+    border-radius: 24px;
+  }
+
+  &.fit-bottom {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    min-width: 0;
+    border-radius: 0;
+  }
+
+  &.paper-toast-open {
+    visibility: visible;
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+  }
+}

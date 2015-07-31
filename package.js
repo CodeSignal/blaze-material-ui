@@ -70,6 +70,10 @@ Package.onUse(function(api) {
     'lib/paper-elements/PaperItem/PaperItem.tpl.jade',
     'lib/paper-elements/PaperItem/PaperItem.es6',
 
+    'lib/paper-elements/PaperToast/PaperToast.scss',
+    'lib/paper-elements/PaperToast/PaperToast.tpl.jade',
+    'lib/paper-elements/PaperToast/PaperToast.es6',
+
     'lib/paper-elements/PaperCheckbox/PaperCheckbox.scss',
     'lib/paper-elements/PaperCheckbox/PaperCheckbox.tpl.jade',
     'lib/paper-elements/PaperCheckbox/PaperCheckbox.es6',
