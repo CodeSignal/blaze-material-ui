@@ -6,9 +6,9 @@ class PaperCheckbox extends BlazeComponent {
   onCreated() {
     this.focused = new ReactiveVar(false);
     this.pressed = new ReactiveVar(false);
-    let checked = this.data().checked;
+    let checked = this.data().checked ? 'checked' : false;
     let hidden;
-    if (!this.data().checked) {
+    if (!checked) {
       hidden = 'hidden';
     }
     this.checked = new ReactiveVar(checked);
