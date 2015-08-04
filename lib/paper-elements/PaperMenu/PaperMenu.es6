@@ -3,7 +3,9 @@ class PaperMenu extends BlazeComponent {
   /**
    * set defaults
    */
-  onCreated () {}
+  onCreated () {
+    this.id = new ReactiveVar(this.data().id)
+  }
 
   /**
    * after render

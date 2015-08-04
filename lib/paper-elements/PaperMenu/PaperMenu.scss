@@ -2,6 +2,9 @@ paper-menu {
   outline: 0;
   display: block;
   padding: 8px 0;
+  position: relative;
+  background: #fff;
+  color: #000;
 
   .content > .iron-selected {
     font-weight: bold;
@@ -20,5 +23,19 @@ paper-menu {
 
   .content > *[colored]:focus:after {
     opacity: 0.26;
+  }
+
+  paper-material {
+    pointer-events: none;
+  }
+
+  paper-menu {
+    min-width: min-content;
+    min-width: -webkit-min-content;
+    z-index: 9;
+  }
+
+  paper-item {
+    white-space: nowrap;
   }
 }

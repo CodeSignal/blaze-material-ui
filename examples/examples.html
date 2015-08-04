@@ -24,6 +24,11 @@
             {{#PaperToolbarTop}}
              {{>PaperIconButton icon="menu" className="paper-drawer-toggle"}}
               <span class="title">Toolbar Top</span>
+              {{#PaperMenuButton icon="navigation:more-vert" horizontalAlign="right" verticalAlign="top"}}
+                {{#PaperItem className="paper-item-0" }}Links{{/PaperItem}}
+                {{#PaperItem className="paper-item-0" }}are just some{{/PaperItem}}
+                {{#PaperItem className="paper-item-0" }}awesome things{{/PaperItem}}
+              {{/PaperMenuButton}}
             {{/PaperToolbarTop}}
           {{/PaperToolbar}}
           {{#PaperHeaderPanelMain}}
@@ -35,8 +40,18 @@
             <div>
               {{#PaperButton eventHook="someDialog"}}Open Dialog{{/PaperButton}}
               {{>PaperIconButton icon="navigation:menu" eventHook="someDialog"}}
+
             </div>
 
+
+            <div>
+              {{#PaperMenuButton icon="navigation:arrow-drop_down" horizontalAlign="left" verticalAlign="top" label="Select something"}}
+                {{#PaperItem className="paper-item-0" }}<a href='/test_1'>Inbox</a>{{/PaperItem}}
+                {{#PaperItem className="paper-item-0" }}<a href='/test_2'>Starred</a>{{/PaperItem}}
+                {{#PaperItem className="paper-item-0" }}<a href='/test_3'>Sent mail</a>{{/PaperItem}}
+                {{#PaperItem className="paper-item-0" }}<a href='/test_4'>Draft</a>{{/PaperItem}}
+              {{/PaperMenuButton}}
+            </div>
             <div class="horizontal-section-container">
               <div>
                 <h3>Standard</h3>

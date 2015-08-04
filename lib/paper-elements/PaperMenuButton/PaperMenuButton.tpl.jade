@@ -2,6 +2,9 @@ paper-menu-button(class=className
                   role="group"
                   aria-haspopup="true"
                   aria-disabled="false"
-                  horizontal-align="left"
-                  vertical-align="top")
-  +Template.contentBlock
+                  horizontal-align=horizontalAlign
+                  vertical-align=verticalAlign)
+  label(event-hook="menu-open") #{label}
+    +PaperIconButton(icon=icon)
+  +PaperMenu(className="paper-menu-button")
+    +Template.contentBlock

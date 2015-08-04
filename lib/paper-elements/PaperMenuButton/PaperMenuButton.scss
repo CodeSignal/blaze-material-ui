@@ -8,19 +8,40 @@ paper-menu-button {
     cursor: auto;
   }
 
-  &[vertical-align="top"] paper-material.paper-menu-button {
+  &[vertical-align="top"] paper-menu.paper-menu-button {
     margin-bottom: 20px;
     margin-top: -10px;
     top: 10px;
   }
 
-  &[vertical-align="bottom"] paper-material.paper-menu-button {
+  &[vertical-align="bottom"] paper-menu.paper-menu-button {
     bottom: 10px;
     margin-bottom: -10px;
     margin-top: 20px;
   }
 
+  &[horizontal-align="right"] paper-menu.paper-menu-button {
+    right: 10px;
+  }
+
+  &[horizontal-align="left"] paper-menu.paper-menu-button {
+    left: 10px;
+  }
+
   &.paper-menu-button {
     border-radius: 2px;
+  }
+
+  > .paper-menu-button {
+    position: absolute;
+    display: none;
+    z-index: 9;
+    min-width: calc(100% - 16px);
+  }
+
+  &.open {
+    > .paper-menu-button {
+      display: block;
+    }
   }
 }

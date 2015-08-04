@@ -5,4 +5,9 @@ paper-item {
   > *:not(:first-child):not(:last-child) {
     margin-right: 16px;
   }
+
+  a {
+    color: currentColor;
+    text-decoration: none;
+  }
 }

@@ -8,7 +8,19 @@ class PaperItem extends BlazeComponent {
   /**
    * after render
    */
-  onRendered () {}
+  onRendered () {
+    this.link = this.find('a');
+  }
+
+  events(){
+    return [{
+      'click': ()=> {
+        if (this.link) {
+          this.link.click()
+        }
+      }
+    }]
+  }
 }
 
 PaperItem.register('PaperItem');
