@@ -12,8 +12,6 @@ class PaperMenuButton extends BlazeComponent {
     this.input = this.find('input');
     this.selector = this.find('iron-selector');
     this.material = this.find('paper-material');
-
-    console.log(this.componentChildrenWith('id')[0].componentChildrenWith('selected')[0].selected.get())
   }
 
   events() {
