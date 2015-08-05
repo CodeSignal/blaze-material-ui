@@ -5,6 +5,6 @@ paper-menu-button(class=className
                   horizontal-align=horizontalAlign
                   vertical-align=verticalAlign)
   label(event-hook="menu-open") #{label}
-    +PaperIconButton(icon=icon)
+    +PaperIconButton(icon=icon eventHook="menu-open")
   +PaperMenu(className="paper-menu-button")
     +Template.contentBlock

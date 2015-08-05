@@ -32,6 +32,12 @@ paper-menu-button {
     border-radius: 2px;
   }
 
+  paper-icon-button {
+    paper-ripple {
+      pointer-events: none;
+    }
+  }
+
   > .paper-menu-button {
     position: absolute;
     display: none;
