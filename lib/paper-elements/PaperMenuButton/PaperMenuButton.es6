@@ -25,6 +25,10 @@ class PaperMenuButton extends BlazeComponent {
     document.body.addEventListener('click', this.onOutsideClick);
   }
 
+  onDestroyed() {
+    document.body.removeEventListener('click', this.onOutsideClick);
+  }
+
   closeMenu() {
     this.firstNode().classList.remove('open');
   }
@@ -38,12 +42,19 @@ class PaperMenuButton extends BlazeComponent {
   }
 
   onOutsideClick(e) {
-    this.closeMenu();
+    if(!$(e.target).closest(this.firstNode()).length) {
+      this.closeMenu();
+    }
   }
 
   events() {
     return [{
-      'click [event-hook=menu-open]': this.openMenu
+      'click [event-hook=menu-open]': this.openMenu,
+      'mouseleave paper-menu': (e) => {
+        if(this.data().closeOnMouseLeave) {
+          this.firstNode().classList.remove('open')
+        }
+      }
     }];
   }
 }
