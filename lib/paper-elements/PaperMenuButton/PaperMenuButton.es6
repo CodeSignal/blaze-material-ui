@@ -17,7 +17,6 @@ class PaperMenuButton extends BlazeComponent {
     this.input = this.find('input');
     this.selector = this.find('iron-selector');
     this.material = this.find('paper-material');
-    this.button = this.firstNode();
   }
 
   closeMenu() {
@@ -25,7 +24,6 @@ class PaperMenuButton extends BlazeComponent {
   }
 
   openMenu() {
-    console.log(this.firstNode())
     this.firstNode().classList.add('open');
   }
 
@@ -40,7 +38,7 @@ class PaperMenuButton extends BlazeComponent {
   events() {
     return [{
       'click [event-hook=menu-open]': this.openMenu,
-      'click *': this.stop
+      'click paper-menu-button': this.stop
     }];
   }
 }
