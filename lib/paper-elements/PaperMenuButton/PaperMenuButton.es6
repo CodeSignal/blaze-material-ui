@@ -1,5 +1,10 @@
 class PaperMenuButton extends BlazeComponent {
 
+  constructor() {
+    super();
+    this.onOutsideClick = this.onOutsideClick.bind(this);
+  }
+
   /**
    * set defaults
    */
@@ -7,7 +12,6 @@ class PaperMenuButton extends BlazeComponent {
     this.closeMenu = this.closeMenu.bind(this);
     this.openMenu = this.openMenu.bind(this);
     this.toggleMenu = this.toggleMenu.bind(this);
-    document.body.addEventListener('click', this.closeMenu);
   }
 
   /**
@@ -18,6 +22,12 @@ class PaperMenuButton extends BlazeComponent {
     this.selector = this.find('iron-selector');
     this.material = this.find('paper-material');
     this.button = this.firstNode();
+    this.button.openMenu = this.openMenu;
+    document.body.addEventListener('click', this.onOutsideClick);
+  }
+
+  onDestroyed() {
+    document.body.removeEventListener('click', this.onOutsideClick);
   }
 
   closeMenu() {
@@ -25,7 +35,6 @@ class PaperMenuButton extends BlazeComponent {
   }
 
   openMenu() {
-    console.log(this.firstNode())
     this.firstNode().classList.add('open');
   }
 
@@ -33,14 +42,20 @@ class PaperMenuButton extends BlazeComponent {
     this.firstNode().classList.toggle('open');
   }
 
-  stop(e) {
-    e.stopPropagation();
+  onOutsideClick(e) {
+    if(!$(e.target).closest(this.firstNode()).length) {
+      this.closeMenu();
+    }
   }
 
   events() {
     return [{
       'click [event-hook=menu-open]': this.openMenu,
-      'click *': this.stop
+      'mouseleave paper-menu': (e) => {
+        if(this.data().closeOnMouseLeave) {
+          this.firstNode().classList.remove('open')
+        }
+      }
     }];
   }
 }

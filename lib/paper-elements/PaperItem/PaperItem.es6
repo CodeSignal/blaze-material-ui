@@ -16,7 +16,7 @@ class PaperItem extends BlazeComponent {
     return [{
       'click': ()=> {
         if (this.link) {
-          this.link.click()
+          //this.link.click()
         }
       }
     }]
