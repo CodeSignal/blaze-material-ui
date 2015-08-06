@@ -1,4 +1,4 @@
-# PaperInput 
+# PaperInput
 
 
 ## Screenshot
@@ -8,18 +8,43 @@
 
 Basic usage
 
-```
+```handlebars
 {{> PaperInput}}
 ```
 
 Add a custom className
 
-```
+```handlebars
 {{> PaperInput className="my-custom-class"}}
 ```
 
-Use an argument
+Add a custom label
 
+```handlebars
+{{> PaperInput label="my-custom-label"}}
 ```
-{{> PaperInput argument="some-argument"}}
+
+## Properties
+
+* No Label Float
+
+  ```handlebars
+  {{#PaperInput labelFloat="false"}}[content]{{/PaperInput}}
+  ```
+
+* Disabled
+
+  ```handlebars
+  {{#PaperInput disabled=""}}[content]{{/PaperInput}}
+  ```
+
+## Styling
+
+Style the input with CSS as you would a normal DOM element.
+
+```css
+// Label
+.my-custom-class .label-is-highlighted label {
+  color: blue;
+}
 ```
