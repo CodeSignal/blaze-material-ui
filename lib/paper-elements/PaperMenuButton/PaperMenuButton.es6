@@ -22,6 +22,7 @@ class PaperMenuButton extends BlazeComponent {
     this.selector = this.find('iron-selector');
     this.material = this.find('paper-material');
     this.button = this.firstNode();
+    this.button.openMenu = this.openMenu;
     document.body.addEventListener('click', this.onOutsideClick);
   }
 
