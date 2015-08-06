@@ -1,12 +1,5 @@
 class PaperDialog extends BlazeComponent {
 
-  constructor() {
-    super();
-    this.openDialog = this.openDialog.bind(this);
-    this.closeDialog = this.closeDialog.bind(this);
-    this.closeCallbacks = [];
-  }
-
   /**
    * set defaults
    */
@@ -17,23 +10,13 @@ class PaperDialog extends BlazeComponent {
    */
   onRendered () {
     this.node = this.firstNode();
-
-    // Allow parent to manually open & close the dialog
-    this.node.openDialog = this.openDialog;
-    this.node.closeDialog = this.closeDialog;
-
-    // Allow parent to set dialog close hooks
-    this.node.onClose = (closeCallback) => {
-      this.closeCallbacks.push(closeCallback);
-    };
+    this.openDialog();
   }
 
   closeDialog() {
     setTimeout(()=>{
       this.node.style.display = 'none';
-      for(let i in this.closeCallbacks) {
-        this.closeCallbacks[i]();
-      }
+
     }, 100);
   }
 
@@ -59,9 +42,8 @@ class PaperDialog extends BlazeComponent {
       this.node.style[prop] = style[prop];
     }
 
-    setTimeout(() => {
-      this.node.style.display = 'block';
-    }, 100);
+
+    //this.node.style.display = 'block';
   }
 
   dismissDialog() {
@@ -69,9 +51,14 @@ class PaperDialog extends BlazeComponent {
 
   }
 
+  confirmDialog() {
+    this.closeDialog();
+  }
+
   events() {
     return [{
-      'click [event-hook=dialog-dismiss]' : this.dismissDialog
+      'click [event-hook=dialog-dismiss]' : this.dismissDialog,
+      'click [event-hook=dialog-confirm]' : this.confirmDialog,
     }];
   }
 }
