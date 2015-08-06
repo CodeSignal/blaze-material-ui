@@ -1028,3 +1028,78 @@ paper-item.paper-item-0 {
   font-weight: 400;
   line-height: 24px;
 }
+
+.paper-input-container-0 .floated-label-placeholder.paper-input-container {
+  font-family: 'Roboto', 'Noto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.011em;
+  line-height: 20px;
+}
+
+.paper-input-container-0 .focused-line.paper-input-container {
+  background: #3f51b5;
+}
+
+.paper-input-container-0 .underline.is-highlighted.paper-input-container .focused-line.paper-input-container {}
+
+.paper-input-container-0 .underline.is-invalid.paper-input-container .focused-line.paper-input-container {
+  background: #db4437;
+}
+
+.paper-input-container-0 .unfocused-line.paper-input-container {
+  background: #757575;
+}
+
+paper-input-container.paper-input-container-0[disabled] .unfocused-line.paper-input-container {
+  border-color: #757575;
+}
+
+.paper-input-container-0 .input-content.paper-input-container label, .paper-input-container-0
+.input-content.paper-input-container .paper-input-label {
+  color: #757575;
+  font-family: 'Roboto', 'Noto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.paper-input-container-0 .input-content.label-is-floating.paper-input-container label, .paper-input-container-0
+.input-content.label-is-floating.paper-input-container .paper-input-label {}
+
+.paper-input-container-0 .input-content.label-is-highlighted.paper-input-container label, .paper-input-container-0
+.input-content.label-is-highlighted.paper-input-container .paper-input-label {
+  color: #3f51b5;
+}
+
+.paper-input-container-0 .input-content.is-invalid.paper-input-container label, .paper-input-container-0
+.input-content.is-invalid.paper-input-container .paper-input-label {
+  color: #db4437;
+}
+
+.paper-input-container-0 .input-content.paper-input-container input, .paper-input-container-0
+.input-content.paper-input-container textarea, .paper-input-container-0
+.input-content.paper-input-container iron-autogrow-textarea, .paper-input-container-0
+.input-content.paper-input-container .paper-input-input {
+  color: #212121;
+  font-family: 'Roboto', 'Noto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.paper-input-container-0 .add-on-content.is-invalid.paper-input-container * {
+  color: #db4437;
+}
+
+.paper-input-container-0 .add-on-content.is-highlighted.paper-input-container * {
+  color: #3f51b5;
+}

@@ -7,7 +7,6 @@
 
 <template name="exampleCatalog">
 
-
   {{#PaperDialog className="paper-dialog-0" id="someDialog"}}
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
     <div class="buttons" layout horizontal end-justified>
@@ -38,6 +37,9 @@
             {{>PaperToast text="This is a toast 1" }}
             {{>PaperToast text="This is a toast 2" }}
             {{>PaperToast text="This is a toast 3" active="true"}}
+
+            {{>PaperInput className="paper-input-container-0" label="Test" name="test"}}
+
 
             <div>
               {{#PaperButton eventHook="someDialog"}}Open Dialog{{/PaperButton}}

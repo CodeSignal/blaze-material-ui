@@ -1,0 +1,15 @@
+paper-input-container(class=className)
+  div(class="floated-label-placeholder paper-input-container") &nbsp;
+  div(class="input-content paper-input-container #{float.get}")
+    label(class="paper-input"
+          for=label)=label
+    input(type=type
+          name=name
+          id=label
+          data-id="input"
+          class="paper-input"
+          placeholder=placeholder)
+    div(class="underline paper-input-container #{highlight.get}")
+      div(class="unfocused-line fit paper-input-container")
+      div(class="focused-line fit paper-input-container")
+  div(class="add-on-content paper-input-container")

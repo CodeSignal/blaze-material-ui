@@ -1,0 +1,99 @@
+paper-input {
+  paper-input-container {
+    display: block;
+    padding: 8px 0;
+
+    &[inline] {
+      display: inline-block;
+    }
+
+    &[disabled] {
+      pointer-events: none;
+      opacity: 0.33;
+    }
+
+    .underline.paper-input-container {
+      position: relative;
+    }
+
+    .focused-line.paper-input-container {
+      height: 2px;
+      -webkit-transform-origin: center center;
+      transform-origin: center center;
+      -webkit-transform: scale3d(0, 1, 1);
+      transform: scale3d(0, 1, 1);
+    }
+
+    .underline.is-highlighted.paper-input-container .focused-line.paper-input-container {
+      -webkit-transform: none;
+      transform: none;
+      -webkit-transition: -webkit-transform 0.25s;
+      transition: transform 0.25s;
+    }
+
+    .underline.is-invalid.paper-input-container .focused-line.paper-input-container {
+      -webkit-transform: none;
+      transform: none;
+      -webkit-transition: -webkit-transform 0.25s;
+      transition: transform 0.25s;
+    }
+
+    .unfocused-line.paper-input-container {
+      height: 1px;
+    }
+
+    &[disabled] .unfocused-line.paper-input-container {
+      border-bottom: 1px dashed;
+      background: transparent;
+    }
+
+    .input-content.paper-input-container {
+      position: relative;
+    }
+
+    .input-content.paper-input-container label,
+    .input-content.paper-input-container .paper-input-label {
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      font: inherit;
+    }
+
+    .input-content.label-is-floating.paper-input-container label,
+    .input-content.label-is-floating.paper-input-container .paper-input-label {
+      -webkit-transform: translate3d(0, -75%, 0) scale(0.75);
+      transform: translate3d(0, -75%, 0) scale(0.75);
+      -webkit-transform-origin: left top;
+      transform-origin: left top;
+      -webkit-transition: -webkit-transform 0.25s;
+      transition: transform 0.25s;
+    }
+
+    .input-content.label-is-hidden.paper-input-container label,
+    .input-content.label-is-hidden.paper-input-container .paper-input-label {
+      visibility: hidden;
+    }
+
+    .input-content.paper-input-container input,
+    .input-content.paper-input-container textarea,
+    .input-content.paper-input-container iron-autogrow-textarea,
+    .input-content.paper-input-container .paper-input-input {
+      position: relative;
+      outline: none;
+      box-shadow: none;
+      padding: 0;
+      width: 100%;
+      background: transparent;
+      border: none;
+    }
+
+    .input-content.paper-input-container input {
+      min-width: 0;
+    }
+
+    .input-content.paper-input-container textarea {
+      resize: none;
+    }
+  }
+}
