@@ -6,7 +6,8 @@ class PaperInput extends BlazeComponent {
   onCreated () {
     this.focused = new ReactiveVar(false);
     this.pressed = new ReactiveVar(false);
-    this.value = new ReactiveVar(false);
+
+    this.labelFloat = new ReactiveVar(false);
 
     let highlight = this.data().highlight;
     this.highlight = new ReactiveVar(highlight);
@@ -23,7 +24,8 @@ class PaperInput extends BlazeComponent {
 
   /**
    * handle the focus event
-   * 1. not focused while pressed
+   * 1. focused when pressed
+   * 2. add is-highlighted class
    * @param  {Event}
    */
   onFocus(event) {
@@ -33,7 +35,6 @@ class PaperInput extends BlazeComponent {
 
 
     this.highlight.set('is-highlighted');
-    // this.float.set('label-is-floating label-is-highlighted');
 
     this.focused.set(true);
     console.log('oh yaaa');
@@ -42,24 +43,29 @@ class PaperInput extends BlazeComponent {
   /**
    * handle the blur event
    * 1. not focused
+   * 2. remove focus
+   * 3. remove highlight class
    * @param  {Event}
    */
   onBlur(event) {
     this.focused.set(false);
     this.highlight.set(false);
-    // this.float.set(false);
-    console.log('ya Im goone');
 
-    if (this.data().value == '') {
-      this.float.set(false);
-      console.log('key up');
-    }
+    console.log('ya Im goone');
   }
 
+  /**
+   * handle keydown event
+   * 1. check if labelfloat false/true
+   * 2. add label-is-hidden class if false
+   * 3. add label-is-float & label-is-highlighted if true
+   * @param  {event}
+   */
   onKeyDown(event) {
-    this.float.set('label-is-floating label-is-highlighted');
-    if (this.data().value == '') {
-      console.log('key pressed');
+    if (this.data().labelFloat == 'false') {
+      this.float.set('label-is-hidden');
+    } else {
+      this.float.set('label-is-floating label-is-highlighted');
     }
   }
 
