@@ -1,0 +1,13 @@
+paper-tooltip {
+  display: block;
+  position: absolute;
+  outline: none;
+
+  [data-id=tooltip].paper-tooltip {
+    outline: none;
+    font-size: 10px;
+    padding: 8px;
+    border-radius: 2px;
+    z-index: 1002;
+  }
+}

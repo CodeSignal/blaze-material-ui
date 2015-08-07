@@ -103,6 +103,10 @@ Package.onUse(function(api) {
     'lib/paper-elements/PaperButton/PaperButton.tpl.jade',
     'lib/paper-elements/PaperButton/PaperButton.es6',
 
+    'lib/paper-elements/PaperTooltip/PaperTooltip.scss',
+    'lib/paper-elements/PaperTooltip/PaperTooltip.tpl.jade',
+    'lib/paper-elements/PaperTooltip/PaperTooltip.es6',
+
     'lib/paper-elements/PaperHeaderPanel/PaperHeaderPanel.scss',
     'lib/paper-elements/PaperHeaderPanel/PaperHeaderPanel.tpl.jade',
     'lib/paper-elements/PaperHeaderPanel/PaperHeaderPanelMain.tpl.jade',
