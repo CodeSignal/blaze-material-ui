@@ -6,6 +6,14 @@ if (Meteor.isClient) {
       var targetDialog = document.querySelector('[data-id=' + targetId + ']');
 
       targetDialog.style.display = 'block';
+    },
+
+    'mouseover [event-hook=someTooltip]': function(event, instance) {
+
+      var targetId = event.currentTarget.getAttribute('event-hook');
+      var targetDialog = document.querySelector('[data-id=' + targetId + ']');
+
+      targetDialog.style.display = 'block';
     }
   });
 
@@ -15,6 +23,7 @@ if (Meteor.isClient) {
     //document.querySelector('[data-id=someDialog]').style.display = 'block';
 
   $('[data-id=someDialog]').show();
+  $('[data-id=someTooltip]').hide();
   });
 
 }

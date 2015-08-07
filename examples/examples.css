@@ -1103,3 +1103,11 @@ paper-input-container.paper-input-container-0[disabled] .unfocused-line.paper-in
 .paper-input-container-0 .add-on-content.is-highlighted.paper-input-container * {
   color: #3f51b5;
 }
+
+.paper-tooltip-0 [data-id=tooltip].paper-tooltip {
+  font-family: 'Roboto', 'Noto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  background-color: #616161;
+  opacity: 0.9;
+  color: white;
+}
