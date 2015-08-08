@@ -37,7 +37,6 @@ class PaperInput extends BlazeComponent {
     this.highlight.set('is-highlighted');
 
     this.focused.set(true);
-    console.log('oh yaaa');
   };
 
   /**
@@ -51,7 +50,6 @@ class PaperInput extends BlazeComponent {
     this.focused.set(false);
     this.highlight.set(false);
 
-    console.log('ya Im goone');
   }
 
   /**
