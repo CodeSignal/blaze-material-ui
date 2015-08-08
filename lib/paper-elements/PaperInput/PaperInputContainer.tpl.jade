@@ -2,14 +2,20 @@ paper-input-container(class=className
                       disabled=disabled)
   div(class="floated-label-placeholder paper-input-container") &nbsp;
   div(class="input-content paper-input-container #{float.get}")
-    label(class="paper-input"
-          for=label)=label
-    input(type=type
-          name=name
-          id=label
-          data-id="input"
-          class="paper-input"
-          placeholder=placeholder)
+    label(class="paper-input")=label
+    if textarea.get
+      textarea(type=type
+              name=name
+              data-id="textrea"
+              class="paper-input"
+              placeholder=placeholder)= value    
+    else
+      input(type=type
+            name=name
+            data-id="input"
+            class="paper-input"
+            value=value
+            placeholder=placeholder)
     div(class="underline paper-input-container #{highlight.get}")
       div(class="unfocused-line fit paper-input-container")
       div(class="focused-line fit paper-input-container")

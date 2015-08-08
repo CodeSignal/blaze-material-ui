@@ -7,19 +7,18 @@ class PaperInput extends BlazeComponent {
     this.focused = new ReactiveVar(false);
     this.pressed = new ReactiveVar(false);
 
-    this.labelFloat = new ReactiveVar(false);
+    this.highlight = new ReactiveVar(this.data().highlight);
+    this.float = new ReactiveVar(this.data().float);
 
-    let highlight = this.data().highlight;
-    this.highlight = new ReactiveVar(highlight);
-
-    let float = this.data().float;
-    this.float = new ReactiveVar(float);
+    this.empty = new ReactiveVar(this.data().value?false:true);
+    this.textarea = new ReactiveVar(this.data().type === 'textarea'?true:false);
   }
 
   /**
    * after render
    */
   onRendered () {
+    this.onKeyUp();
   }
 
   /**
@@ -52,30 +51,42 @@ class PaperInput extends BlazeComponent {
 
   }
 
+
   /**
-   * handle keydown event
-   * 1. check if labelfloat false/true
-   * 2. add label-is-hidden class if false
-   * 3. add label-is-float & label-is-highlighted if true
+   * handle keyup event
    * @param  {event}
    */
-  onKeyDown(event) {
-    if (this.data().labelFloat == 'false') {
+  onKeyUp(event) {
+
+    let input = this.find('input') || this.find('textarea');
+    if ((input && input.value.length <= 0)) {
+      this.empty = true;
+    } else {
+      this.empty = false;
+
+    }
+
+
+    if (this.empty) {
+      this.float.set('');
+    } else if (this.data().labelFloat === 'false') {
       this.float.set('label-is-hidden');
     } else {
       this.float.set('label-is-floating label-is-highlighted');
     }
   }
 
-
   /**
    * @return {Object}  The events
    */
   events() {
     return [{
-      'keydown input': this.onKeyDown,
+      'keyup textarea': this.onKeyUp,
+      'keyup input': this.onKeyUp,
+      'blur textarea': this.onBlur,
       'blur input': this.onBlur,
-      'focus input.paper-input': this.onFocus,
+      'focus input': this.onFocus,
+      'focus textarea': this.onFocus,
     }];
   }
 }
