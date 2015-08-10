@@ -2,6 +2,8 @@ paper-tooltip {
   display: block;
   position: absolute;
   outline: none;
+  top: 28px;
+  left: 0;
 
   [data-id=tooltip].paper-tooltip {
     outline: none;

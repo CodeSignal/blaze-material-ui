@@ -3,22 +3,24 @@ class PaperButton extends BlazeComponent {
   /**
    * set defaults
    */
-  onCreated () {
+  onCreated() {
     this.focused = new ReactiveVar(false);
     this.pressed = new ReactiveVar(false);
     this.active = new ReactiveVar(false);
 
-    this.elevated = this.data().elevated
-    this.ink = !this.data().noink
+    this.elevated = this.data() && this.data().elevated;
+    this.ink = this.data() && !this.data().noink;
+    this.toggles = this.data() && this.data().toggles;
+
+    this.elevation = new ReactiveVar(0);
+    this.toggled = new ReactiveVar(null);
 
     if (this.elevated) {
-      this.elevation = new ReactiveVar(1);
-    } else {
-      this.elevation = new ReactiveVar(0);
+      this.elevation.set(1);
     }
 
-    if (this.data().toggles) {
-      this.toggled = new ReactiveVar(false);
+    if (this.toggles) {
+      this.toggled.set(false);
     }
   }
 
@@ -27,7 +29,7 @@ class PaperButton extends BlazeComponent {
    */
 
   handleToggle() {
-    if (this.data().toggles) {
+    if (this.toggles) {
       let toggled = this.toggled.get();
       this.toggled.set(!toggled);
     }
@@ -40,13 +42,13 @@ class PaperButton extends BlazeComponent {
    */
   onClick() {
     this.handleToggle();
-    this.active = new ReactiveVar(true);
+    this.active.set(true);
   }
 
   /**
    * after render
    */
-  onRendered () {
+  onRendered() {
     // find the ripples container
     this.ripple = this.componentChildrenWith('rippleElements')[0];
   }
@@ -56,7 +58,7 @@ class PaperButton extends BlazeComponent {
    * 1. not focused while pressed
    * 2. elevated
    */
-  onFocus () {
+  onFocus() {
     if (!this.pressed.get()) {
       this.focused.set('');
     }
@@ -72,7 +74,7 @@ class PaperButton extends BlazeComponent {
    * 1. not focused
    * 2. not elevated
    */
-  onBlur () {
+  onBlur() {
     this.focused.set(false);
     if (this.elevated) {
       this.elevation.set(1);
@@ -90,7 +92,7 @@ class PaperButton extends BlazeComponent {
    * 5. send event to ripple
    * @param  {Event}
    */
-  onDown (event) {
+  onDown(event) {
     this.pressed.set('');
     this.active.set('');
     this.focused.set(false);
@@ -113,22 +115,21 @@ class PaperButton extends BlazeComponent {
    * 5. send event to ripple
    * @param  {Event}
    */
-  onUp (event) {
-    if(this.pressed.get()!==false) {
+  onUp(event) {
+    if (this.pressed.get() !== false) {
       this.pressed.set(false);
       this.active.set(false);
       if (this.elevated) {
         if (this.focused.get()) {
           this.elevation.set(3);
-        }
-        else {
+        } else {
           this.elevation.set(1);
         }
       } else {
         this.elevation.set(0);
       }
 
-      if(this.ripple) {
+      if (this.ripple) {
         this.ripple.onUp(event);
       }
     }
@@ -137,7 +138,7 @@ class PaperButton extends BlazeComponent {
   /**
    * @return {Object}  The events
    */
-  events () {
+  events() {
     return [{
       'blur': this.onBlur,
       'focus': this.onFocus,
@@ -150,4 +151,4 @@ class PaperButton extends BlazeComponent {
 }
 
 
-PaperButton.register('PaperButton')
+PaperButton.register('PaperButton');

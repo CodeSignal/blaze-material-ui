@@ -22,8 +22,8 @@ if (Meteor.isClient) {
 
     //document.querySelector('[data-id=someDialog]').style.display = 'block';
 
-  $('[data-id=someDialog]').show();
-  $('[data-id=someTooltip]').hide();
+  //$('[data-id=someDialog]').show();
+ // $('[data-id=someTooltip]').hide();
   });
 
 }

@@ -33,12 +33,22 @@
 
             <h2>Paper Elements</h2>
 
-            <div>
-              {{#PaperTooltip className="paper-tooltip-0" id="someTooltip"}}
-                test
+            <div class="with-tooltip">
+            Hover me for some info
+              {{#PaperTooltip className="paper-tooltip-0" }}
+                This is a tooltip
               {{/PaperTooltip}}
-
-              {{#PaperButton eventHook="someTooltip"}}Open Tooltip{{/PaperButton}}
+            </div>
+            <div class="with-tooltip">
+            Here is some real action
+              {{#PaperTooltip className="paper-tooltip-0" }}
+                 {{>PaperIconButton icon="navigation:menu"}}
+                 {{>PaperIconButton icon="navigation:menu"}}
+                 {{>PaperIconButton icon="navigation:menu"}}
+                 {{>IronIcon icon="navigation:menu"}}
+                 {{>IronIcon icon="navigation:menu"}}
+                {{#PaperButton className="foofoo"}} {{>IronIcon icon="navigation:menu"}}Some Button{{/PaperButton}}
+              {{/PaperTooltip}}
             </div>
 
             {{>PaperToast text="This is a toast 1" }}
