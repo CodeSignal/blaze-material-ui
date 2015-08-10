@@ -38,17 +38,19 @@ class PaperHeaderPanel extends BlazeComponent {
   }
 
   handleScroll(){
-    let scrollTop = this.mainContainer.scrollTop;
-    let dynamicShadow = this.dynamicShadow.indexOf(this.mode.get()) > -1;
-    if(scrollTop > 0 && dynamicShadow) {
-      this.addShadow();
-    } else if (dynamicShadow) {
-      this.removeShadow();
-    }
-    if(scrollTop > 0 && this.mode.get() === 'waterfall-tall') {
-      this.header.classList.remove('medium-tall');
-    } else if(scrollTop <= 0 && this.mode.get() === 'waterfall-tall') {
-      this.header.classList.add('medium-tall');
+    if (this.mainContainer && this.mainContainer.scrollTop) {
+      let scrollTop = this.mainContainer.scrollTop;
+      let dynamicShadow = this.dynamicShadow.indexOf(this.mode.get()) > -1;
+      if(scrollTop > 0 && dynamicShadow) {
+        this.addShadow();
+      } else if (dynamicShadow) {
+        this.removeShadow();
+      }
+      if(scrollTop > 0 && this.mode.get() === 'waterfall-tall') {
+        this.header.classList.remove('medium-tall');
+      } else if(scrollTop <= 0 && this.mode.get() === 'waterfall-tall') {
+        this.header.classList.add('medium-tall');
+      }
     }
   }
 
