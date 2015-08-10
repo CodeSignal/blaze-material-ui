@@ -8,27 +8,30 @@ Material.IronSelector = IronSelector = class IronSelector extends BlazeComponent
    */
   onCreated () {
     this.selected = new ReactiveVar(this.data().selected || 0);
-  }
+    //console.log(this.data().onUpdate)
+    //this.updateParent = this.data().update;
+ }
 
-  getSelected () {
-    return this.selected.get();
-  }
+
 
   handleClick (e) {
     var $element = $(e.toElement);
-    //console.log($element)
-    if ($element.parent()[0] !== this._componentInternals.templateInstance.firstNode) {
+    if ($element.parent()[0] !== this.firstNode()) {
       return false;
     }
     var selected = $element.index();
     this.selected.set(selected);
     this.updateSelection();
+    if (typeof this.data().onUpdate === 'function') {
+      this.data().onUpdate();
+    }
+
   }
 
   updateSelection () {
     var $elements = this.findAll('>*>*');
     $elements.forEach((item, index)=>{
-      let isSelected = index === this.getSelected();
+      let isSelected = index === parseInt(this.selected.get(),10);
       item.classList.toggle('iron-selected', isSelected);
     });
   }
