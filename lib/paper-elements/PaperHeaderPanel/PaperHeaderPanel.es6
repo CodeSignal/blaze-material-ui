@@ -38,7 +38,7 @@ class PaperHeaderPanel extends BlazeComponent {
   }
 
   handleScroll(){
-    if (this.mainContainer && this.mainContainer.scrollTop) {
+    if (this.mainContainer && this.mainContainer.scrollTop >= 0) {
       let scrollTop = this.mainContainer.scrollTop;
       let dynamicShadow = this.dynamicShadow.indexOf(this.mode.get()) > -1;
       if(scrollTop > 0 && dynamicShadow) {
