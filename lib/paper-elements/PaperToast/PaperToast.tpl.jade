@@ -1,4 +1,7 @@
 paper-toast(class=className
             text=text
-            aria-hidden="true" active=active.get)
-  span(data-id="label" class="paper-toast")=text
+            aria-hidden="true" active=active.get
+            layout horizontal center)
+  span(data-id="label" class="paper-toast" flex)=text
+  if dismissable
+    +PaperIconButton(icon="navigation:close" eventHook="close-toast")
