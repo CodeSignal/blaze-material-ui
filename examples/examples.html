@@ -35,13 +35,31 @@
 
             <div class="with-tooltip">
             Hover me for some info
-              {{#PaperTooltip className="paper-tooltip-0" }}
-                This is a tooltip
+              {{#PaperTooltip className="paper-tooltip-0" position="left top"}}
+                This is a top left tooltip
+              {{/PaperTooltip}}
+            </div>
+            <div class="with-tooltip">
+            Hover me for some info
+            {{#PaperTooltip className="paper-tooltip-0" position="right bottom"}}
+                This is a right bottom tooltip
+              {{/PaperTooltip}}
+            </div>
+            <div class="with-tooltip">
+            Hover me for some info
+              {{#PaperTooltip className="paper-tooltip-0" position="top"}}
+                This is a top tooltip
+              {{/PaperTooltip}}
+            </div>
+            <div class="with-tooltip">
+            Hover me for some info
+              {{#PaperTooltip className="paper-tooltip-0" position="bottom"}}
+                This is a bottom tooltip
               {{/PaperTooltip}}
             </div>
             <div class="with-tooltip">
             Here is some real action
-              {{#PaperTooltip className="paper-tooltip-0" }}
+              {{#PaperTooltip className="paper-tooltip-0" position="left bottom"}}
                  {{>PaperIconButton icon="navigation:menu"}}
                  {{>PaperIconButton icon="navigation:menu"}}
                  {{>PaperIconButton icon="navigation:menu"}}
@@ -53,7 +71,7 @@
 
             {{>PaperToast text="This is a toast 1" }}
             {{>PaperToast text="This is a toast 2" }}
-            {{>PaperToast text="This is a toast 3" active="true"}}
+            {{>PaperToast text="This is a toast 3" active="true" delay=18000}}
 
             <div class="horizontal-section-container">
               <div>
