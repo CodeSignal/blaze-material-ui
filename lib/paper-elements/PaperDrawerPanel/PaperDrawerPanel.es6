@@ -26,6 +26,10 @@ Material.PaperDrawerPanel = PaperDrawerPanel = class PaperDrawerPanel extends Bl
 
   }
 
+  onDestroyed(){
+    window.removeEventListener('resize', this.handleResize);
+  }
+
   handleResize() {
     if (window.innerWidth < 900) {
       this.classNames.set('narrow-layout left-drawer paper-drawer-panel transition');

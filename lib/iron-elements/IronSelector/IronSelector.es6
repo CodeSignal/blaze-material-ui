@@ -15,15 +15,16 @@ Material.IronSelector = IronSelector = class IronSelector extends BlazeComponent
 
 
   handleClick (e) {
-    var $element = $(e.toElement);
-    if ($element.parent()[0] !== this.firstNode()) {
+    var $element = $(e.target).closest('iron-selector>*');
+    let inScope = $(e.target).closest('iron-selector')[0] == $(this.firstNode())[0];
+    if (!inScope) {
       return false;
     }
     var selected = $element.index();
     this.selected.set(selected);
     this.updateSelection();
     if (typeof this.data().onUpdate === 'function') {
-      this.data().onUpdate();
+      this.data().onUpdate(this);
     }
 
   }

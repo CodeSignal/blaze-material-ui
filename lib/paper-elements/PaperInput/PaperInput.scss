@@ -18,23 +18,17 @@ paper-input {
 
     .focused-line.paper-input-container {
       height: 2px;
-      -webkit-transform-origin: center center;
       transform-origin: center center;
-      -webkit-transform: scale3d(0, 1, 1);
       transform: scale3d(0, 1, 1);
     }
 
     .underline.is-highlighted.paper-input-container .focused-line.paper-input-container {
-      -webkit-transform: none;
       transform: none;
-      -webkit-transition: -webkit-transform 0.25s;
       transition: transform 0.25s;
     }
 
     .underline.is-invalid.paper-input-container .focused-line.paper-input-container {
-      -webkit-transform: none;
       transform: none;
-      -webkit-transition: -webkit-transform 0.25s;
       transition: transform 0.25s;
     }
 
@@ -62,11 +56,8 @@ paper-input {
 
     .input-content.label-is-floating.paper-input-container label,
     .input-content.label-is-floating.paper-input-container .paper-input-label {
-      -webkit-transform: translate3d(0, -75%, 0) scale(0.75);
       transform: translate3d(0, -75%, 0) scale(0.75);
-      -webkit-transform-origin: left top;
       transform-origin: left top;
-      -webkit-transition: -webkit-transform 0.25s;
       transition: transform 0.25s;
     }
 

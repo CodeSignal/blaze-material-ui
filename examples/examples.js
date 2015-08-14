@@ -8,13 +8,6 @@ if (Meteor.isClient) {
       targetDialog.style.display = 'block';
     },
 
-    'mouseover [event-hook=someTooltip]': function(event, instance) {
-
-      var targetId = event.currentTarget.getAttribute('event-hook');
-      var targetDialog = document.querySelector('[data-id=' + targetId + ']');
-
-      targetDialog.style.display = 'block';
-    }
   });
 
 

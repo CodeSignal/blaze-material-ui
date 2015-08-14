@@ -3,6 +3,7 @@ paper-tooltip {
   position: absolute;
   outline: none;
   min-width: 100px;
+  z-index: 9999;
 
   [data-id=tooltip].paper-tooltip {
     outline: none;

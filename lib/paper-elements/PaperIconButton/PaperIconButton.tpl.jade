@@ -11,5 +11,7 @@ paper-icon-button(class=className
                   role="button"
                   event-hook=eventHook)
   +PaperRipple(fit='' id="ink" className="circle paper-icon-button" centered="")
-  +IronIcon(label=title icon=icon id="icon")
-
+  if icon
+    +IronIcon(label=title icon=icon id="icon")
+  else
+    +Template.contentBlock

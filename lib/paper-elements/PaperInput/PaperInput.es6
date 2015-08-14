@@ -76,6 +76,20 @@ class PaperInput extends BlazeComponent {
     }
   }
 
+    /**
+   * handle keyup event
+   * @param  {event}
+   */
+  onKeyDown(event) {
+
+
+    if (this.data().labelFloat === 'false') {
+      this.float.set('label-is-hidden');
+    } else {
+      this.float.set('label-is-floating label-is-highlighted');
+    }
+  }
+
   /**
    * @return {Object}  The events
    */
@@ -83,6 +97,8 @@ class PaperInput extends BlazeComponent {
     return [{
       'keyup textarea': this.onKeyUp,
       'keyup input': this.onKeyUp,
+      'keydown input': this.onKeyDown,
+      'keydown textarea': this.onKeyDown,
       'blur textarea': this.onBlur,
       'blur input': this.onBlur,
       'focus input': this.onFocus,

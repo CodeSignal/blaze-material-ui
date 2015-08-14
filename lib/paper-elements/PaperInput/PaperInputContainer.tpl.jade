@@ -8,6 +8,7 @@ paper-input-container(class=className
               name=name
               data-id="textrea"
               class="paper-input"
+              disabled=disabled
               placeholder=placeholder)= value    
     else
       input(type=type
@@ -15,6 +16,7 @@ paper-input-container(class=className
             data-id="input"
             class="paper-input"
             value=value
+            disabled=disabled
             placeholder=placeholder)
     div(class="underline paper-input-container #{highlight.get}")
       div(class="unfocused-line fit paper-input-container")

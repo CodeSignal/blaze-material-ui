@@ -2,6 +2,10 @@ paper-toast(class=className
             text=text
             aria-hidden="true" active=active.get
             layout horizontal center)
-  span(data-id="label" class="paper-toast" flex)=text
+  span(data-id="label" class="paper-toast" flex)
+    if text
+      | #{text}
+    else
+      +Template.contentBlock
   if dismissable
     +PaperIconButton(icon="navigation:close" eventHook="close-toast")
