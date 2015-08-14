@@ -5,11 +5,12 @@ paper-input-container(class=className
     label(class="paper-input")=label
     if textarea.get
       textarea(type=type
-              name=name
-              data-id="textrea"
-              class="paper-input"
-              disabled=disabled
-              placeholder=placeholder)= value    
+                name=name
+                data-id="textrea"
+                class="paper-input"
+                disabled=disabled
+                rows="4"
+                placeholder=placeholder)= value    
     else
       input(type=type
             name=name

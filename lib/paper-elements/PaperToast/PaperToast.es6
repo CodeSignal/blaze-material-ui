@@ -9,10 +9,8 @@ class PaperToast extends BlazeComponent {
    * set defaults
    */
   onCreated() {
-    this.dismissable = this.data && this.data().dismissable;
-    let active = this.data && this.data().active;
-    this.active = new ReactiveVar(active);
-
+    this.props = this.data() || {};
+    this.active = new ReactiveVar(this.props.active);
   }
 
   deactivate() {
@@ -30,7 +28,7 @@ class PaperToast extends BlazeComponent {
   }
 
   handleClose() {
-    if (this.data && typeof this.data().onClose === 'function') {
+    if (typeof this.props.onClose === 'function') {
       this.data().onClose();
     }
   }
@@ -39,8 +37,12 @@ class PaperToast extends BlazeComponent {
    */
   onRendered() {
     if (this.active.get()) {
-      this.timer = setTimeout(this.deactivate, this.data().delay || 3000);
+      this.timer = setTimeout(this.deactivate, this.props.delay || 3000);
     }
+  }
+
+  onDestroyed(){
+    clearTimeout(this.timer);
   }
 
   events() {
