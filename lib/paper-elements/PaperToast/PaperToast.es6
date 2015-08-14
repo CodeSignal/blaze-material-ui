@@ -20,7 +20,7 @@ class PaperToast extends BlazeComponent {
   }
 
   handleClose() {
-    if (this.data && this.data().onClose === 'function') {
+    if (this.data && typeof this.data().onClose === 'function') {
       this.data().onClose();
     }
   }
