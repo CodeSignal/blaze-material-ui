@@ -13,9 +13,17 @@ class PaperToast extends BlazeComponent {
     this.active = new ReactiveVar(this.props.active);
   }
 
+  removeToast(e) {
+    if (e.animationName === 'hide-toast') {
+      e.target.removeEventListener('animationend', this.removeToast);
+      e.target.remove();
+    }
+  }
+
   deactivate() {
     this.active.set(false);
     this.handleClose();
+    this.firstNode().addEventListener('animationend', this.removeToast);
   }
 
   closeOnClick() {
@@ -41,7 +49,7 @@ class PaperToast extends BlazeComponent {
     }
   }
 
-  onDestroyed(){
+  onDestroyed() {
     clearTimeout(this.timer);
   }
 
