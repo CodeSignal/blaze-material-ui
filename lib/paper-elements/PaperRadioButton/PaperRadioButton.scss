@@ -59,7 +59,7 @@ paper-radio-button {
     box-sizing: content-box;
   }
 
-  &[checked] [data-id=onRadio].paper-radio-button {
+  :checked ~ [data-id=onRadio].paper-radio-button {
     transform: scale(1);
   }
 
@@ -84,7 +84,7 @@ paper-radio-button {
     opacity: 0.5;
   }
 
-  &[disabled][checked] [data-id=onRadio].paper-radio-button {
+  &[disabled] :checked ~ [data-id=onRadio].paper-radio-button {
     opacity: 0.5;
   }
 

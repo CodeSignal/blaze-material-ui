@@ -6,21 +6,23 @@ class PaperRadioButton extends BlazeComponent {
   onCreated () {
     this.focused = new ReactiveVar(false);
     this.pressed = new ReactiveVar(false);
-    let checked = this.data().checked;
-    this.checked = new ReactiveVar(checked);
+    //let checked = this.data().checked;
+    //this.checked = new ReactiveVar(this.data().checked);
   }
 
   /**
    * Handle the click of the checkbox
    */
   handleClick(){
-    let checked = this.checked.get()
-    if (checked === 'checked') {
-        this.checked.set(false);
-    } else {
-        this.checked.set('checked');
-    }
-  }
+    // let checked = this.checked.get()
+    // if (checked === 'checked') {
+    //     this.checked.set(false);
+    // } else {
+    //     this.checked.set('checked');
+    // }
+    //this.checked.set('checked');
+    this.find('input').checked = 'checked';
+}
 
 
   /**
@@ -59,6 +61,9 @@ class PaperRadioButton extends BlazeComponent {
     this.ripple.onUp(event);
   }
 
+  onChange(e){
+    console.log(e)
+  }
   /**
    * handle the mousedown event
    * 1. send event to ripple
@@ -87,6 +92,8 @@ class PaperRadioButton extends BlazeComponent {
       'mousedown [data-id=radioContainer]': this.onDown,
       'mouseleave [data-id=radioContainer]': this.onUp,
       'mouseup [data-id=radioContainer]': this.onUp,
+      'input input': this.onChange,
+      'change input': this.onChange,
       'blur input': this.onBlur,
       'focus input': this.onFocus,
       'click': this.handleClick

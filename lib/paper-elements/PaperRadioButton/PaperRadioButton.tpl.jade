@@ -3,16 +3,14 @@ paper-radio-button(class=className
                    tabindex="-1"
                    aria-pressed=pressed.get
                    aria-disabled=disabled
-                   aria-checked=checked.get
                    aria-label=label
                    focused=focused.get
                    pressed=pressed.get
-                   disabled=disabled
-                   checked=checked.get)
+                   disabled=disabled)
   div(data-id="radioContainer"
       class="paper-radio-button")
     input(type="radio" 
-          checked=checked.get 
+          checked=checked 
           name=name 
           id=id 
           tabindex="0" 
@@ -21,7 +19,7 @@ paper-radio-button(class=className
         class="paper-radio-button")
     div(data-id="onRadio"
         class="paper-radio-button")
-    +PaperRipple(id="ink" className="paper-radio-button" centered="" checked="")
+    +PaperRipple(id="ink" className="paper-radio-button" centered="true" )
   div(data-id="radioLabel"
       class="paper-radio-button"
       aria-hidden="true")= label
