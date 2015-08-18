@@ -12,6 +12,8 @@ class PaperTooltip extends BlazeComponent {
   onCreated() {
     this.hidden = new ReactiveVar(true);
     this.style = new ReactiveVar('');
+    this.inDelay = this.data() && this.data().inDelay || 0;
+    this.outDelay = this.data() && this.data().outDelay || 0;
 
   }
 
@@ -64,17 +66,21 @@ class PaperTooltip extends BlazeComponent {
   }
 
   show() {
-    this.hidden.set(false);
-    this.entered = true;
+
+    this.showing = setTimeout(() => {
+      this.hidden.set(false);
+      this.entered = true;
+    }, this.inDelay);
   }
 
   hide() {
+    clearTimeout(this.showing);
     this.entered = false;
     setTimeout(() => {
       if (!this.entered) {
         this.hidden.set(true);
       }
-    }, 400);
+    }, this.outDelay);
   }
 
   /**

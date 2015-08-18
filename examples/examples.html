@@ -34,8 +34,8 @@
             <h2>Paper Elements</h2>
 
             <div class="with-tooltip">
-            Hover me for some info
-              {{#PaperTooltip className="paper-tooltip-0" position="left top"}}
+            Hover me for some info (2000ms)
+              {{#PaperTooltip className="paper-tooltip-0" position="left top" inDelay="2000"}}
                 This is a top left tooltip
               {{/PaperTooltip}}
             </div>
@@ -59,7 +59,7 @@
             </div>
             <div class="with-tooltip">
             Here is some real action
-              {{#PaperTooltip className="paper-tooltip-0" position="left bottom"}}
+              {{#PaperTooltip className="paper-tooltip-0" position="left bottom" outDelay="2000"}}
                  {{>PaperIconButton icon="navigation:menu"}}
                  {{>PaperIconButton icon="navigation:menu"}}
                  {{>PaperIconButton icon="navigation:menu"}}

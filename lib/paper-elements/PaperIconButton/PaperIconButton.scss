@@ -7,6 +7,7 @@ paper-icon-button {
   cursor: pointer;
   z-index: 0;
   border-radius: 50%;
+  box-sizing: content-box;
 }
 
 paper-icon-button [data-id=ink].paper-icon-button {
