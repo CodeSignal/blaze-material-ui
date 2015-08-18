@@ -5,7 +5,7 @@ paper-tab(class=className
   +PaperRipple(className="paper-tab" id="ink")
   div(class="tab-content  paper-tab" flex-auto center-center horizontal layout)
     if link
-      a(href=link)
+      a(href=link layout horizontal center)
         +Template.contentBlock
     else
       +Template.contentBlock
