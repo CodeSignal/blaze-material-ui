@@ -31,6 +31,8 @@ class PaperButton extends BlazeComponent {
   handleToggle() {
     if (this.toggles) {
       let toggled = this.toggled.get();
+      let active = this.active.get();
+      this.active.set(active===false?'':false);
       this.toggled.set(!toggled);
     }
   }
@@ -42,7 +44,6 @@ class PaperButton extends BlazeComponent {
    */
   onClick() {
     this.handleToggle();
-    this.active.set(true);
   }
 
   /**
