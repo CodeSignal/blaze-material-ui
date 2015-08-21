@@ -61,8 +61,11 @@ class PaperTooltip extends BlazeComponent {
   }
 
   onDestroyed() {
-    this.triggerNode.removeEventListener('mouseenter', this.show);
-    this.triggerNode.removeEventListener('mouseleave', this.hide);
+    if (this.triggerNode) {
+      this.triggerNode.removeEventListener('mouseenter', this.show);
+      this.triggerNode.removeEventListener('mouseleave', this.hide);
+    }
+
   }
 
   show() {
