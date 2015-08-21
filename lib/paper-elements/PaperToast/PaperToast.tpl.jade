@@ -3,8 +3,9 @@ paper-toast(class=className
             aria-hidden="true" active=active.get
             layout horizontal center)
   span(data-id="label" class="paper-toast" flex)
+    //- HTML rendering should be removed (keep it for now)
     if text
-      | #{text}
+      | !{text}
     else
       +Template.contentBlock
   if dismissable
