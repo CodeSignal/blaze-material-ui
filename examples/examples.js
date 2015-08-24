@@ -9,6 +9,14 @@ if (Meteor.isClient) {
     },
 
   });
+  Template.exampleCatalog.helpers({
+    checkboxChanges: function(){
+      return function(checked, value){
+        console.log(checked, value);
+      }
+    }
+
+  });
 
 
   $(function(){

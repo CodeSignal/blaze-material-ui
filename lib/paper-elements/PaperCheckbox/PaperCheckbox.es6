@@ -28,6 +28,9 @@ class PaperCheckbox extends BlazeComponent {
       this.checked.set('checked');
       this.hidden.set(false);
     }
+    if (this.data()&&this.data().onChange) {
+      this.data().onChange(checked !== 'checked', this.data()&&this.data().value);
+    }
   }
 
   /**
