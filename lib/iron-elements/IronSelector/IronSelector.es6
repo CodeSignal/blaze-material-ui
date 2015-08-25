@@ -3,15 +3,25 @@ Material = Material || {}
 
 Material.IronSelector = IronSelector = class IronSelector extends BlazeComponent {
 
+  constructor() {
+    super();
+    this.updateSelectedIndex = this.updateSelectedIndex.bind(this);
+    this.updateSelection = this.updateSelection.bind(this);
+  }
+
   /**
    * set defaults
    */
   onCreated () {
-    this.selected = new ReactiveVar(this.data().selected || 0);
+    this.selected = new ReactiveVar(0);
     //console.log(this.data().onUpdate)
     //this.updateParent = this.data().update;
+    this.autorun(this.updateSelectedIndex);
  }
 
+  updateSelectedIndex () {
+    this.selected.set(this.data().selected || 0);
+  }
 
 
   handleClick (e) {
@@ -30,9 +40,10 @@ Material.IronSelector = IronSelector = class IronSelector extends BlazeComponent
   }
 
   updateSelection () {
+    let selected = parseInt(this.selected.get(),10);
     var $elements = this.findAll('>*>*');
     $elements.forEach((item, index)=>{
-      let isSelected = index === parseInt(this.selected.get(),10);
+      let isSelected = index === selected;
       item.classList.toggle('iron-selected', isSelected);
     });
   }
@@ -42,7 +53,7 @@ Material.IronSelector = IronSelector = class IronSelector extends BlazeComponent
    */
   onRendered () {
     this.selector = this.componentChildrenWith('selected');
-    this.updateSelection();
+    this.autorun(this.updateSelection);
 
   }
 

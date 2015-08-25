@@ -15,7 +15,6 @@ class PaperTabs extends BlazeComponent {
    */
   onRendered() {
     this.selector = this.componentChildrenWith('selected')[0];
-    this.selected = this.selector.selected.get();
     this.selectorElement = this.selector.firstNode();
     this.selectorElement.setAttribute('flex', '');
     this.selectorElement.setAttribute('horizontal', '');
@@ -27,15 +26,18 @@ class PaperTabs extends BlazeComponent {
 
   }
 
+  getSelected() {
+    return this.selector.selected.get();
+  }
+
   handleClick() {
-    this.selected = this.selector.selected.get();
     this.updatePosition();
     this.updateScrollable();
   }
 
   updateScrollable(){
     let length = this.findAll('paper-tab').length;
-    let current = this.selected;
+    let current = this.getSelected();
     // console.log(length, current)
 
     if (this.scrollable && current < length - 1) {
@@ -54,7 +56,7 @@ class PaperTabs extends BlazeComponent {
 
   updatePosition(){
     let tabs = this.tabs.length;
-    let selectedTab = this.find('paper-tab:nth-child('+ (parseInt(this.selected,10)  + 1) +')');
+    let selectedTab = this.find('paper-tab:nth-child('+ (parseInt(this.getSelected(),10)  + 1) +')');
     let scale = selectedTab.offsetWidth/(this.selectorElement.offsetWidth);
     this.style.set('transform:translate3d('+ selectedTab.offsetLeft +'px,0,0) scaleX('+ scale + ')');
   }
