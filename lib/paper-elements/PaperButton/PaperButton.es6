@@ -7,6 +7,7 @@ class PaperButton extends BlazeComponent {
     this.focused = new ReactiveVar(false);
     this.pressed = new ReactiveVar(false);
     this.active = new ReactiveVar(false);
+    this.eventHook = new ReactiveVar(this.data() && this.data().eventHook);
 
     this.elevated = this.data() && this.data().elevated;
     this.ink = this.data() && !this.data().noink;
