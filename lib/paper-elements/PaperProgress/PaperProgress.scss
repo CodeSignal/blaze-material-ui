@@ -3,7 +3,6 @@ paper-progress {
   width: 200px;
   height: 4px;
 
-
   [data-id=progressContainer].paper-progress {
     position: relative;
     height: 100%;
@@ -16,24 +15,22 @@ paper-progress {
     transform: scaleX(0);
   }
 
-  [data-id=activeProgress].indeterminate.paper-progress {
+  [data-id=activeProgress][indeterminate].paper-progress {
     transform-origin: center center;
     animation: indeterminate-bar 1s linear infinite;
   }
 }
 
-
 @keyframes indeterminate-bar {
-0% {
-  transform: translate(-50%) scaleX(0);
-}
+  0% {
+    transform: translate(-50%) scaleX(0);
+  }
 
-50% {
-  transform: translate(0%) scaleX(0.3);
-}
+  50% {
+    transform: translate(0%) scaleX(0.3);
+  }
 
-100% {
-  transform: translate(50%) scaleX(0);
-}
-
+  100% {
+    transform: translate(50%) scaleX(0);
+  }
 }
