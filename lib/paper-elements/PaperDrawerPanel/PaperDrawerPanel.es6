@@ -20,6 +20,7 @@ Material.PaperDrawerPanel = PaperDrawerPanel = class PaperDrawerPanel extends Bl
   onRendered() {
     var main = this.componentChildren('IronSelector');
     this.selector = this.componentChildrenWith('selected')[0];
+    this.firstNode().component = this.component();
 
     // handle resize
     window.addEventListener('resize', this.handleResize);
