@@ -62,7 +62,6 @@ class PaperRadioButton extends BlazeComponent {
   }
 
   onChange(e){
-    console.log(e)
   }
   /**
    * handle the mousedown event
