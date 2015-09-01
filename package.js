@@ -30,7 +30,9 @@ Package.onUse(function(api) {
 
   api.addFiles([
 
-    'vendors/marked/lib/marked.js',
+    'vendors/remarkable/dist/remarkable.js',
+    'vendors/highlight/highlight.pack.js',
+    'vendors/highlight/styles/github.css',
 
     'lib/layout/layout.scss',
 
