@@ -405,6 +405,7 @@ paper-tab.paper-tab-0 {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   flex: 1;
   flex-basis: 0.01px;
   text-transform: uppercase;

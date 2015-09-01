@@ -3,7 +3,7 @@ paper-tab(class=className
           aria-disabled="false"
           link=link)
   +PaperRipple(className="paper-tab" id="ink")
-  div(class="tab-content  paper-tab" flex-auto center-center horizontal layout)
+  div(class="tab-content  paper-tab" flex auto center-center vertical layout)
     if link
       a(href=link layout horizontal center)
         +Template.contentBlock
