@@ -3,22 +3,26 @@ class PaperInput extends BlazeComponent {
   /**
    * set defaults
    */
-  onCreated () {
+  onCreated() {
     this.focused = new ReactiveVar(false);
     this.pressed = new ReactiveVar(false);
 
     this.highlight = new ReactiveVar(this.data().highlight);
     this.float = new ReactiveVar(this.data().float);
 
-    this.empty = new ReactiveVar(this.data().value?false:true);
-    this.textarea = new ReactiveVar(this.data().type === 'textarea'?true:false);
+    this.empty = new ReactiveVar(this.data().value ? false : true);
+    this.textarea = new ReactiveVar(this.data().type === 'textarea' ? true : false);
   }
 
   /**
    * after render
    */
-  onRendered () {
+  onRendered() {
     this.onKeyUp();
+    if (this.textarea) {
+      var $textarea = $(this.firstNode()).find('textarea');
+      $textarea.autoGrow();
+    }
   }
 
   /**
@@ -29,8 +33,8 @@ class PaperInput extends BlazeComponent {
    */
   onFocus(event) {
     if (this.disabled) {
-      return
-    };
+      return;
+    }
 
 
     this.highlight.set('is-highlighted');
@@ -59,7 +63,7 @@ class PaperInput extends BlazeComponent {
   onKeyUp(event) {
 
     let input = this.find('input') || this.find('textarea');
-    if ((input && input.value.length <= 0)) {
+    if ( (input && input.value.length <= 0) ) {
       this.empty = true;
     } else {
       this.empty = false;
@@ -76,7 +80,7 @@ class PaperInput extends BlazeComponent {
     }
   }
 
-    /**
+  /**
    * handle keyup event
    * @param  {event}
    */

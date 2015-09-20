@@ -33,6 +33,7 @@ Package.onUse(function(api) {
     'vendors/remarkable/dist/remarkable.js',
     'vendors/highlight/highlight.pack.js',
     'vendors/highlight/styles/github.css',
+    'vendors/autogrowtextarea/jquery.autogrowtextarea.js',
 
     'lib/layout/layout.scss',
 
@@ -153,10 +154,10 @@ Package.onUse(function(api) {
     'lib/paper-elements/PaperDrawerPanel/PaperDrawerPanel.es6',
 
 
-    //'dist/blaze-material-ui.jade',
-    //'dist/blaze-material-ui.scss',
-    //'dist/blaze-material-ui.es6'
-  ],'client');
+  //'dist/blaze-material-ui.jade',
+  //'dist/blaze-material-ui.scss',
+  //'dist/blaze-material-ui.es6'
+  ], 'client');
 
   // api.export('Material');
   api.export('Material');
