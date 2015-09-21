@@ -21,7 +21,9 @@ class PaperInput extends BlazeComponent {
     this.onKeyUp();
     if (this.textarea) {
       var $textarea = $(this.firstNode()).find('textarea');
-      $textarea.autoGrow();
+      $textarea.autoGrow({
+        extraline: false
+      });
     }
   }
 
