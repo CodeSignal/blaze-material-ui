@@ -1,3 +1,6 @@
 iron-selector {
-  
+    visibility; hidden;
+    > * {
+        visibility: visible;
+    }
 }
