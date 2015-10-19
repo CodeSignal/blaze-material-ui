@@ -8,7 +8,6 @@ autopublish
 insecure
 codefights:blaze-material-ui
 templating
-fourseven:scss
 standard-minifiers
 meteor-base
 mobile-experience
@@ -23,3 +22,4 @@ random
 ejson
 spacebars
 check
+fourseven:scss@3.3.3_3
