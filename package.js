@@ -15,7 +15,7 @@ Package.onUse(function(api) {
 
   // server dependencies
   api.use([
-    'peerlibrary:blaze-components',
+    'peerlibrary:blaze-components@0.14.0',
     'ecmascript',
     'reactive-var',
   ]);
