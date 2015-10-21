@@ -5,13 +5,28 @@
 
 ## Installation
 
-Right now it is required to clone the repo and then use it locally.
+Right now it is required to clone the repo and then use it locally. (see [local installation](#local-installation))
 In future it will be available from atmosphere
 
 ```shell
 meteor add codefights:blaze-material-ui
 ```
 
+## Screenshots
+
+![demo](demo.png)
+
+
+## Demos
+
+### Component Catalog
+[official demo page](http://blaze-material-ui.meteor.com/)
+
+### Apps using this library
+[CodeFights](https://codefights.com)
+
+
+## Local installation
 ```shell
 cd [yourApp]
 ## if packages does not exist
@@ -23,19 +38,6 @@ cd ..
 ## add the package to meteor
 meteor add codefights:blaze-material-ui
 ```
-
-
-## Demos
-
-### Component Catalog
-[official demo page](http://blaze-material-ui.meteor.com/)
-
-### Apps using this library
-[CodeFights](https://codefights.com)
-
-## Screenshots
-
-![demo](demo.png)
 
 ## Browser support
 
