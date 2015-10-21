@@ -1181,7 +1181,7 @@ paper-menu.no-shadow > paper-material {
     height: 20px;
     width: 100%;
     background: #bc0000;
-    box-shadow:  #bc0000 0 0 0 3px;
+    box-shadow:  #bc0000 0 0 0 3px, 0 5px 4px rgba(0,0,0,0.5);
     border: 1px dashed white;
     color: white;
     text-decoration: none;
