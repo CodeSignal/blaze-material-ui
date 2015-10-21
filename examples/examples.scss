@@ -1116,3 +1116,47 @@ paper-input-container.paper-input-container-0[disabled] .unfocused-line.paper-in
   display: inline-block;
   position: relative;
 }
+
+paper-icon-button + .title,
+iron-icon + .title {
+  margin-left: 16px;
+}
+
+
+
+.paper-drawer-toggle {
+  display: none;
+}
+.narrow-layout .paper-drawer-toggle {
+  display: block;
+}
+
+.content {
+  max-width: 960px;
+  margin: auto;
+
+}
+
+.paper-item-0 iron-icon {
+  margin-left: 16px;
+  margin-right: 16px;
+  color: #616161;
+}
+
+.paper-item-0 {
+  position: relative;
+
+  > a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+  }
+}
+
+paper-menu.no-shadow > paper-material {
+  display: none;
+}

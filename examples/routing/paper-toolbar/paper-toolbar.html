@@ -1,0 +1,50 @@
+<template name="paperToolbar">
+
+    <h1>Paper Toolbar</h1>
+    <div>
+
+
+        {{#PaperToolbar className="paper-toolbar-0"}}
+        {{#PaperToolbarTop}}
+        <span class="title">Toolbar Top</span>
+        {{/PaperToolbarTop}}
+        {{/PaperToolbar}}
+        <br>
+        {{#PaperToolbar className="paper-toolbar-1 medium-tall"}}
+        {{#PaperToolbarTop}}
+        {{>PaperIconButton icon="navigation:menu"}}
+        <span class="title">Toolbar Top</span>
+        {{>PaperIconButton icon="navigation:more-vert"}}
+        {{/PaperToolbarTop}}
+        {{#PaperToolbarMiddle}}
+        {{>PaperIconButton icon="navigation:refresh"}}
+        <span class="title">Toolbar Middle</span>
+        {{>PaperIconButton icon="navigation:more-vert"}}
+        {{/PaperToolbarMiddle}}
+        {{/PaperToolbar}}
+
+
+        <br>
+        {{#PaperToolbar className="paper-toolbar-2 tall"}}
+        {{#PaperToolbarTop}}
+        {{>PaperIconButton icon="navigation:menu"}}
+        <span class="title">Toolbar Top</span>
+        {{>PaperIconButton icon="navigation:refresh"}}
+        {{>PaperIconButton icon="navigation:more-vert"}}
+        {{/PaperToolbarTop}}
+        {{#PaperToolbarMiddle}}
+        {{>PaperIconButton icon="navigation:menu"}}
+        <span class="title">Toolbar Middle</span>
+        {{>PaperIconButton icon="navigation:refresh"}}
+        {{>PaperIconButton icon="navigation:more-vert"}}
+        {{/PaperToolbarMiddle}}
+        {{#PaperToolbarBottom}}
+        {{>PaperIconButton icon="navigation:menu"}}
+        <span class="title">Toolbar Bottom</span>
+        {{>PaperIconButton icon="navigation:refresh"}}
+        {{/PaperToolbarBottom}}
+        {{/PaperToolbar}}
+
+
+    </div>
+</template>

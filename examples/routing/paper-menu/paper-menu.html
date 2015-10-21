@@ -1,0 +1,41 @@
+<template name="paperMenu">
+    <div class="horizontal-section-container">
+        <div>
+            <h3>Standard</h3>
+            <div class="horizontal-section">
+                {{#PaperMenu className="paper-menu-0"  defaultSelected="-1"}}
+                {{#PaperItem className="paper-item-0"}}Inbox{{/PaperItem}}
+                {{#PaperItem className="paper-item-0"}}Starred{{/PaperItem}}
+                {{#PaperItem className="paper-item-0"}}Sent mail{{/PaperItem}}
+                {{#PaperItem className="paper-item-0"}}Draft{{/PaperItem}}
+                {{/PaperMenu}}
+            </div>
+        </div>
+
+        <div>
+            <h3>Pre-selected</h3>
+            <div class="horizontal-section">
+                {{#PaperMenu className="paper-menu-0"  defaultSelected="3"}}
+                {{#PaperItem className="paper-item-0"}}Inbox{{/PaperItem}}
+                {{#PaperItem className="paper-item-0"}}Starred{{/PaperItem}}
+                {{#PaperItem className="paper-item-0"}}Sent mail{{/PaperItem}}
+                {{#PaperItem className="paper-item-0"}}Draft{{/PaperItem}}
+                {{/PaperMenu}}
+            </div>
+        </div>
+        <!-- <div> -->
+        <!--     <h3>Multi-select</h3> -->
+        <!--     <div class="horizontal-section"> -->
+        <!--         {{#PaperMenu className="paper-menu-0"}} -->
+        <!--         {{#PaperItem className="paper-item-0"}}Inbox{{/PaperItem}} -->
+        <!--         {{#PaperItem className="paper-item-0"}}Starred{{/PaperItem}} -->
+        <!--         {{#PaperItem className="paper-item-0"}}Sent mail{{/PaperItem}} -->
+        <!--         {{#PaperItem className="paper-item-0"}}Draft{{/PaperItem}} -->
+        <!--         {{/PaperMenu}} -->
+        <!--     </div> -->
+        <!-- </div> -->
+
+
+    </div>
+
+</template>

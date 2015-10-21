@@ -56,7 +56,7 @@ Style the button with CSS as you would a normal DOM element.
 By default, the ripple is the same color as the foreground at 25% opacity. You may customize the color using this selector:
 
 ```css
-.my-custom-class::shadow paper-ripple {
+.my-custom-class[data-id=shadow] paper-ripple {
 	color: darkblue;
 }
 ```

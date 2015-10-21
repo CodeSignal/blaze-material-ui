@@ -1,0 +1,98 @@
+<template name="main">
+    <div class="content-card">
+        <h1>Welcome to the Material World</h1>
+
+        <table id="element-table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Tags</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>PaperButton</td>
+                    <td>Material Design button</td>
+                    <td>button</td>
+                    <td>
+                        {{>PaperIconButton icon="action:visibility" eventHook="paperButtonDemo"}}
+                    </td>
+                </tr>
+                <tr>
+                    <td>PaperCheckbox</td>
+                    <td>Material Design checkbox</td>
+                    <td>checkbox, control</td>
+                    <td>
+                        {{>PaperIconButton icon="action:visibility" eventHook="paperCheckboxDemo"}}
+                    </td>
+                </tr>
+                <tr>
+                    <td>PaperDialog</td>
+                    <td>Material Design dialog</td>
+                    <td>dialog, overlay</td>
+                    <td>
+                        {{>PaperIconButton icon="action:visibility" eventHook="paperDialogDemo"}}
+                    </td>
+                </tr>
+                <tr>
+                    <td>PaperFab</td>
+                    <td>A material design floating action button</td>
+                    <td>button</td>
+                    <td>
+                        {{>PaperIconButton icon="action:visibility" eventHook="paperFabDemo"}}
+                    </td>
+                </tr>
+                <tr>
+                    <td>PaperInput</td>
+                    <td>Material design text fields</td>
+                    <td>input</td>
+                    <td>
+                        {{>PaperIconButton icon="action:visibility" eventHook="paperInputDemo"}}
+                    </td>
+                </tr>
+                <tr>
+                    <td>PaperMenu</td>
+                    <td>Implements a material design menu</td>
+                    <td>menu</td>
+                    <td>
+                        {{>PaperIconButton icon="action:visibility" eventHook="paperMenuDemo"}}
+                    </td>
+                </tr>
+                <tr>
+                    <td>PaperRadioButton</td>
+                    <td>A material design radio button</td>
+                    <td>radio, control</td>
+                    <td>
+                        {{>PaperIconButton icon="action:visibility" eventHook="paperRadioButtonDemo"}}
+                    </td>
+                </tr>
+                <tr>
+                    <td>PaperTabs</td>
+                    <td>Material design tabs</td>
+                    <td>tabs, control</td>
+                    <td>
+                        {{>PaperIconButton icon="action:visibility" eventHook="paperTabsDemo"}}
+                    </td>
+                </tr>
+                <tr>
+                    <td>PaperToolbar</td>
+                    <td>A material design toolbar that is easily customizable</td>
+                    <td>toolbar, layout</td>
+                    <td>
+                        {{>PaperIconButton icon="action:visibility" eventHook="paperToolbarDemo"}}
+                    </td>
+                </tr>
+                <tr>
+                    <td>PaperToggleButton</td>
+                    <td>A material design toggle button control</td>
+                    <td>toggle, control</td>
+                    <td>
+                        {{>PaperIconButton icon="action:visibility" eventHook="paperToggleButtonDemo"}}
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</template>
