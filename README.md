@@ -76,7 +76,7 @@ will create
 lib
  ┗━┳ paper-elements
    ┗━┳ PaperButton
-     ┣━ PaperButton.es6
+     ┣━ PaperButton.js
      ┣━ PaperButton.scss
      ┗━ PaperButton.tpl.jade
 ```
