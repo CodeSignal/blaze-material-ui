@@ -4,11 +4,15 @@
 <body></body>
 
 
-
+<template name="forkMe">
+    <div class="corner-ribbon">
+        <a href="" target="_blank">Fork me on Github</a>
+    </div>
+</template>
 
 
 <template name="Layout">
-
+    {{>forkMe}}
     {{#PaperDrawerPanel}}
     {{#PaperDrawerPanelMain}}
     {{#PaperHeaderPanel mode="standard" className="paper-header-panel-1 blue"}}

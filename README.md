@@ -1,7 +1,6 @@
 # blaze-material-ui
 
-## Warning !! this is an alpha release
-## This is not intended to be used on production environments
+> This is an alpha release so use it at your own risk. See below for a list of apps that use this in production
 
 
 ## Installation
@@ -10,6 +9,17 @@ Right now it is required to clone the repo and then use it locally.
 In future it will be available from atmosphere
 
 ```shell
+meteor add codefights:blaze-material-ui
+```
+
+```shell
+cd [yourApp]
+## if packages does not exist
+mkdir packages
+## manually add the package
+cd packages
+git clone git@github.com:Code-Fights/blaze-material-ui.git
+cd ..
 ## add the package to meteor
 meteor add codefights:blaze-material-ui
 ```

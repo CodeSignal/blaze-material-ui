@@ -1160,3 +1160,32 @@ iron-icon + .title {
 paper-menu.no-shadow > paper-material {
   display: none;
 }
+
+
+.corner-ribbon {
+  position: fixed;
+  z-index: 11111;
+  top: 0;
+  right: 0;
+  visibility: hidden;
+  background: blue;
+  height: 200px;
+  width: 200px;
+  transform: translate(25%,-25%);
+  a {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: block;
+    visibility: visible;
+    height: 20px;
+    width: 100%;
+    background: #bc0000;
+    box-shadow:  #bc0000 0 0 0 3px;
+    border: 1px dashed white;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+}
