@@ -1,8 +1,8 @@
 Package.describe({
   name: 'codefights:blaze-material-ui',
-  version: '0.1.4',
+  version: '0.1.5',
   // Brief, one-line summary of the package.
-  summary: '',
+  summary: 'Material design components for blaze',
   // URL to the Git repository containing the source code for this package.
   git: '',
   // By default, Meteor will default to using README.md for documentation.
@@ -16,14 +16,14 @@ Package.onUse(function(api) {
   // server dependencies
   api.use([
     'peerlibrary:blaze-components@0.14.0',
-    'ecmascript',
+    'ecmascript@0.1.5',
     'reactive-var',
   ]);
   // client dependencies
   api.use([
     'templating',
     'mquandalle:jade@0.4.3',
-    'fourseven:scss',
+    'fourseven:scss@3.3.3_3',
   ], 'client');
 
 

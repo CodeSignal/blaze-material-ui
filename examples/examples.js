@@ -7,5 +7,4 @@
 
 if (Meteor.isClient) {
 
-  // client side code
 }
