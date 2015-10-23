@@ -5,16 +5,13 @@
 
 ## Installation
 
-Right now it is required to clone the repo and then use it locally. (see [local installation](#local-installation))
-In future it will be available from atmosphere
-
 ```shell
 meteor add codefights:blaze-material-ui
 ```
 
 ## Screenshots
 
-![demo](demo.png)
+![demo](https://raw.githubusercontent.com/Code-Fights/blaze-material-ui/master/demo.png)
 
 
 ## Demos
@@ -25,19 +22,6 @@ meteor add codefights:blaze-material-ui
 ### Apps using this library
 [CodeFights](https://codefights.com)
 
-
-## Local installation
-```shell
-cd [yourApp]
-## if packages does not exist
-mkdir packages
-## manually add the package
-cd packages
-git clone git@github.com:Code-Fights/blaze-material-ui.git
-cd ..
-## add the package to meteor
-meteor add codefights:blaze-material-ui
-```
 
 ## Browser support
 
@@ -59,7 +43,7 @@ Since this is an alpha version we are making a new concept for or release candid
 ## Paper elements for Meteor 
 
 This library provides material design elements in meteor.  
-It is built on top of [meteor-blaze-compoents](https://github.com/peerlibrary/meteor-blaze-components) which uses [blaze](https://github.com/meteor/blaze)
+It is built on top of [meteor-blaze-components](https://github.com/peerlibrary/meteor-blaze-components) which uses [blaze](https://github.com/meteor/blaze)
 
 
 ## Create components from gulp
