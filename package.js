@@ -1,6 +1,6 @@
 Package.describe({
   name: 'codefights:blaze-material-ui',
-  version: '0.1.7_1',
+  version: '0.1.7_2',
   // Brief, one-line summary of the package.
   summary: 'Material design components for blaze',
   // URL to the Git repository containing the source code for this package.
