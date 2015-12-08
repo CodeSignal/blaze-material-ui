@@ -1,6 +1,6 @@
 {
   "name": "blaze-material-ui",
-  "version": "0.1.7_2",
+  "version": "0.1.8",
   "description": "blaze components for material design",
   "main": "Gulpfile.js",
   "directories": {
