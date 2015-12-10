@@ -1,12 +1,12 @@
 paper-toggle-button(class=className
-                    role="button"
-                    aria-pressed="false"
+                    role="checkbox"
+                    aria-pressed=pressed.get
                     tabindex="0"
+                    aria-disabled=disabled.get
                     toggles=""
-                    aria-disabled="false"
-                    focused=getFocused
-                    pressed=getPressed
-                    disabled=disabled
+                    focused=focused.get
+                    pressed=pressed.get
+                    disabled=disabled.get
                     checked=checked.get)
   div(data-id="toggleContainer" class="paper-toggle-button")
     div(data-id="toggleBar" class="toggle-bar paper-toggle-button")

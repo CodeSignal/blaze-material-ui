@@ -8,6 +8,7 @@ autopublish
 insecure
 codefights:blaze-material-ui
 templating
+reactive-var
 standard-minifiers
 meteor-base
 mobile-experience
