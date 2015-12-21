@@ -10,7 +10,8 @@ paper-input-container(class=className
                 class="paper-input"
                 disabled=disabled
                 rows="1"
-                placeholder=placeholder)= value    
+                placeholder=placeholder
+                readonly=readonly)= value    
     else
       input(type=type
             name=name
@@ -18,7 +19,8 @@ paper-input-container(class=className
             class="paper-input"
             value=value
             disabled=disabled
-            placeholder=placeholder)
+            placeholder=placeholder
+            readonly=readonly)
     div(class="underline paper-input-container #{highlight.get}")
       div(class="unfocused-line fit paper-input-container")
       div(class="focused-line fit paper-input-container")
