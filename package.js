@@ -1,6 +1,6 @@
 Package.describe({
   name: 'codefights:blaze-material-ui',
-  version: '0.1.10',
+  version: '0.1.11',
   // Brief, one-line summary of the package.
   summary: 'Material design components for blaze',
   // URL to the Git repository containing the source code for this package.
@@ -11,7 +11,7 @@ Package.describe({
 });
 
 Package.onUse(function(api) {
-  api.versionsFrom('1.1.0.2');
+  api.versionsFrom('1.2');
 
   // server dependencies
   api.use([
@@ -21,10 +21,9 @@ Package.onUse(function(api) {
   ]);
   // client dependencies
   api.use([
-    'templating',
     'mquandalle:jade@0.4.3',
     'fourseven:scss@3.3.3_3',
-  ], 'client');
+  ]);
 
 
 
