@@ -1,6 +1,6 @@
 Package.describe({
   name: 'codefights:blaze-material-ui',
-  version: '0.1.11',
+  version: '0.1.12',
   // Brief, one-line summary of the package.
   summary: 'Material design components for blaze',
   // URL to the Git repository containing the source code for this package.
@@ -17,13 +17,13 @@ Package.onUse(function(api) {
   api.use([
     'peerlibrary:blaze-components@0.14.0',
     'ecmascript@0.1.5',
-    'reactive-var',
+    'reactive-var'
   ]);
   // client dependencies
   api.use([
     'templating',
     'mquandalle:jade@0.4.3',
-    'fourseven:scss@3.3.3_3',
+    'fourseven:scss@3.3.3_3'
   ], 'client');
 
 
@@ -151,7 +151,7 @@ Package.onUse(function(api) {
     'lib/paper-elements/PaperDrawerPanel/PaperDrawerPanel.tpl.jade',
     'lib/paper-elements/PaperDrawerPanel/PaperDrawerPanelMain.tpl.jade',
     'lib/paper-elements/PaperDrawerPanel/PaperDrawerPanelDrawer.tpl.jade',
-    'lib/paper-elements/PaperDrawerPanel/PaperDrawerPanel.js',
+    'lib/paper-elements/PaperDrawerPanel/PaperDrawerPanel.js'
 
 
   //'dist/blaze-material-ui.jade',
