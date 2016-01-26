@@ -37,7 +37,7 @@ Package.onUse(function(api) {
 
     'lib/layout/layout.scss',
 
-    'lib/services/IronIconService.js',
+    'lib/services/IconService.js',
 
     'lib/iron-elements/IronIcon/IronIcon.scss',
     'lib/iron-elements/IronIcon/IronIcon.tpl.jade',
