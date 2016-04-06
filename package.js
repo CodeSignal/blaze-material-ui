@@ -21,7 +21,6 @@ Package.onUse(function(api) {
   ]);
   // client dependencies
   api.use([
-    'templating',
     'mquandalle:jade@0.4.3',
     'fourseven:scss@3.3.3_3'
   ], 'client');
