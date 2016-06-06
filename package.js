@@ -31,7 +31,6 @@ Package.onUse(function(api) {
   api.addFiles([
 
     'vendors/remarkable/dist/remarkable.js',
-    'vendors/highlight/highlight.pack.js',
     'vendors/highlight/styles/github.css',
     'vendors/autogrowtextarea/jquery.autogrowtextarea.js',
 
