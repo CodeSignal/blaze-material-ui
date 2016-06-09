@@ -111,11 +111,6 @@ Package.onUse(function(api) {
     'lib/paper-elements/PaperTooltip/PaperTooltip.tpl.jade',
     'lib/paper-elements/PaperTooltip/PaperTooltip.js',
 
-    'lib/paper-elements/PaperHeaderPanel/PaperHeaderPanel.scss',
-    'lib/paper-elements/PaperHeaderPanel/PaperHeaderPanel.tpl.jade',
-    'lib/paper-elements/PaperHeaderPanel/PaperHeaderPanelMain.tpl.jade',
-    'lib/paper-elements/PaperHeaderPanel/PaperHeaderPanel.js',
-
     'lib/paper-elements/PaperToolbar/PaperToolbar.scss',
     'lib/paper-elements/PaperToolbar/PaperToolbar.tpl.jade',
     'lib/paper-elements/PaperToolbar/PaperToolbarTop.tpl.jade',
